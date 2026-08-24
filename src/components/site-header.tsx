@@ -16,7 +16,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
         <Link to="/" className="flex items-center" aria-label="ARP Experiences home">
-          <img src={logo.url} alt="ARP Experiences" className="h-9 w-auto md:h-11" />
+          <img src={logo.url} alt="ARP Experiences" className="h-14 w-auto md:h-16" />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
