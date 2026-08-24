@@ -1,0 +1,149 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageHeader, Section } from "@/components/page-shell";
+import destination from "@/assets/destination.jpg";
+import gathering from "@/assets/gathering.jpg";
+import lobby from "@/assets/lobby.jpg";
+
+export const Route = createFileRoute("/services")({
+  head: () => ({
+    meta: [
+      { title: "Services — ARP Experiences" },
+      {
+        name: "description",
+        content:
+          "Private travel, group travel, retreats, destination weddings, celebrations, and concierge experiences from ARP Experiences.",
+      },
+      { property: "og:title", content: "Services — ARP Experiences" },
+      {
+        property: "og:description",
+        content: "Travel. Groups & Gatherings. Experiences & Concierge.",
+      },
+    ],
+  }),
+  component: Services,
+});
+
+const groups = [
+  {
+    label: "Travel",
+    lede: "Personalized travel planning and access for clients seeking exceptional places and experiences.",
+    img: destination,
+    w: 1408,
+    h: 1008,
+    items: [
+      "Hotel and resort bookings",
+      "Villas and private residences",
+      "Private aviation",
+      "Yacht and charter experiences",
+      "Cruises",
+      "Air travel",
+      "Multi-destination travel",
+      "Custom itineraries",
+      "Honeymoons and milestone travel",
+      "Family and multigenerational travel",
+      "VIP and high-touch travel",
+    ],
+  },
+  {
+    label: "Groups & Gatherings",
+    lede: "Bringing people together in places that elevate the experience.",
+    img: gathering,
+    w: 1408,
+    h: 1008,
+    items: [
+      "Corporate retreats",
+      "Executive off-sites",
+      "Leadership gatherings",
+      "Incentive travel",
+      "Brand and client events",
+      "Wellness and lifestyle retreats",
+      "Destination weddings",
+      "Wedding room blocks",
+      "Family reunions",
+      "Milestone celebrations",
+      "Group leisure travel",
+      "Multi-room and multi-property bookings",
+    ],
+  },
+  {
+    label: "Experiences & Concierge",
+    lede: "The details that transform a trip into something more.",
+    img: lobby,
+    w: 1200,
+    h: 1504,
+    items: [
+      "Restaurant reservations",
+      "Private dining",
+      "Chef experiences",
+      "Cultural experiences",
+      "Activities and excursions",
+      "Nightlife",
+      "Shopping",
+      "Wellness experiences",
+      "Local guides",
+      "Transportation",
+      "Private tours",
+      "Special occasions and VIP requests",
+      "Destination-specific recommendations",
+    ],
+  },
+];
+
+function Services() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="Services"
+        title="Exceptional places. Exceptional experiences."
+        intro="We specialize in private travel, group travel, retreats, destination weddings, celebrations, and hospitality experiences — rooted in relationships rather than transactions."
+      />
+
+      {groups.map((g, i) => (
+        <Section key={g.label} className={i === 0 ? "!pt-0" : ""}>
+          <div
+            className={`grid items-start gap-14 md:grid-cols-2 ${
+              i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
+            }`}
+          >
+            <img
+              src={g.img}
+              alt={g.label}
+              loading="lazy"
+              width={g.w}
+              height={g.h}
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <div>
+              <p className="eyebrow">{`0${i + 1}`}</p>
+              <h2 className="mt-5 text-4xl md:text-5xl">{g.label}</h2>
+              <p className="mt-5 max-w-xl text-base font-light leading-relaxed text-muted-foreground">
+                {g.lede}
+              </p>
+              <ul className="mt-10 grid gap-y-4 sm:grid-cols-2">
+                {g.items.map((item) => (
+                  <li
+                    key={item}
+                    className="border-b border-border pb-3 text-sm font-light tracking-wide"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Section>
+      ))}
+
+      <Section className="!pt-0">
+        <div className="border border-border px-8 py-20 text-center md:px-16">
+          <h2 className="mx-auto max-w-2xl text-4xl leading-tight md:text-5xl">
+            Tell us about the person, the purpose, and the place.
+          </h2>
+          <Link to="/inquire" className="btn-arp mt-12">
+            Begin an inquiry
+          </Link>
+        </div>
+      </Section>
+    </>
+  );
+}
