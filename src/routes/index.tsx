@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroSuite from "@/assets/hero-suite.jpg";
-import gathering from "@/assets/gathering.jpg";
-import lobby from "@/assets/lobby.jpg";
-import destination from "@/assets/destination.jpg";
+import heroPlaceholder from "@/assets/hero-placeholder.jpg";
+import serviceGatheringsPlaceholder from "@/assets/service-gatherings-placeholder.jpg";
+import serviceConciergePlaceholder from "@/assets/service-concierge-placeholder.jpg";
+import serviceTravelPlaceholder from "@/assets/service-travel-placeholder.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -16,9 +16,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "ARP Experiences — Travel, thoughtfully experienced." },
       {
         property: "og:description",
-        content:
-          "Exceptional places. Personal relationships. Experiences worth remembering.",
+        content: "Exceptional places. Personal relationships. Experiences worth remembering.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
@@ -51,6 +52,28 @@ const approach = [
   },
 ];
 
+// Placeholder testimonials — swap for real client quotes when ready.
+const testimonials = [
+  {
+    quote:
+      "Every detail was considered before we thought to ask. The hotel knew our names, the table was already held, and the week unfolded without a single loose end.",
+    name: "Private client",
+    detail: "Family travel, Amalfi Coast",
+  },
+  {
+    quote:
+      "We had twenty-two people across four days and it felt effortless. Amber's relationships turned a company off-site into something our team still talks about.",
+    name: "Leadership off-site",
+    detail: "Technology company, Mexico City",
+  },
+  {
+    quote:
+      "She understood the occasion before she recommended a single property. That's the difference — it never felt like a list of options, it felt like the right answer.",
+    name: "Milestone celebration",
+    detail: "Anniversary travel, Paris",
+  },
+];
+
 function Home() {
   return (
     <>
@@ -58,7 +81,7 @@ function Home() {
       <section className="relative">
         <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
           <img
-            src={heroSuite}
+            src={heroPlaceholder}
             alt="Warm, wood-panelled hotel suite in late afternoon light"
             width={1600}
             height={1104}
@@ -105,21 +128,21 @@ function Home() {
         <div className="grid gap-10 md:grid-cols-3">
           {[
             {
-              img: destination,
+              img: serviceTravelPlaceholder,
               w: 1408,
               h: 1008,
               label: "Travel",
               body: "Personalized planning and access for clients seeking exceptional places — hotels, villas, private aviation, yachts, and multi-destination itineraries.",
             },
             {
-              img: gathering,
+              img: serviceGatheringsPlaceholder,
               w: 1408,
               h: 1008,
               label: "Groups & Gatherings",
               body: "Retreats, off-sites, destination weddings, celebrations, and reunions in places that elevate the occasion.",
             },
             {
-              img: lobby,
+              img: serviceConciergePlaceholder,
               w: 1200,
               h: 1504,
               label: "Experiences & Concierge",
@@ -160,8 +183,7 @@ function Home() {
           </h2>
           <div className="mt-16 grid gap-x-14 gap-y-12 md:grid-cols-3">
             {approach.map((a) => (
-              <div key={a.title}>
-                <div className="rule-thin mb-6" />
+              <div key={a.title} className="border-t border-border pt-6">
                 <h3 className="eyebrow !text-foreground">{a.title}</h3>
                 <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
                   {a.body}
@@ -172,45 +194,66 @@ function Home() {
         </div>
       </section>
 
-      {/* Founder */}
+      {/* Testimonials */}
       <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
-        <div className="grid items-center gap-14 md:grid-cols-2">
-          <img
-            src={lobby}
-            alt="Hotel interior detail with brass lamp and marble floor"
-            loading="lazy"
-            width={1200}
-            height={1504}
-            className="aspect-[4/5] w-full object-cover"
-          />
-          <div>
-            <p className="eyebrow">The founder</p>
-            <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
-            <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
-              More than 25 years across fashion, boutique hotels, experiential design, partnerships,
-              relationship management, and travel — from launching Detroit Foundation Hotel to
-              serving as Chief Relationship Officer at Aparium Hotel Group.
-            </p>
-            <p className="mt-6 font-display text-2xl leading-snug">
-              Understand the person, understand the purpose, know the place, and consider every
-              detail.
-            </p>
-            <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
-              Read her story
-            </Link>
+        <p className="eyebrow">In their words</p>
+        <h2 className="mt-6 max-w-3xl text-4xl md:text-6xl">
+          Relationships first — and it shows in how the travel feels.
+        </h2>
+        <div className="mt-16 grid gap-12 md:grid-cols-3">
+          {testimonials.map((t) => (
+            <blockquote key={t.name} className="border-t border-border pt-8">
+              <p className="font-display text-2xl leading-snug">“{t.quote}”</p>
+              <footer className="mt-6">
+                <p className="eyebrow !text-foreground">{t.name}</p>
+                <p className="mt-2 text-sm font-light text-muted-foreground">{t.detail}</p>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="bg-secondary/70">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
+          <div className="grid items-center gap-14 md:grid-cols-2">
+            <img
+              src={serviceConciergePlaceholder}
+              alt="Hotel interior detail with brass lamp and marble floor"
+              loading="lazy"
+              width={1200}
+              height={1504}
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <div>
+              <p className="eyebrow">The founder</p>
+              <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
+              <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
+                More than two decades across fashion, boutique hotels, experiential design,
+                partnerships, relationship management, and travel — from launching Detroit
+                Foundation Hotel to serving as Chief Relationship Officer at Aparium Hotel Group.
+              </p>
+              <p className="mt-6 font-display text-2xl leading-snug">
+                Understand the person, understand the purpose, know the place, and consider every
+                detail.
+              </p>
+              <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
+                Read her story
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="border border-border px-8 py-20 text-center md:px-16">
-          <p className="eyebrow">Brand promise</p>
+      <section className="bg-oxblood text-primary-foreground">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
+          <p className="eyebrow !text-primary-foreground/70">Brand promise</p>
           <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight md:text-6xl">
             Exceptional places. Personal relationships. Experiences worth remembering.
           </h2>
-          <Link to="/inquire" className="btn-arp mt-12">
-            Inquire
+          <Link to="/inquire" className="btn-arp-ghost mt-12">
+            Begin an inquiry
           </Link>
         </div>
       </section>
