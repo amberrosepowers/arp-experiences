@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
-import founderStill from "@/assets/founder-still.jpg";
-import destination from "@/assets/destination.jpg";
+import founderPortraitPlaceholder from "@/assets/founder-portrait-placeholder.jpg";
+import aboutPlaceholder from "@/assets/about-placeholder.jpg";
+import serviceTravelPlaceholder from "@/assets/service-travel-placeholder.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -18,6 +19,8 @@ export const Route = createFileRoute("/about")({
         content:
           "Founded by Amber Rose Powers, ARP Experiences approaches travel through a hospitality lens.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: About,
@@ -45,22 +48,26 @@ function About() {
 
       <Section className="!pt-0">
         <div className="grid gap-14 md:grid-cols-2">
-          <img
-            src={founderStill}
-            alt="Travel journals and a globe in warm window light"
-            loading="lazy"
-            width={1200}
-            height={1504}
-            className="aspect-[4/5] w-full object-cover"
-          />
+          <div className="space-y-4">
+            {/* Portrait placeholder — replace founder-portrait-placeholder.jpg with Amber's headshot. */}
+            <img
+              src={founderPortraitPlaceholder}
+              alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
+              loading="lazy"
+              width={1024}
+              height={1280}
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <p className="eyebrow">Amber Rose Powers · Founder</p>
+          </div>
           <div className="space-y-6 text-base font-light leading-relaxed text-muted-foreground">
             <p className="font-display text-3xl leading-snug text-foreground">
               Amber Rose Powers — Founder
             </p>
             <p>
-              Amber is a hospitality and travel professional with more than 25 years of experience
-              across fashion, boutique hotels, experiential design, partnerships, relationship
-              management, and travel.
+              Amber is a hospitality and travel professional with more than two decades of
+              experience across fashion, boutique hotels, experiential design, partnerships,
+              relationship management, and travel.
             </p>
             <p>
               Her career began in fashion, with a degree in Apparel Design and experience spanning
@@ -86,19 +93,20 @@ function About() {
 
       <section className="bg-secondary/70">
         <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12">
-          <div className="grid gap-14 md:grid-cols-2">
+          <div className="grid gap-14 md:grid-cols-[1fr_1.1fr]">
+            <img
+              src={aboutPlaceholder}
+              alt="Leather travel journals and a brass compass in warm afternoon light"
+              loading="lazy"
+              width={1024}
+              height={1280}
+              className="aspect-[4/5] w-full object-cover"
+            />
             <div>
               <p className="eyebrow">Mission</p>
               <p className="mt-6 font-display text-3xl leading-snug md:text-4xl">
                 To create exceptional travel and gathering experiences through deep relationships,
                 genuine hospitality, and a discerning understanding of people and place.
-              </p>
-            </div>
-            <div>
-              <p className="eyebrow">Vision</p>
-              <p className="mt-6 font-display text-3xl leading-snug md:text-4xl">
-                To build a trusted travel and hospitality company known for its relationships,
-                expertise, taste, and ability to connect people with exceptional places.
               </p>
             </div>
           </div>
@@ -137,7 +145,7 @@ function About() {
             </Link>
           </div>
           <img
-            src={destination}
+            src={serviceTravelPlaceholder}
             alt="Coastal town in golden late-afternoon light"
             loading="lazy"
             width={1408}

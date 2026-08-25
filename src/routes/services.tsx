@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
-import destination from "@/assets/destination.jpg";
-import gathering from "@/assets/gathering.jpg";
-import lobby from "@/assets/lobby.jpg";
+import destination from "@/assets/service-travel-placeholder.jpg";
+import gathering from "@/assets/service-gatherings-placeholder.jpg";
+import lobby from "@/assets/service-concierge-placeholder.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -89,6 +89,25 @@ const groups = [
   },
 ];
 
+const howWeWork = [
+  {
+    q: "How do we begin?",
+    a: "With a conversation. We start by understanding the person, the purpose, and the occasion before recommending a place or a property. From there, we shape the travel and the experiences around it.",
+  },
+  {
+    q: "What does working with an advisor add?",
+    a: "Relationships and insight. Our connections across hotels, destinations, and hospitality partners bring access, added value, and a point of view you cannot find in a search result.",
+  },
+  {
+    q: "Do you only book hotels?",
+    a: "No. The hotel is one part of the experience. We also arrange dining, private experiences, guides, transportation, and the details waiting when you arrive.",
+  },
+  {
+    q: "How do you charge?",
+    a: "Planning fees vary by the scope and complexity of the trip or gathering. We share fees clearly before any work begins.",
+  },
+];
+
 function Services() {
   return (
     <>
@@ -134,8 +153,27 @@ function Services() {
         </Section>
       ))}
 
-      <Section className="!pt-0">
-        <div className="border border-border px-8 py-20 text-center md:px-16">
+      <section id="how-we-work" className="bg-secondary/70">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12">
+          <p className="eyebrow">How we work</p>
+          <h2 className="mt-6 max-w-2xl text-4xl md:text-5xl">
+            A few questions we're asked most often.
+          </h2>
+          <div className="mt-14 grid gap-x-16 gap-y-10 md:grid-cols-2">
+            {howWeWork.map((f) => (
+              <div key={f.q} className="border-t border-border pt-6">
+                <h3 className="text-2xl leading-snug">{f.q}</h3>
+                <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
+                  {f.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Section>
+        <div className="text-center">
           <h2 className="mx-auto max-w-2xl text-4xl leading-tight md:text-5xl">
             Tell us about the person, the purpose, and the place.
           </h2>

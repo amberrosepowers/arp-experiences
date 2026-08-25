@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
-import { Route as FaqRouteImport } from './routes/faq'
 import { Route as InquireRouteImport } from './routes/inquire'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -31,11 +30,6 @@ const AboutRoute = AboutRouteImport.update({
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InquireRoute = InquireRouteImport.update({
@@ -63,7 +57,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
-  '/faq': typeof FaqRoute
   '/inquire': typeof InquireRoute
   '/services': typeof ServicesRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -72,7 +65,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/faq': typeof FaqRoute
   '/inquire': typeof InquireRoute
   '/services': typeof ServicesRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -83,7 +75,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
-  '/faq': typeof FaqRoute
   '/inquire': typeof InquireRoute
   '/services': typeof ServicesRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -95,20 +86,17 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
-    | '/faq'
     | '/inquire'
     | '/services'
     | '/blog/$slug'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    '/' | '/about' | '/faq' | '/inquire' | '/services' | '/blog/$slug' | '/blog'
+  to: '/' | '/about' | '/inquire' | '/services' | '/blog/$slug' | '/blog'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/blog'
-    | '/faq'
     | '/inquire'
     | '/services'
     | '/blog/$slug'
@@ -119,7 +107,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRouteWithChildren
-  FaqRoute: typeof FaqRoute
   InquireRoute: typeof InquireRoute
   ServicesRoute: typeof ServicesRoute
 }
@@ -145,13 +132,6 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/inquire': {
@@ -201,7 +181,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRouteWithChildren,
-  FaqRoute: FaqRoute,
   InquireRoute: InquireRoute,
   ServicesRoute: ServicesRoute,
 }
