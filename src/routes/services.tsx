@@ -89,6 +89,25 @@ const groups = [
   },
 ];
 
+const howWeWork = [
+  {
+    q: "How do we begin?",
+    a: "With a conversation. We start by understanding the person, the purpose, and the occasion before recommending a place or a property. From there, we shape the travel and the experiences around it.",
+  },
+  {
+    q: "What does working with an advisor add?",
+    a: "Relationships and insight. Our connections across hotels, destinations, and hospitality partners bring access, added value, and a point of view you cannot find in a search result.",
+  },
+  {
+    q: "Do you only book hotels?",
+    a: "No. The hotel is one part of the experience. We also arrange dining, private experiences, guides, transportation, and the details waiting when you arrive.",
+  },
+  {
+    q: "How do you charge?",
+    a: "Planning fees vary by the scope and complexity of the trip or gathering. We share fees clearly before any work begins.",
+  },
+];
+
 function Services() {
   return (
     <>
