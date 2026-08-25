@@ -3,10 +3,10 @@ import { useState } from "react";
 import logo from "@/assets/arp-logo.png.asset.json";
 
 const nav = [
+  { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/blog", label: "Journal" },
-  { to: "/faq", label: "FAQ" },
 ] as const;
 
 export function SiteHeader() {
@@ -26,12 +26,13 @@ export function SiteHeader() {
               to={item.to}
               className="eyebrow link-underline text-foreground/70 transition-colors hover:text-foreground"
               activeProps={{ className: "text-foreground" }}
+              activeOptions={item.to === "/" ? { exact: true } : undefined}
             >
               {item.label}
             </Link>
           ))}
           <Link to="/inquire" className="btn-arp !px-7 !py-3">
-            Inquire
+            Inquiry
           </Link>
         </nav>
 
@@ -46,7 +47,7 @@ export function SiteHeader() {
 
       {open && (
         <nav className="flex flex-col gap-5 border-t border-border px-6 py-8 md:hidden">
-          {[...nav, { to: "/inquire", label: "Inquire" } as const].map((item) => (
+          {[...nav, { to: "/inquire", label: "Inquiry" } as const].map((item) => (
             <Link
               key={item.to}
               to={item.to}
