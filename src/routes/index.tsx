@@ -87,9 +87,9 @@ function Home() {
         <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
           <img
             src={heroPlaceholder}
-            alt="Warm, wood-panelled hotel suite in late afternoon light"
-            width={1600}
-            height={1104}
+            alt="Walnut-panelled hotel lounge with oxblood and cream marble floor"
+            width={1440}
+            height={1920}
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-oxblood/75 via-walnut/25 to-transparent" />
@@ -134,22 +134,22 @@ function Home() {
           {[
             {
               img: serviceTravelPlaceholder,
-              w: 1408,
-              h: 1008,
+              w: 1440,
+              h: 1920,
               label: "Travel",
               body: "Personalized planning and access for clients seeking exceptional places — hotels, villas, private aviation, yachts, and multi-destination itineraries.",
             },
             {
               img: serviceGatheringsPlaceholder,
-              w: 1408,
-              h: 1008,
+              w: 1440,
+              h: 1920,
               label: "Groups & Gatherings",
               body: "Retreats, off-sites, destination weddings, celebrations, and reunions in places that elevate the occasion.",
             },
             {
               img: serviceConciergePlaceholder,
-              w: 1200,
-              h: 1504,
+              w: 1440,
+              h: 1920,
               label: "Experiences & Concierge",
               body: "Private dining, cultural experiences, guides, transportation, and the details that transform a trip into something more.",
             },
@@ -224,10 +224,10 @@ function Home() {
           <div className="grid items-center gap-14 md:grid-cols-2">
             <img
               src={serviceConciergePlaceholder}
-              alt="Hotel interior detail with brass lamp and marble floor"
+              alt="Wood-panelled hotel library bar in warm evening light"
               loading="lazy"
-              width={1200}
-              height={1504}
+              width={1440}
+              height={1920}
               className="aspect-[4/5] w-full object-cover"
             />
             <div>

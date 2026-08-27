@@ -1,8 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
-import destination from "@/assets/service-travel-placeholder.jpg";
-import gathering from "@/assets/service-gatherings-placeholder.jpg";
-import lobby from "@/assets/service-concierge-placeholder.jpg";
+import travelAsset from "@/assets/service-travel.jpg.asset.json";
+import gatheringsAsset from "@/assets/service-gatherings.jpg.asset.json";
+import conciergeAsset from "@/assets/service-concierge.jpg.asset.json";
+
+const destination = travelAsset.url;
+const gathering = gatheringsAsset.url;
+const lobby = conciergeAsset.url;
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -28,8 +32,8 @@ const groups = [
     label: "Travel",
     lede: "Personalized travel planning and access for clients seeking exceptional places and experiences.",
     img: destination,
-    w: 1408,
-    h: 1008,
+    w: 1440,
+    h: 1920,
     items: [
       "Hotel and resort bookings",
       "Villas and private residences",
@@ -48,8 +52,8 @@ const groups = [
     label: "Groups & Gatherings",
     lede: "Bringing people together in places that elevate the experience.",
     img: gathering,
-    w: 1408,
-    h: 1008,
+    w: 1440,
+    h: 1920,
     items: [
       "Corporate retreats",
       "Executive off-sites",
@@ -69,8 +73,8 @@ const groups = [
     label: "Experiences & Concierge",
     lede: "The details that transform a trip into something more.",
     img: lobby,
-    w: 1200,
-    h: 1504,
+    w: 1440,
+    h: 1920,
     items: [
       "Restaurant reservations",
       "Private dining",
