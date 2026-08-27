@@ -1,8 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroPlaceholder from "@/assets/hero-placeholder.jpg";
-import serviceGatheringsPlaceholder from "@/assets/service-gatherings-placeholder.jpg";
-import serviceConciergePlaceholder from "@/assets/service-concierge-placeholder.jpg";
-import serviceTravelPlaceholder from "@/assets/service-travel-placeholder.jpg";
+import heroAsset from "@/assets/hero-balzac-lounge.jpg.asset.json";
+import gatheringsAsset from "@/assets/service-gatherings.jpg.asset.json";
+import conciergeAsset from "@/assets/service-concierge.jpg.asset.json";
+import travelAsset from "@/assets/service-travel.jpg.asset.json";
+
+const heroPlaceholder = heroAsset.url;
+const serviceGatheringsPlaceholder = gatheringsAsset.url;
+const serviceConciergePlaceholder = conciergeAsset.url;
+const serviceTravelPlaceholder = travelAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
