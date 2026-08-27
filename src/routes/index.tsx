@@ -234,9 +234,7 @@ function Home() {
               <p className="eyebrow">The founder</p>
               <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
               <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
-                More than two decades across fashion, boutique hotels, experiential design,
-                partnerships, relationship management, and travel — from launching Detroit
-                Foundation Hotel to serving as Chief Relationship Officer at Aparium Hotel Group.
+                Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. 
               </p>
               <p className="mt-6 font-display text-2xl leading-snug">
                 Understand the person, understand the purpose, know the place, and consider every
