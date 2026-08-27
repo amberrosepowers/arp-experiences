@@ -102,16 +102,6 @@ function About() {
         </div>
       </section>
 
-      <Section>
-        <p className="eyebrow">Core expertise</p>
-        <ul className="mt-10 grid gap-y-5 md:grid-cols-2">
-          {expertise.map((item) => (
-            <li key={item} className="border-b border-border pb-5 font-display text-2xl">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </Section>
 
       <Section className="!pt-0">
         <div className="grid items-center gap-14 md:grid-cols-2">
