@@ -26,7 +26,7 @@ export function SiteHeader() {
               to={item.to}
               className="eyebrow link-underline text-foreground/70 transition-colors hover:text-foreground"
               activeProps={{ className: "text-foreground" }}
-              activeOptions={item.to === "/" ? { exact: true } : undefined}
+              {...(item.to === "/" ? { activeOptions: { exact: true } } : {})}
             >
               {item.label}
             </Link>
