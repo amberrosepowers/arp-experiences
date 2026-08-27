@@ -3,11 +3,13 @@ import heroAsset from "@/assets/hero-balzac-lounge.jpg.asset.json";
 import gatheringsAsset from "@/assets/service-gatherings.jpg.asset.json";
 import conciergeAsset from "@/assets/service-concierge.jpg.asset.json";
 import travelAsset from "@/assets/service-travel.jpg.asset.json";
+import founderAsset from "@/assets/founder-portrait.jpg.asset.json";
 
 const heroPlaceholder = heroAsset.url;
 const serviceGatheringsPlaceholder = gatheringsAsset.url;
 const serviceConciergePlaceholder = conciergeAsset.url;
 const serviceTravelPlaceholder = travelAsset.url;
+const founderPortrait = founderAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -223,8 +225,8 @@ function Home() {
         <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
           <div className="grid items-center gap-14 md:grid-cols-2">
             <img
-              src={serviceConciergePlaceholder}
-              alt="Wood-panelled hotel library bar in warm evening light"
+              src={founderPortrait}
+              alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
               loading="lazy"
               width={1440}
               height={1920}
@@ -249,7 +251,7 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-oxblood text-primary-foreground">
+      <section className="bg-walnut text-primary-foreground">
         <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
           <p className="eyebrow !text-primary-foreground/70">Brand promise</p>
           <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight md:text-6xl">
