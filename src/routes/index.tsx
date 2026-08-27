@@ -236,7 +236,7 @@ function Home() {
               <p className="eyebrow">The founder</p>
               <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
               <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
-                Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. 
+                Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. She is highly relationship-driven and is passionate about guiding her clients to beautiful destinations, paired with incredible experiences. 
               </p>
               <p className="mt-6 font-display text-2xl leading-snug">
                 Understand the person, understand the purpose, know the place, and consider every
