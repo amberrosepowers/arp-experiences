@@ -90,7 +90,7 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-oxblood/75 via-walnut/25 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-16 md:px-12 md:pb-24">
             <p className="eyebrow fade-up !text-primary-foreground/75">
-              Travel · Hospitality · Experiences
+              {"\n"}
             </p>
             <h1 className="fade-up mt-6 max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
               Travel, thoughtfully experienced.
@@ -198,7 +198,7 @@ function Home() {
       <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
         <p className="eyebrow">In their words</p>
         <h2 className="mt-6 max-w-3xl text-4xl md:text-6xl">
-          Relationships first — and it shows in how the travel feels.
+          Relationships first — and it shows in the travel experience.
         </h2>
         <div className="mt-16 grid gap-12 md:grid-cols-3">
           {testimonials.map((t) => (
