@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
-import founderPortraitPlaceholder from "@/assets/founder-portrait-placeholder.jpg";
-import aboutPlaceholder from "@/assets/about-placeholder.jpg";
-import serviceTravelPlaceholder from "@/assets/service-travel-placeholder.jpg";
+import founderPortraitAsset from "@/assets/founder-portrait.jpg.asset.json";
+import conciergeAsset from "@/assets/service-concierge.jpg.asset.json";
+
+const founderPortrait = founderPortraitAsset.url;
+const closingImage = conciergeAsset.url;
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -49,13 +51,12 @@ function About() {
       <Section className="!pt-0">
         <div className="grid gap-14 md:grid-cols-2">
           <div className="space-y-4">
-            {/* Portrait placeholder — replace founder-portrait-placeholder.jpg with Amber's headshot. */}
             <img
-              src={founderPortraitPlaceholder}
+              src={founderPortrait}
               alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
               loading="lazy"
-              width={1024}
-              height={1280}
+              width={933}
+              height={1400}
               className="aspect-[4/5] w-full object-cover"
             />
             <p className="eyebrow">Amber Rose Powers · Founder</p>
@@ -92,24 +93,12 @@ function About() {
       </Section>
 
       <section className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12">
-          <div className="grid gap-14 md:grid-cols-[1fr_1.1fr]">
-            <img
-              src={aboutPlaceholder}
-              alt="Leather travel journals and a brass compass in warm afternoon light"
-              loading="lazy"
-              width={1024}
-              height={1280}
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <div>
-              <p className="eyebrow">Mission</p>
-              <p className="mt-6 font-display text-3xl leading-snug md:text-4xl">
-                To create exceptional travel and gathering experiences through deep relationships,
-                genuine hospitality, and a discerning understanding of people and place.
-              </p>
-            </div>
-          </div>
+        <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
+          <p className="eyebrow">Mission</p>
+          <p className="mx-auto mt-6 max-w-3xl font-display text-3xl leading-snug md:text-4xl">
+            To create exceptional travel and gathering experiences through deep relationships,
+            genuine hospitality, and a discerning understanding of people and place.
+          </p>
         </div>
       </section>
 
@@ -145,11 +134,11 @@ function About() {
             </Link>
           </div>
           <img
-            src={serviceTravelPlaceholder}
-            alt="Coastal town in golden late-afternoon light"
+            src={closingImage}
+            alt="Wood-panelled hotel library bar in warm evening light"
             loading="lazy"
-            width={1408}
-            height={1008}
+            width={1440}
+            height={1920}
             className="aspect-[4/5] w-full object-cover"
           />
         </div>
