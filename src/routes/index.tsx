@@ -95,22 +95,16 @@ function Home() {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-oxblood/75 via-walnut/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-16 md:px-12 md:pb-24">
-            <p className="eyebrow fade-up !text-primary-foreground/75">
-              {"\n"}
-            </p>
-            <h1 className="fade-up mt-6 max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
+          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-12 md:px-12 md:pb-16">
+            <h1 className="fade-up max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
               Travel, thoughtfully experienced.
             </h1>
-            <div className="fade-up mt-10 flex flex-wrap gap-4">
-              <Link to="/inquire" className="btn-arp-ghost">
-                Begin an inquiry
-              </Link>
-              <Link
-                to="/services"
-                className="btn-arp-ghost !border-transparent !px-0 underline underline-offset-8"
-              >
-                View services
+            <p className="fade-up mt-6 max-w-2xl text-lg font-light leading-relaxed text-primary-foreground/85 md:text-xl">
+              Exceptional places. Personal relationships. Experiences worth remembering.
+            </p>
+            <div className="fade-up mt-10">
+              <Link to="/inquire" className="btn-arp">
+                Inquire
               </Link>
             </div>
           </div>
