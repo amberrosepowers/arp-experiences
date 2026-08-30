@@ -182,6 +182,9 @@ function Home() {
           <h2 className="mt-6 max-w-2xl text-4xl md:text-6xl">
             We begin with the person, not the destination.
           </h2>
+          <p className="mt-6 max-w-2xl font-display text-2xl leading-snug">
+            Understand the person, understand the purpose, know the place, and consider every detail.
+          </p>
           <div className="mt-16 grid gap-x-14 gap-y-12 md:grid-cols-3">
             {approach.map((a) => (
               <div key={a.title} className="border-t border-border pt-6">
