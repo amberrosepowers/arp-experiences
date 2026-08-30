@@ -59,27 +59,8 @@ const approach = [
   },
 ];
 
-// Placeholder testimonials — swap for real client quotes when ready.
-const testimonials = [
-  {
-    quote:
-      "Every detail was considered before we thought to ask. The hotel knew our names, the table was already held, and the week unfolded without a single loose end.",
-    name: "Private client",
-    detail: "Family travel, Amalfi Coast",
-  },
-  {
-    quote:
-      "We had twenty-two people across four days and it felt effortless. Amber's relationships turned a company off-site into something our team still talks about.",
-    name: "Leadership off-site",
-    detail: "Technology company, Mexico City",
-  },
-  {
-    quote:
-      "She understood the occasion before she recommended a single property. That's the difference — it never felt like a list of options, it felt like the right answer.",
-    name: "Milestone celebration",
-    detail: "Anniversary travel, Paris",
-  },
-];
+
+
 
 function Home() {
   return (
@@ -95,22 +76,16 @@ function Home() {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-oxblood/75 via-walnut/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-16 md:px-12 md:pb-24">
-            <p className="eyebrow fade-up !text-primary-foreground/75">
-              {"\n"}
-            </p>
-            <h1 className="fade-up mt-6 max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
+          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-12 md:px-12 md:pb-16">
+            <h1 className="fade-up max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
               Travel, thoughtfully experienced.
             </h1>
-            <div className="fade-up mt-10 flex flex-wrap gap-4">
-              <Link to="/inquire" className="btn-arp-ghost">
-                Begin an inquiry
-              </Link>
-              <Link
-                to="/services"
-                className="btn-arp-ghost !border-transparent !px-0 underline underline-offset-8"
-              >
-                View services
+            <p className="fade-up mt-6 max-w-2xl text-lg font-light leading-relaxed text-primary-foreground/85 md:text-xl">
+              Exceptional places. Personal relationships. Experiences worth remembering.
+            </p>
+            <div className="fade-up mt-10">
+              <Link to="/inquire" className="btn-arp">
+                Inquire
               </Link>
             </div>
           </div>
@@ -188,6 +163,9 @@ function Home() {
           <h2 className="mt-6 max-w-2xl text-4xl md:text-6xl">
             We begin with the person, not the destination.
           </h2>
+          <p className="mt-6 max-w-2xl font-display text-2xl leading-snug">
+            Understand the person, understand the purpose, know the place, and consider every detail.
+          </p>
           <div className="mt-16 grid gap-x-14 gap-y-12 md:grid-cols-3">
             {approach.map((a) => (
               <div key={a.title} className="border-t border-border pt-6">
@@ -201,26 +179,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
-        <p className="eyebrow">In their words</p>
-        <h2 className="mt-6 max-w-3xl text-4xl md:text-6xl">
-          Relationships first — and it shows in the travel experience.
-        </h2>
-        <div className="mt-16 grid gap-12 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <blockquote key={t.name} className="border-t border-border pt-8">
-              <p className="font-display text-2xl leading-snug">“{t.quote}”</p>
-              <footer className="mt-6">
-                <p className="eyebrow !text-foreground">{t.name}</p>
-                <p className="mt-2 text-sm font-light text-muted-foreground">{t.detail}</p>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
-
       {/* Founder */}
+
       <section className="bg-secondary/70">
         <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
           <div className="grid items-center gap-14 md:grid-cols-2">
@@ -237,10 +197,6 @@ function Home() {
               <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
               <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
                 Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. She is highly relationship-driven and is passionate about guiding her clients to beautiful destinations, paired with incredible experiences. 
-              </p>
-              <p className="mt-6 font-display text-2xl leading-snug">
-                Understand the person, understand the purpose, know the place, and consider every
-                detail.
               </p>
               <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
                 Read her story
