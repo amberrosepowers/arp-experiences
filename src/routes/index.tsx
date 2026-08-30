@@ -217,10 +217,6 @@ function Home() {
               <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
                 Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. She is highly relationship-driven and is passionate about guiding her clients to beautiful destinations, paired with incredible experiences. 
               </p>
-              <p className="mt-6 font-display text-2xl leading-snug">
-                Understand the person, understand the purpose, know the place, and consider every
-                detail.
-              </p>
               <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
                 Read her story
               </Link>
