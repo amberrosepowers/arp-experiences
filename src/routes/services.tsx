@@ -116,6 +116,7 @@ function Services() {
   return (
     <>
       <PageHeader
+        centered
         eyebrow="Services"
         title="Exceptional places. Exceptional experiences."
         intro="We specialize in private travel, group travel, retreats, destination weddings, celebrations, and hospitality experiences — rooted in relationships rather than transactions."

@@ -25,16 +25,17 @@ function BlogIndex() {
   return (
     <>
       <PageHeader
+        centered
         eyebrow="Journal"
         title="Notes on places, people, and hospitality."
         intro="Observations from inside the industry — the hotels worth knowing, the way a gathering comes together, and the thinking behind how we plan."
       />
 
       <Section className="!pt-0">
-        <div className="max-w-4xl">
+        <div className="mx-auto max-w-4xl text-center">
           {posts.map((post) => (
             <article key={post.slug} className="border-t border-border py-12">
-              <div className="flex flex-wrap items-center gap-6">
+              <div className="flex flex-wrap items-center justify-center gap-6">
                 <span className="eyebrow">{post.category}</span>
                 <span className="text-xs font-light tracking-wide text-muted-foreground">
                   {new Date(post.date).toLocaleDateString("en-US", {
@@ -49,7 +50,7 @@ function BlogIndex() {
                   {post.title}
                 </Link>
               </h2>
-              <p className="mt-5 max-w-2xl text-base font-light leading-relaxed text-muted-foreground">
+              <p className="mx-auto mt-5 max-w-2xl text-base font-light leading-relaxed text-muted-foreground">
                 {post.excerpt}
               </p>
               <Link

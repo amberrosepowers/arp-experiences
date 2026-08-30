@@ -4,17 +4,27 @@ export function PageHeader({
   eyebrow,
   title,
   intro,
+  centered,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
+  centered?: boolean;
 }) {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 pb-16 pt-20 md:px-12 md:pb-24 md:pt-28">
+    <section
+      className={`mx-auto max-w-[1400px] px-6 pb-16 pt-20 md:px-12 md:pb-24 md:pt-28 ${centered ? "text-center" : ""}`}
+    >
       <p className="eyebrow fade-up">{eyebrow}</p>
-      <h1 className="fade-up mt-6 max-w-4xl text-5xl leading-[1.05] md:text-7xl">{title}</h1>
+      <h1
+        className={`fade-up mt-6 max-w-4xl text-5xl leading-[1.05] md:text-7xl ${centered ? "mx-auto" : ""}`}
+      >
+        {title}
+      </h1>
       {intro && (
-        <p className="fade-up mt-8 max-w-2xl text-lg font-light leading-relaxed text-muted-foreground">
+        <p
+          className={`fade-up mt-8 max-w-2xl text-lg font-light leading-relaxed text-muted-foreground ${centered ? "mx-auto" : ""}`}
+        >
           {intro}
         </p>
       )}
