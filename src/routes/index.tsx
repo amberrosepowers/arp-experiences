@@ -198,26 +198,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
-        <p className="eyebrow">In their words</p>
-        <h2 className="mt-6 max-w-3xl text-4xl md:text-6xl">
-          Relationships first — and it shows in the travel experience.
-        </h2>
-        <div className="mt-16 grid gap-12 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <blockquote key={t.name} className="border-t border-border pt-8">
-              <p className="font-display text-2xl leading-snug">“{t.quote}”</p>
-              <footer className="mt-6">
-                <p className="eyebrow !text-foreground">{t.name}</p>
-                <p className="mt-2 text-sm font-light text-muted-foreground">{t.detail}</p>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
-
       {/* Founder */}
+
       <section className="bg-secondary/70">
         <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
           <div className="grid items-center gap-14 md:grid-cols-2">
