@@ -59,27 +59,8 @@ const approach = [
   },
 ];
 
-// Placeholder testimonials — swap for real client quotes when ready.
-const testimonials = [
-  {
-    quote:
-      "Every detail was considered before we thought to ask. The hotel knew our names, the table was already held, and the week unfolded without a single loose end.",
-    name: "Private client",
-    detail: "Family travel, Amalfi Coast",
-  },
-  {
-    quote:
-      "We had twenty-two people across four days and it felt effortless. Amber's relationships turned a company off-site into something our team still talks about.",
-    name: "Leadership off-site",
-    detail: "Technology company, Mexico City",
-  },
-  {
-    quote:
-      "She understood the occasion before she recommended a single property. That's the difference — it never felt like a list of options, it felt like the right answer.",
-    name: "Milestone celebration",
-    detail: "Anniversary travel, Paris",
-  },
-];
+
+
 
 function Home() {
   return (
