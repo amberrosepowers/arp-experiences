@@ -76,11 +76,11 @@ function Home() {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-oxblood/75 via-walnut/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-12 md:px-12 md:pb-16">
-            <h1 className="fade-up max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
+          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-12 text-center md:px-12 md:pb-16">
+            <h1 className="fade-up mx-auto text-xl leading-[1.05] text-primary-foreground whitespace-nowrap sm:text-4xl md:text-5xl lg:text-6xl">
               Travel, thoughtfully experienced.
             </h1>
-            <p className="fade-up mt-6 max-w-2xl text-lg font-light leading-relaxed text-primary-foreground/85 md:text-xl">
+            <p className="fade-up mt-6 mx-auto max-w-2xl text-lg font-light leading-relaxed text-primary-foreground/85 md:text-xl">
               Exceptional places. Personal relationships. Experiences worth remembering.
             </p>
             <div className="fade-up mt-10">
@@ -94,9 +94,9 @@ function Home() {
 
       {/* Statement */}
       <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-36">
-        <p className="mx-auto max-w-4xl text-center font-display text-3xl leading-[1.35] md:text-5xl">
-          Where you go matters.
-          <span className="text-oxblood"> How you experience it matters more.</span>
+        <p className="text-center font-display text-3xl leading-[1.4] md:text-5xl">
+          <span className="block">Where you go matters.</span>
+          <span className="block text-oxblood">How you experience it matters more.</span>
         </p>
         <p className="mx-auto mt-10 max-w-2xl text-center text-lg font-light leading-relaxed text-muted-foreground">
           ARP Experiences is a relationship-led travel and hospitality company creating exceptional
@@ -159,13 +159,15 @@ function Home() {
       {/* Approach */}
       <section className="mt-28 bg-secondary/70">
         <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
-          <p className="eyebrow">Our approach</p>
-          <h2 className="mt-6 max-w-2xl text-4xl md:text-6xl">
-            We begin with the person, not the destination.
-          </h2>
-          <p className="mt-6 max-w-2xl font-display text-2xl leading-snug">
-            Understand the person, understand the purpose, know the place, and consider every detail.
-          </p>
+          <div className="text-center">
+            <p className="eyebrow">Our approach</p>
+            <h2 className="mx-auto mt-6 max-w-2xl text-4xl md:text-6xl">
+              We begin with the person, not the destination.
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl font-display text-2xl leading-snug">
+              Understand the person, understand the purpose, know the place, and consider every detail.
+            </p>
+          </div>
           <div className="mt-16 grid gap-x-14 gap-y-12 md:grid-cols-3">
             {approach.map((a) => (
               <div key={a.title} className="border-t border-border pt-6">

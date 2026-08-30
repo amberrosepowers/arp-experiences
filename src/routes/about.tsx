@@ -43,6 +43,7 @@ function About() {
   return (
     <>
       <PageHeader
+        centered
         eyebrow="About"
         title="Where travel, hospitality, and experience design come together."
         intro="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients."
