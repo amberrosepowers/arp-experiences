@@ -49,7 +49,17 @@ function About() {
         intro="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients."
       />
 
-      <Section className="!pt-0">
+      <section className="bg-secondary/70">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
+          <p className="eyebrow">Mission</p>
+          <p className="mx-auto mt-6 max-w-3xl font-display text-3xl leading-snug md:text-4xl">
+            To create exceptional travel and gathering experiences through deep relationships,
+            genuine hospitality, and a discerning understanding of people and place.
+          </p>
+        </div>
+      </section>
+
+      <Section>
         <div className="grid gap-14 md:grid-cols-2">
           <div className="space-y-4">
             <div className="mx-auto max-w-[300px] space-y-4">
@@ -95,15 +105,6 @@ function About() {
         </div>
       </Section>
 
-      <section className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
-          <p className="eyebrow">Mission</p>
-          <p className="mx-auto mt-6 max-w-3xl font-display text-3xl leading-snug md:text-4xl">
-            To create exceptional travel and gathering experiences through deep relationships,
-            genuine hospitality, and a discerning understanding of people and place.
-          </p>
-        </div>
-      </section>
 
 
       <Section className="!pt-0">
