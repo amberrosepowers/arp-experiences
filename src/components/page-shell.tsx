@@ -7,7 +7,7 @@ export function PageHeader({
   centered,
 }: {
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   intro?: string;
   centered?: boolean;
 }) {

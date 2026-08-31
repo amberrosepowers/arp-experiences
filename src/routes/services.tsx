@@ -99,7 +99,12 @@ function Services() {
       <PageHeader
         centered
         eyebrow="Services"
-        title="Exceptional places. Exceptional experiences."
+        title={
+          <>
+            <span className="block">Exceptional places.</span>
+            <span className="block">Exceptional experiences.</span>
+          </>
+        }
         intro="We specialize in private travel, group travel, retreats, destination weddings, celebrations, and hospitality experiences — rooted in relationships rather than transactions."
       />
 
@@ -139,35 +144,14 @@ function Services() {
         </Section>
       ))}
 
-      <section id="how-we-work" className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12">
-          <p className="eyebrow">How we work</p>
-          <h2 className="mt-6 max-w-2xl text-4xl md:text-5xl">
-            A few questions we're asked most often.
-          </h2>
-          <div className="mt-14 grid gap-x-16 gap-y-10 md:grid-cols-2">
-            {howWeWork.map((f) => (
-              <div key={f.q} className="border-t border-border pt-6">
-                <h3 className="text-2xl leading-snug">{f.q}</h3>
-                <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
-                  {f.a}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Section>
+      <Section className="!pt-0">
         <div className="text-center">
-          <h2 className="mx-auto max-w-2xl text-4xl leading-tight md:text-5xl">
-            Tell us about the person, the purpose, and the place.
-          </h2>
-          <Link to="/inquire" className="btn-arp mt-12">
+          <Link to="/inquire" className="btn-arp">
             Begin an inquiry
           </Link>
         </div>
       </Section>
+
     </>
   );
 }
