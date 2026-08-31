@@ -31,11 +31,6 @@ export function SiteFooter() {
                   Journal
                 </Link>
               </li>
-              <li>
-                <Link to="/services" hash="how-we-work" className="link-underline">
-                  How we work
-                </Link>
-              </li>
             </ul>
           </div>
 

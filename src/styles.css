@@ -39,7 +39,7 @@
   --color-parchment: var(--parchment);
   --color-sand: var(--sand);
   --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Jost", "Helvetica Neue", sans-serif;
+  --font-sans: "Archivo", "Helvetica Neue", sans-serif;
 }
 
 :root {
@@ -81,7 +81,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: -0.005em;
     -webkit-font-smoothing: antialiased;
   }
 
