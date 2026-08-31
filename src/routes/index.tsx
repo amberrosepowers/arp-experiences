@@ -75,15 +75,12 @@ function Home() {
             height={1920}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-oxblood/75 via-walnut/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-6 md:px-12 md:pb-8">
-            <h1 className="fade-up max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
+          <div className="absolute inset-0 bg-gradient-to-t from-walnut/70 via-walnut/25 to-transparent" />
+          <div className="absolute inset-x-0 top-[58%] mx-auto max-w-[1400px] px-6 md:px-12">
+            <h1 className="fade-up whitespace-nowrap text-[7vw] leading-none text-primary-foreground md:text-[4.6vw]">
               Travel, thoughtfully experienced.
             </h1>
-            <p className="fade-up mt-6 max-w-2xl text-base font-light leading-relaxed text-primary-foreground/85 md:text-lg">
-              Exceptional places. Personal relationships. Experiences worth remembering.
-            </p>
-            <div className="fade-up mt-10">
+            <div className="fade-up mt-8">
               <Link to="/inquire" className="btn-arp">
                 Inquire
               </Link>
