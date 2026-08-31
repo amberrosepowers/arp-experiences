@@ -76,11 +76,11 @@ function Home() {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-oxblood/75 via-walnut/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-12 text-center md:px-12 md:pb-16">
-            <h1 className="fade-up mx-auto text-xl leading-[1.05] text-primary-foreground whitespace-nowrap sm:text-4xl md:text-5xl lg:text-6xl">
+          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-6 md:px-12 md:pb-8">
+            <h1 className="fade-up max-w-3xl text-5xl leading-[1.02] text-primary-foreground md:text-8xl">
               Travel, thoughtfully experienced.
             </h1>
-            <p className="fade-up mt-6 mx-auto max-w-2xl text-lg font-light leading-relaxed text-primary-foreground/85 md:text-xl">
+            <p className="fade-up mt-6 max-w-2xl text-base font-light leading-relaxed text-primary-foreground/85 md:text-lg">
               Exceptional places. Personal relationships. Experiences worth remembering.
             </p>
             <div className="fade-up mt-10">
@@ -96,7 +96,7 @@ function Home() {
       <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-36">
         <p className="text-center font-display text-3xl leading-[1.4] md:text-5xl">
           <span className="block">Where you go matters.</span>
-          <span className="block text-oxblood">How you experience it matters more.</span>
+          <span className="block">How you experience it matters more.</span>
         </p>
         <p className="mx-auto mt-10 max-w-2xl text-center text-lg font-light leading-relaxed text-muted-foreground">
           ARP Experiences is a relationship-led travel and hospitality company creating exceptional
@@ -164,9 +164,6 @@ function Home() {
             <h2 className="mx-auto mt-6 max-w-2xl text-4xl md:text-6xl">
               We begin with the person, not the destination.
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl font-display text-2xl leading-snug">
-              Understand the person, understand the purpose, know the place, and consider every detail.
-            </p>
           </div>
           <div className="mt-16 grid gap-x-14 gap-y-12 md:grid-cols-3">
             {approach.map((a) => (
@@ -181,33 +178,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Founder */}
-
-      <section className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
-          <div className="grid items-center gap-14 md:grid-cols-2">
-            <img
-              src={founderPortrait}
-              alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
-              loading="lazy"
-              width={1440}
-              height={1920}
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <div>
-              <p className="eyebrow">The founder</p>
-              <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
-              <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
-                Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. She is highly relationship-driven and is passionate about guiding her clients to beautiful destinations, paired with incredible experiences. 
-              </p>
-              <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
-                Read her story
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-walnut text-primary-foreground">
         <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
@@ -218,6 +188,32 @@ function Home() {
           <Link to="/inquire" className="btn-arp-ghost mt-12">
             Begin an inquiry
           </Link>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="bg-secondary/70">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
+          <div className="grid items-center gap-14 md:grid-cols-2">
+            <img
+              src={founderPortrait}
+              alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
+              loading="lazy"
+              width={1440}
+              height={1920}
+              className="aspect-[4/5] w-full max-w-[300px] mx-auto object-cover"
+            />
+            <div>
+              <p className="eyebrow">The founder</p>
+              <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
+              <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
+                Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. She is highly relationship-driven and is passionate about guiding her clients to beautiful destinations, paired with incredible experiences. 
+              </p>
+              <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
+                Read her story
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

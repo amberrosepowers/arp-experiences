@@ -52,15 +52,17 @@ function About() {
       <Section className="!pt-0">
         <div className="grid gap-14 md:grid-cols-2">
           <div className="space-y-4">
-            <img
-              src={founderPortrait}
-              alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
-              loading="lazy"
-              width={933}
-              height={1400}
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <p className="eyebrow">Amber Rose Powers · Founder</p>
+            <div className="mx-auto max-w-[300px] space-y-4">
+              <img
+                src={founderPortrait}
+                alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
+                loading="lazy"
+                width={933}
+                height={1400}
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <p className="eyebrow">Amber Rose Powers · Founder</p>
+            </div>
           </div>
           <div className="space-y-6 text-base font-light leading-relaxed text-muted-foreground">
             <p className="font-display text-3xl leading-snug text-foreground">

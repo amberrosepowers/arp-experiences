@@ -143,7 +143,7 @@
   letter-spacing: 0.26em;
   text-transform: uppercase;
   border: 1px solid var(--walnut);
-  background: color-mix(in oklab, var(--walnut) 70%, transparent);
+  background: var(--walnut);
   color: var(--parchment);
   transition:
     background 0.4s ease,
