@@ -6,7 +6,6 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/faq", label: "FAQ" },
   { to: "/blog", label: "Journal" },
 ] as const;
 
@@ -33,7 +32,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link to="/inquire" className="btn-arp !px-7 !py-3">
-            Inquiry
+            Contact
           </Link>
         </nav>
 
@@ -48,7 +47,7 @@ export function SiteHeader() {
 
       {open && (
         <nav className="flex flex-col gap-5 border-t border-border px-6 py-8 md:hidden">
-          {[...nav, { to: "/inquire", label: "Inquiry" } as const].map((item) => (
+          {[...nav, { to: "/inquire", label: "Contact" } as const].map((item) => (
             <Link
               key={item.to}
               to={item.to}
