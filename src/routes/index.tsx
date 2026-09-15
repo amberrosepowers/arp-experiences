@@ -30,33 +30,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const approach = [
-  {
-    title: "Relationship-Led",
-    body: "Exceptional travel begins with understanding people. We build relationships with our clients, our hospitality partners, and the destinations we represent.",
-  },
-  {
-    title: "Hospitality-Rooted",
-    body: "We understand what makes people feel welcomed, cared for, and genuinely considered — because we have lived it from inside the industry.",
-  },
-  {
-    title: "Experience-Driven",
-    body: "We think about where you stay, where you gather, what you do, who you meet, and how it all comes together.",
-  },
-  {
-    title: "Well-Connected",
-    body: "Our relationships across hotels, destinations, and hospitality professionals bring insight, access, value, and a personal touch.",
-  },
-  {
-    title: "Personally Edited",
-    body: "We don't believe in overwhelming clients with endless options. We believe in knowing enough to recommend the right ones.",
-  },
-  {
-    title: "Detail-Oriented",
-    body: "The location, the atmosphere, the welcome, the room choice, the amenities, the F&B, the design, the hospitality — it all matters to us.",
-  },
-];
-
 const services = [
   {
     n: "01",
@@ -119,28 +92,6 @@ function Home() {
           travel and gathering experiences for discerning clients. We don't simply arrange travel.
           We create experiences around it.
         </p>
-      </section>
-
-      {/* Approach */}
-      <section className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
-          <div className="text-center">
-            <p className="eyebrow">Our approach</p>
-            <h2 className="mx-auto mt-6 max-w-2xl text-4xl md:text-6xl">
-              We begin with the person, not the destination.
-            </h2>
-          </div>
-          <div className="mt-16 grid gap-x-14 gap-y-12 md:grid-cols-3">
-            {approach.map((a) => (
-              <div key={a.title} className="border-t border-border pt-6">
-                <h3 className="eyebrow !text-foreground">{a.title}</h3>
-                <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
-                  {a.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Services */}

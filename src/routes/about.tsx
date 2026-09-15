@@ -4,6 +4,7 @@ import founderPortraitAsset from "@/assets/founder-portrait.jpg.asset.json";
 
 const founderPortrait = founderPortraitAsset.url;
 const closingImage = "/photos/about-closing-staircase.jpg";
+const approachImage = "/photos/about-approach-window-flowers.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -113,19 +114,31 @@ function About() {
       </section>
 
       <Section className="!pb-0">
-        <p className="eyebrow text-center">Our Approach</p>
-        <h2 className="mx-auto mt-6 max-w-2xl text-center text-4xl md:text-5xl">
-          We begin with the person, then design the experience.
-        </h2>
-        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {approach.map((a) => (
-            <div key={a.title} className="border-t border-border pt-6">
-              <h3 className="font-display text-2xl text-oxblood">{a.title}</h3>
-              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
-                {a.body}
-              </p>
+        <div className="grid items-start gap-14 md:grid-cols-2">
+          <img
+            src={approachImage}
+            alt="Fresh flowers on a desk beside a tall window"
+            loading="lazy"
+            width={900}
+            height={1125}
+            className="aspect-[4/5] w-full object-cover"
+          />
+          <div>
+            <p className="eyebrow">Our Approach</p>
+            <h2 className="mt-6 text-4xl md:text-5xl">
+              We begin with the person, then design the experience.
+            </h2>
+            <div className="mt-10 space-y-6">
+              {approach.map((a) => (
+                <div key={a.title} className="border-t border-border pt-5">
+                  <h3 className="font-display text-xl text-oxblood">{a.title}</h3>
+                  <p className="mt-2 text-sm font-light leading-relaxed text-muted-foreground">
+                    {a.body}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </Section>
 
@@ -151,25 +164,24 @@ function About() {
             <p>
               Amber is a hospitality and travel professional with more than two decades of
               experience across fashion, boutique hotels, experiential design, partnerships,
-              relationship management, and travel.
+              relationship management, and travel. Her career began in fashion, with a degree in
+              Apparel Design and experience spanning design, PR, sales, and brand relationships,
+              before she moved into real estate development and boutique hospitality — helping
+              launch Detroit Foundation Hotel and later serving as its Director of Lifestyle,
+              developing experiential programming and managing VIP relationships alongside a
+              Michelin-starred chef.
             </p>
-            <p>
-              Her career began in fashion, with a degree in Apparel Design and experience spanning
-              design, PR, sales, and brand relationships. She later moved into real estate
-              development and boutique hospitality, helping launch Detroit Foundation Hotel before
-              serving as its Director of Lifestyle, where she developed experiential programming,
-              managed local and global VIP relationships, and worked alongside a Michelin-starred
-              chef.
+            <p className="font-display text-xl italic leading-snug text-foreground">
+              She is highly relationship-driven and passionate about guiding her clients to
+              beautiful destinations, paired with incredible experiences.
             </p>
             <p>
               She subsequently joined Aparium Hotel Group headquarters in Chicago as Chief
               Relationship Officer, working across a portfolio of boutique hotels with a focus on
-              relationships, partnerships, culture, and lifestyle-driven initiatives.
-            </p>
-            <p>
-              In 2022, Amber brought that hospitality perspective into travel advising, developing a
-              deep network of industry relationships and firsthand knowledge of the hotels,
-              destinations, and partners that create exceptional guest experiences.
+              relationships, partnerships, culture, and lifestyle-driven initiatives. In 2022, Amber
+              brought that hospitality perspective into travel advising, developing a deep network
+              of industry relationships and firsthand knowledge of the hotels, destinations, and
+              partners that create exceptional guest experiences.
             </p>
           </div>
         </div>
