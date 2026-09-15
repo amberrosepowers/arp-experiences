@@ -300,7 +300,7 @@ function Inquire() {
                       <option>Full Itinerary Planning with Concierge</option>
                       <option>Group Booking or Experience</option>
                       <option>Cruise</option>
-                      <option>A La Carte Offerings</option>
+                      <option>A La Carte Bookings</option>
                     </select>
                   </div>
                 </div>
