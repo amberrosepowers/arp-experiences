@@ -5,7 +5,7 @@ const heroPlaceholder = "/photos/hero-balzac-lobby.jpg";
 const founderPortrait = founderAsset.url;
 
 const cardHotel = "/photos/offering-hotel-seafront-room.jpg";
-const cardItinerary = "/photos/offering-itinerary-colonnade.jpg";
+const cardItinerary = "/photos/card-itinerary-bar.jpg";
 const cardGroup = "/photos/service-gatherings-dining.jpg";
 const cardALaCarte = "/photos/service-travel-malta.jpg";
 
@@ -34,21 +34,21 @@ const services = [
   {
     n: "01",
     label: "Hotel Only Booking",
-    body: "A personal introduction to the property before you arrive, plus preferred partner perks — daily breakfast, room upgrades, early check-in, and resort credit where available. Complimentary.",
+    body: "The Hotel will be privy to your arrival through our personal relationships, plus preferred partner perks added — daily breakfast, room upgrades, early check-in, and resort credit, where available.",
     to: "hotel-only-bookings",
     img: cardHotel,
   },
   {
     n: "02",
     label: "Itinerary Planning",
-    body: "From accommodations and transportation to dining, spa, and concierge-level details — planned around how you want the trip to feel.",
+    body: "From accommodations, transportation and tours to dining, spa, and concierge-level details — itineraries planned intentionally around how you want the trip to feel.",
     to: "essential-itinerary-planning",
     img: cardItinerary,
   },
   {
     n: "03",
     label: "Group Bookings",
-    body: "Room blocks, rate negotiation, and on-the-ground logistics sourced and negotiated on your behalf for weddings, retreats, and corporate gatherings.",
+    body: "Let us help guide your gathering. From room blocks & rate negotiation, to meeting spaces & concessions, sourced and negotiated on your behalf for off-sites, weddings, retreats, and corporate gatherings.",
     to: "group-bookings-experiences",
     img: cardGroup,
   },
