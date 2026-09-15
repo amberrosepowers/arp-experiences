@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import founderAsset from "@/assets/founder-portrait.jpg.asset.json";
 
-const heroPlaceholder = "/photos/hero-dining-room.jpg";
+const heroPlaceholder = "/photos/hero-balzac-lobby.jpg";
 const founderPortrait = founderAsset.url;
 
 export const Route = createFileRoute("/")({
@@ -60,7 +60,7 @@ function Home() {
         <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
           <img
             src={heroPlaceholder}
-            alt="Warm dining room with painted sky ceiling and gilded palm lamps"
+            alt="Wood-paneled hotel lobby with black-and-white checkerboard marble floor"
             width={1440}
             height={1920}
             className="h-full w-full object-cover"
