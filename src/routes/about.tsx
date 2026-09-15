@@ -56,30 +56,28 @@ const approach = [
 ];
 
 const partners = [
-  "The Peninsula — PenClub",
-  "Rosewood — Elite",
-  "Marriott — STARS",
-  "Hilton for Luxury",
-  "Virtuoso",
-  "Shangri-La Hotels & Resorts",
-  "Rocco Forte — Knights",
-  "Relais & Châteaux",
-  "Preferred Hotels & Resorts",
-  "Oetker Hotels — Masterpiece Collection",
-  "Maybourne — Illustrated",
-  "Luminous",
+  "Aman",
+  "Auberge Collection",
+  "Belmond — Bellini Club",
   "Dorchester Collection — Diamond Club",
   "Four Seasons — Preferred Partner",
+  "Hilton for Luxury",
   "Hyatt Privé",
-  "Belmond — Bellini Club",
-  "Mandarin Oriental — Fan Club",
-  "The Leading Hotels of the World",
-  "Langham — Couture",
   "IHG Destined",
-  "Waldorf Astoria Hotels & Residences",
-  "Aman",
+  "Mandarin Oriental — Fan Club",
+  "Marriott — STARS & Luminous",
+  "Maybourne — Illustrated",
+  "Oetker Hotels — Masterpiece Collection",
   "One&Only",
-  "Auberge Collection",
+  "Preferred Hotels & Resorts",
+  "Relais & Châteaux",
+  "Rocco Forte — Knights",
+  "Rosewood — Elite",
+  "Shangri-La Hotels & Resorts",
+  "The Leading Hotels of the World",
+  "The Peninsula — PenClub",
+  "Virtuoso",
+  "Waldorf Astoria Hotels & Residences",
 ];
 
 function About() {
@@ -87,8 +85,8 @@ function About() {
     <>
       <PageHeader
         centered
-        eyebrow="Mission"
-        title="To create exceptional travel and gathering experiences through deep relationships, genuine hospitality, and a discerning understanding of people and place."
+        eyebrow="About"
+        title="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients. We don't simply arrange travel. We create experiences around it."
       />
 
       <Section className="!pb-0">
@@ -177,24 +175,28 @@ function About() {
             <p>
               Amber is a hospitality and travel professional with more than two decades of
               experience across fashion, boutique hotels, experiential design, partnerships,
-              relationship management, and travel. Her career began in fashion, with a degree in
-              Apparel Design and experience spanning design, PR, sales, and brand relationships,
-              before she moved into real estate development and boutique hospitality — helping
-              launch Detroit Foundation Hotel and later serving as its Director of Lifestyle,
-              developing experiential programming and managing VIP relationships alongside a
-              Michelin-starred chef.
+              relationship management, and travel.
             </p>
-            <p className="font-display text-xl italic leading-snug text-foreground">
-              She is highly relationship-driven and passionate about guiding her clients to
-              beautiful destinations, paired with incredible experiences.
+            <p>
+              Her career began in fashion, with a degree in Apparel Design and experience spanning
+              design, PR, sales, and brand relationships, before she moved into real estate
+              development and boutique hospitality — helping launch Detroit Foundation Hotel and
+              later serving as its Director of Lifestyle, developing experiential programming and
+              managing VIP relationships alongside a Michelin-starred chef.
             </p>
             <p>
               She subsequently joined Aparium Hotel Group headquarters in Chicago as Chief
               Relationship Officer, working across a portfolio of boutique hotels with a focus on
-              relationships, partnerships, culture, and lifestyle-driven initiatives. In 2022, Amber
-              brought that hospitality perspective into travel advising, developing a deep network
-              of industry relationships and firsthand knowledge of the hotels, destinations, and
-              partners that create exceptional guest experiences.
+              relationships, partnerships, culture, and lifestyle-driven initiatives.
+            </p>
+            <p>
+              In 2022, Amber brought that hospitality perspective into travel advising, developing a
+              deep network of industry relationships and firsthand knowledge of the hotels,
+              destinations, and partners that create exceptional guest experiences.
+            </p>
+            <p className="font-display text-xl italic leading-snug text-foreground">
+              She is highly relationship-driven and passionate about guiding her clients into the
+              best possible travel experiences &amp; gatherings.
             </p>
           </div>
         </div>
