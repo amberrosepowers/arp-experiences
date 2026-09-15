@@ -13,7 +13,7 @@ import { submitInquiry } from "@/lib/inquiries.functions";
 
 const inquireImage = "/photos/inquire-st-tropez-alley.jpg";
 const processImage = "/photos/inquire-seine-bridge-dusk.jpg";
-const faqImage = "/photos/offering-alacarte-drawing-room.jpg";
+const faqImage = "/photos/inquire-faq-grand-pool.jpg";
 
 export const Route = createFileRoute("/inquire")({
   validateSearch: (search: Record<string, unknown>): { type?: string | undefined } => ({
@@ -799,7 +799,7 @@ function Inquire() {
           </div>
           <img
             src={faqImage}
-            alt="Grand drawing room with crystal chandelier and gilded mirror"
+            alt="Grand skylit indoor pool with chaise loungers"
             loading="lazy"
             width={900}
             height={1125}

@@ -106,7 +106,7 @@ function About() {
           <div>
             <p className="eyebrow">Our Approach</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
-              We begin with the person, then the experience.
+              We begin with the person, then build the experience.
             </h2>
             <div className="mt-10 space-y-6">
               {approach.map((a) => (

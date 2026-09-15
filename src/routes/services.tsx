@@ -145,7 +145,7 @@ const offerings: Offering[] = [
           "VIP hotel booking perks where applicable",
           "Booking and management of tours, activities, and immersive experiences",
           "Ground transportation — private transfers, drivers, trains, ferries, and rental vehicles",
-          "Concierge-level restaurant and cocktail reservations, Spa appointments and wellness experiences, Golf tee times",
+          "Concierge-level restaurant reservations, Spa & wellness experiences, Golf tee times, etc",
           "A beautifully organized digital itinerary with confirmations and essential travel documents",
           "Breakdown of entry requirements",
           "Access to our trusted local partners throughout your time away",
@@ -172,7 +172,7 @@ const offerings: Offering[] = [
           "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, retreats, and milestone celebrations.",
         ],
         items: [
-          "Guidance choosing your accommodations",
+          "Guidance choosing your Hotel or Venue",
           "Room category and rate negotiations",
           "Meeting space and F&B minimum negotiation",
           "Corporate and executive retreats",

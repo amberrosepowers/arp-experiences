@@ -41,7 +41,7 @@ const services = [
   {
     n: "02",
     label: "Itinerary Planning",
-    body: "From accommodations and ground transportation to dining reservations, spa appointments, and concierge-level details — planned around how you want the trip to feel, from the essentials to fully personalized.",
+    body: "From accommodations and transportation to dining, spa, and concierge-level details — planned around how you want the trip to feel.",
     to: "essential-itinerary-planning",
     img: cardItinerary,
   },
@@ -94,6 +94,9 @@ function Home() {
           <p className="mx-auto mt-10 max-w-4xl font-display text-2xl leading-tight md:text-4xl">
             Travel, thoughtfully experienced.
           </p>
+          <Link to="/inquire" className="btn-arp-ghost mt-10">
+            Inquire
+          </Link>
         </div>
       </section>
 
