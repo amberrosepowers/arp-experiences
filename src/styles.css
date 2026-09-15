@@ -156,6 +156,27 @@
   }
 }
 
+@utility btn-arp-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 2.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  border: 1px solid var(--walnut);
+  background: transparent;
+  color: var(--walnut);
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+  &:hover {
+    background: var(--walnut);
+    color: var(--parchment);
+  }
+}
+
 @utility btn-arp-ghost {
   display: inline-flex;
   align-items: center;
