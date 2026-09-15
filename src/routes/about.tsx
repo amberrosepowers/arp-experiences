@@ -170,6 +170,23 @@ function About() {
               relationship management, and travel. She is highly relationship-driven and is
               passionate about helping others to experience travel and gather well.
             </p>
+            <p>
+              Her career began in fashion, with a degree in Apparel Design and experience spanning
+              design, PR, sales, and brand relationships, before she moved into real estate
+              development and boutique hospitality — helping launch Detroit Foundation Hotel and
+              later serving as its Director of Lifestyle, developing experiential programming and
+              managing VIP relationships alongside a Michelin-starred chef.
+            </p>
+            <p>
+              She subsequently joined Aparium Hotel Group headquarters in Chicago as Chief
+              Relationship Officer, working across a portfolio of boutique hotels with a focus on
+              relationships, partnerships, culture, and lifestyle-driven initiatives.
+            </p>
+            <p>
+              In 2022, Amber brought that hospitality perspective into travel advising, developing a
+              deep network of industry relationships and firsthand knowledge of the hotels,
+              destinations, and partners that create exceptional guest experiences.
+            </p>
           </div>
           <div className="space-y-4">
             <img

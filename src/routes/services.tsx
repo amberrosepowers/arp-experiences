@@ -238,6 +238,7 @@ const offerings: Offering[] = [
           "Travel consultation session",
           "Special experiences and celebrations",
           "Other custom travel arrangements",
+          "Ticketing & special access to sporting events (F1, Wimbledon, The Masters), The Olympics, concerts and much more",
         ],
         investment: "Varies by scope",
         finenote: "Fees may apply depending on the request and scope of planning needed.",
@@ -373,7 +374,7 @@ function Services() {
         centered
         eyebrow="Services"
         title="Work with Us"
-        intro="From a single, complimentary hotel booking to a fully planned itinerary with concierge — each service is designed around your preferences and how you want travel to be experienced."
+        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge — each service is designed around your preferences and how you want travel to be experienced."
         introClassName="max-w-4xl"
       />
 
