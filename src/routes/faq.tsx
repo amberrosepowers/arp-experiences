@@ -59,11 +59,7 @@ const faqs = [
 function Faq() {
   return (
     <>
-      <PageHeader
-        eyebrow="FAQ"
-        title="Frequently Asked Questions"
-        intro="A few things clients often ask before their first conversation with us."
-      />
+      <PageHeader eyebrow="FAQ" title="Frequently Asked Questions" />
 
       <Section className="!pt-0">
         <div className="max-w-3xl">

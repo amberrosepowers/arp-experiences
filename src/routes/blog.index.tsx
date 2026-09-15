@@ -32,34 +32,53 @@ function BlogIndex() {
       />
 
       <Section className="!pt-0">
-        <div className="mx-auto max-w-4xl text-center">
-          {posts.map((post) => (
-            <article key={post.slug} className="border-t border-border py-12">
-              <div className="flex flex-wrap items-center justify-center gap-6">
-                <span className="eyebrow">{post.category}</span>
-                <span className="text-xs font-light tracking-wide text-muted-foreground">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </span>
-              </div>
-              <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
-                <Link to="/blog/$slug" params={{ slug: post.slug }} className="link-underline">
-                  {post.title}
-                </Link>
-              </h2>
-              <p className="mx-auto mt-5 max-w-2xl text-base font-light leading-relaxed text-muted-foreground">
-                {post.excerpt}
-              </p>
+        <div className="mx-auto max-w-5xl">
+          {posts.map((post, i) => (
+            <article
+              key={post.slug}
+              className="grid items-center gap-10 border-t border-border py-14 first:pt-0 md:grid-cols-[0.9fr_1.1fr] md:gap-14"
+            >
               <Link
                 to="/blog/$slug"
                 params={{ slug: post.slug }}
-                className="eyebrow link-underline mt-8 inline-block"
+                className={`block overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}
               >
-                Read
+                <img
+                  src={post.image}
+                  alt={post.imageAlt}
+                  loading="lazy"
+                  width={800}
+                  height={1000}
+                  className="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.04]"
+                />
               </Link>
+              <div className={i % 2 === 1 ? "md:order-1" : ""}>
+                <div className="flex flex-wrap items-center gap-6">
+                  <span className="eyebrow">{post.category}</span>
+                  <span className="text-xs font-light tracking-wide text-muted-foreground">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
+                <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
+                  <Link to="/blog/$slug" params={{ slug: post.slug }} className="link-underline">
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="mt-5 max-w-xl text-base font-light leading-relaxed text-muted-foreground">
+                  {post.excerpt}
+                </p>
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: post.slug }}
+                  className="eyebrow link-underline mt-8 inline-block"
+                >
+                  Read
+                </Link>
+              </div>
             </article>
           ))}
         </div>

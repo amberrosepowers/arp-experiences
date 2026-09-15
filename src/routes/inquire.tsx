@@ -42,6 +42,44 @@ const timing = [
   },
 ];
 
+const process = [
+  {
+    n: "01",
+    title: "Inquire",
+    body: "Complete our inquiry form and schedule your complimentary consultation — by phone or video, whichever feels most natural.",
+  },
+  {
+    n: "02",
+    title: "Connect",
+    body: "We'll get to know each other, talk through your vision, and determine how ARP Experiences can best support your trip.",
+  },
+  {
+    n: "03",
+    title: "Formalize",
+    body: "Hotel, villa, and cruise bookings are complimentary. For research, a $150 credit card guarantee applies, charged only if you choose not to book through ARP Experiences. For itinerary and group planning, a contract is signed and the planning fee is settled before work begins.",
+  },
+  {
+    n: "04",
+    title: "Propose",
+    body: "Hotel, villa, and cruise recommendations are typically delivered within a week or less. Custom itinerary and group proposals are typically delivered within two weeks, depending on complexity.",
+  },
+  {
+    n: "05",
+    title: "Refine & Confirm",
+    body: "We'll walk through the details together, refine as needed, and bring everything into place.",
+  },
+  {
+    n: "06",
+    title: "Arrive with Everything in Place",
+    body: "Prior to departure, you'll receive your digital itinerary with confirmations, essential documents, and everything you need for what's ahead.",
+  },
+  {
+    n: "07",
+    title: "Return & Debrief",
+    body: "After you return, we'll reach out to hear how it went. Your feedback becomes part of the relationship, helping every trip that follows feel more personal than the last.",
+  },
+];
+
 const accommodationTypes = [
   "Luxury & exclusive",
   "Boutique & charming",
@@ -262,7 +300,7 @@ function Inquire() {
                       <option>Full Itinerary Planning with Concierge</option>
                       <option>Group Booking or Experience</option>
                       <option>Cruise</option>
-                      <option>Not sure yet</option>
+                      <option>A La Carte Offerings</option>
                     </select>
                   </div>
                 </div>
@@ -658,12 +696,10 @@ function Inquire() {
             <div className="rule-thin" />
             <div>
               <p className="eyebrow">What happens next</p>
-              <ol className="mt-5 space-y-4 text-sm font-light leading-relaxed text-muted-foreground">
-                <li>01 — We review your inquiry and respond personally.</li>
-                <li>02 — A conversation about the person, purpose, and place.</li>
-                <li>03 — A considered set of recommendations, not endless options.</li>
-                <li>04 — We handle the details, the partners, and the arrival.</li>
-              </ol>
+              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
+                We review your inquiry, then schedule a conversation about the person, the purpose,
+                and the place. See the full process below.
+              </p>
             </div>
             <div className="rule-thin" />
             <div className="space-y-8">
@@ -677,6 +713,30 @@ function Inquire() {
               ))}
             </div>
           </aside>
+        </div>
+      </Section>
+
+      <Section className="!pt-0">
+        <div className="border-t border-border pt-16">
+          <div className="max-w-2xl">
+            <p className="eyebrow">The ARP Process</p>
+            <h2 className="mt-6 text-4xl md:text-5xl">
+              From first hello to a trip well-remembered.
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-x-14 gap-y-10 md:grid-cols-2">
+            {process.map((p) => (
+              <div key={p.title} className="flex gap-6 border-t border-border pt-6">
+                <p className="font-display text-2xl text-brass">{p.n}</p>
+                <div>
+                  <h3 className="text-xl">{p.title}</h3>
+                  <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
+                    {p.body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
     </>

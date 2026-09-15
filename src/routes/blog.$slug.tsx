@@ -54,6 +54,14 @@ function PostPage() {
           year: "numeric",
         })}
       </p>
+      <img
+        src={post.image}
+        alt={post.imageAlt}
+        loading="lazy"
+        width={1200}
+        height={800}
+        className="mt-10 aspect-[3/2] w-full object-cover"
+      />
       <div className="mt-12 space-y-7 text-lg font-light leading-relaxed text-muted-foreground">
         {post.body.map((p) => (
           <p key={p.slice(0, 24)}>{p}</p>

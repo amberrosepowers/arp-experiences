@@ -4,6 +4,11 @@ import founderAsset from "@/assets/founder-portrait.jpg.asset.json";
 const heroPlaceholder = "/photos/hero-balzac-lobby.jpg";
 const founderPortrait = founderAsset.url;
 
+const cardHotel = "/photos/offering-hotel-seafront-room.jpg";
+const cardItinerary = "/photos/offering-itinerary-colonnade.jpg";
+const cardGroup = "/photos/service-gatherings-dining.jpg";
+const cardALaCarte = "/photos/service-travel-malta.jpg";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -36,11 +41,11 @@ const approach = [
   },
   {
     title: "Experience-Driven",
-    body: "The hotel is only part of it. We think about where you stay, where you gather, what you do, who you meet, and how it all comes together.",
+    body: "We think about where you stay, where you gather, what you do, who you meet, and how it all comes together.",
   },
   {
     title: "Well-Connected",
-    body: "Relationships across hotels, destinations, and hospitality professionals bring insight, access, and value to every trip.",
+    body: "Our relationships across hotels, destinations, and hospitality professionals bring insight, access, value, and a personal touch.",
   },
   {
     title: "Personally Edited",
@@ -48,7 +53,38 @@ const approach = [
   },
   {
     title: "Detail-Oriented",
-    body: "The room, the table, the timing, the welcome, the connection, the experience waiting when you arrive.",
+    body: "The location, the atmosphere, the welcome, the room choice, the amenities, the F&B, the design, the hospitality — it all matters to us.",
+  },
+];
+
+const services = [
+  {
+    n: "01",
+    label: "Hotel Only Booking",
+    body: "Preferred rates and VIP perks, with a personal relationship connected to the property. Complimentary.",
+    to: "hotel-only-bookings",
+    img: cardHotel,
+  },
+  {
+    n: "02",
+    label: "Itinerary Planning",
+    body: "From the essentials to full concierge service, planned around how you want the trip to feel.",
+    to: "essential-itinerary-planning",
+    img: cardItinerary,
+  },
+  {
+    n: "03",
+    label: "Group Bookings",
+    body: "Room blocks, rate negotiation, and logistics for weddings, retreats, and corporate gatherings.",
+    to: "group-bookings-experiences",
+    img: cardGroup,
+  },
+  {
+    n: "04",
+    label: "A La Carte",
+    body: "Cruises, flights, villas, yachts, and concierge services — arranged whenever you need them.",
+    to: "cruise-bookings",
+    img: cardALaCarte,
   },
 ];
 
@@ -57,7 +93,7 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative">
-        <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
+        <div className="relative h-[62vh] min-h-[420px] w-full overflow-hidden">
           <img
             src={heroPlaceholder}
             alt="Wood-paneled hotel lobby with black-and-white checkerboard marble floor"
@@ -65,12 +101,9 @@ function Home() {
             height={1920}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-walnut/70 via-walnut/25 to-transparent" />
-          <div className="absolute inset-x-0 top-[58%] mx-auto max-w-[1400px] px-6 md:px-12">
-            <h1 className="fade-up whitespace-nowrap text-[7vw] leading-none text-primary-foreground md:text-[4.6vw]">
-              Travel, thoughtfully experienced.
-            </h1>
-            <div className="fade-up mt-8">
+          <div className="absolute inset-0 bg-gradient-to-t from-walnut/70 via-walnut/15 to-transparent" />
+          <div className="absolute inset-x-0 bottom-10 mx-auto max-w-[1400px] px-6 md:px-12">
+            <div className="fade-up">
               <Link to="/inquire" className="btn-arp">
                 Inquire
               </Link>
@@ -80,74 +113,21 @@ function Home() {
       </section>
 
       {/* Statement */}
-      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-36">
-        <p className="text-center font-display text-3xl leading-[1.4] md:text-5xl">
+      <section className="mx-auto max-w-[1400px] px-6 pb-16 pt-14 md:px-12 md:pb-20 md:pt-16">
+        <h1 className="text-center font-display text-3xl leading-[1.3] md:text-5xl">
           <span className="block">Where you go matters.</span>
           <span className="block">How you experience it matters more.</span>
-        </p>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-lg font-light leading-relaxed text-muted-foreground">
+          <span className="block">Travel, thoughtfully experienced.</span>
+        </h1>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-lg font-light leading-relaxed text-muted-foreground">
           ARP Experiences is a relationship-led travel and hospitality company creating exceptional
           travel and gathering experiences for discerning clients. We don't simply arrange travel.
           We create experiences around it.
         </p>
       </section>
 
-      {/* Services */}
-      <section className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="max-w-2xl">
-          <p className="eyebrow">What we do</p>
-          <h2 className="mt-6 text-4xl md:text-5xl">Four ways we take care of a trip.</h2>
-        </div>
-        <div className="mt-16 grid gap-x-10 gap-y-14 sm:grid-cols-2">
-          {[
-            {
-              n: "01",
-              label: "Hotel Only Booking",
-              body: "Preferred rates and VIP perks, with a personal introduction to every property. Complimentary.",
-              to: "hotel-only-bookings",
-            },
-            {
-              n: "02",
-              label: "Itinerary Planning",
-              body: "From the essentials to full concierge service, planned around how you want the trip to feel.",
-              to: "essential-itinerary-planning",
-            },
-            {
-              n: "03",
-              label: "Group Bookings",
-              body: "Room blocks, rate negotiation, and logistics for weddings, retreats, and corporate gatherings.",
-              to: "group-bookings-experiences",
-            },
-            {
-              n: "04",
-              label: "A La Carte",
-              body: "Cruises, flights, villas, and yachts — arranged whenever you need them.",
-              to: "cruise-bookings",
-            },
-          ].map((s) => (
-            <Link
-              key={s.label}
-              to="/services"
-              hash={s.to}
-              className="group block border-t border-border pt-6"
-            >
-              <p className="font-display text-2xl text-brass">{s.n}</p>
-              <h3 className="link-underline mt-3 inline-block text-2xl">{s.label}</h3>
-              <p className="mt-4 max-w-sm text-sm font-light leading-relaxed text-muted-foreground">
-                {s.body}
-              </p>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-14">
-          <Link to="/services" className="eyebrow link-underline">
-            All services
-          </Link>
-        </div>
-      </section>
-
       {/* Approach */}
-      <section className="mt-28 bg-secondary/70">
+      <section className="bg-secondary/70">
         <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
           <div className="text-center">
             <p className="eyebrow">Our approach</p>
@@ -165,6 +145,36 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
+        <div className="grid gap-x-10 gap-y-14 sm:grid-cols-2">
+          {services.map((s) => (
+            <Link key={s.label} to="/services" hash={s.to} className="group block">
+              <div className="overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.label}
+                  loading="lazy"
+                  width={900}
+                  height={1125}
+                  className="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                />
+              </div>
+              <p className="mt-6 font-display text-2xl text-brass">{s.n}</p>
+              <h3 className="link-underline mt-2 inline-block text-2xl">{s.label}</h3>
+              <p className="mt-4 max-w-sm text-sm font-light leading-relaxed text-muted-foreground">
+                {s.body}
+              </p>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-14">
+          <Link to="/services" className="eyebrow link-underline">
+            All services
+          </Link>
         </div>
       </section>
 
