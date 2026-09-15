@@ -5,7 +5,7 @@ const heroPlaceholder = "/photos/hero-balzac-lobby.jpg";
 const founderPortrait = founderAsset.url;
 
 const cardHotel = "/photos/offering-hotel-seafront-room.jpg";
-const cardItinerary = "/photos/card-itinerary-bar.jpg";
+const cardItinerary = "/photos/offering-itinerary-colonnade.jpg";
 const cardGroup = "/photos/service-gatherings-dining.jpg";
 const cardALaCarte = "/photos/service-travel-malta.jpg";
 

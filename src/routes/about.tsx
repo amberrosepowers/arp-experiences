@@ -88,7 +88,6 @@ function About() {
         centered
         eyebrow="About"
         title="Travel, thoughtfully experienced."
-        titleClassName="w-fit whitespace-nowrap !text-[clamp(1.5rem,6vw,4.5rem)] max-w-none"
         intro="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients. We don't simply arrange travel. We create experiences around it."
         introClassName="max-w-4xl"
       />

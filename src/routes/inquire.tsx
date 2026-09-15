@@ -12,7 +12,7 @@ import {
 import { submitInquiry } from "@/lib/inquiries.functions";
 
 const inquireImage = "/photos/inquire-st-tropez-alley.jpg";
-const processImage = "/photos/inquire-seine-bridge-dusk.jpg";
+const processImage = "/photos/card-itinerary-bar.jpg";
 const faqImage = "/photos/blog-fewer-options-spa.jpg";
 
 export const Route = createFileRoute("/inquire")({
@@ -756,7 +756,7 @@ function Inquire() {
           <div className="mt-14 grid gap-14 md:grid-cols-[1fr_1.2fr] md:items-start">
             <img
               src={processImage}
-              alt="Stone bridge over the Seine at blue hour"
+              alt="Warm walnut cocktail bar with backlit glass shelving"
               loading="lazy"
               width={900}
               height={1125}
