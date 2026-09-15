@@ -133,7 +133,7 @@ const offerings: Offering[] = [
       {
         title: "Full Itinerary Planning with Concierge Services",
         num: "04",
-        inquireType: "Full Itinerary Planning with Concierge",
+        inquireType: "Full Itinerary Planning",
         inquireLabel: "Inquire about Full Itinerary",
         lede: "For travelers who want more than just the essentials — every detail of your travel, planned strategically and intentionally for you.",
         paragraphs: [
@@ -172,7 +172,7 @@ const offerings: Offering[] = [
           "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, retreats, and milestone celebrations.",
         ],
         items: [
-          "Guidance choosing the right accommodation",
+          "Guidance choosing your accommodations",
           "Room category and rate negotiations",
           "Meeting space and F&B minimum negotiation",
           "Corporate and executive retreats",
@@ -238,7 +238,7 @@ const offerings: Offering[] = [
           "Travel consultation session",
           "Special experiences and celebrations",
           "Other custom travel arrangements",
-          "Ticketing & special access to sporting events (F1, Wimbledon, The Masters), The Olympics, concerts and much more",
+          "Tickets & exclusive access to sporting events, concerts and more",
         ],
         investment: "Varies by scope",
         finenote: "Fees may apply depending on the request and scope of planning needed.",
@@ -246,6 +246,11 @@ const offerings: Offering[] = [
     ],
   },
 ];
+
+function splitInHalf<T>(items: T[]): [T[], T[]] {
+  const mid = Math.ceil(items.length / 2);
+  return [items.slice(0, mid), items.slice(mid)];
+}
 
 function BlockContent({ block }: { block: Block }) {
   return (
@@ -281,16 +286,20 @@ function BlockContent({ block }: { block: Block }) {
       ))}
 
       {block.items && (
-        <ul className="mt-8 grid max-w-xl gap-y-3 sm:grid-cols-2">
-          {block.items.map((item) => (
-            <li
-              key={item}
-              className="border-b border-border pb-3 pr-4 text-sm font-light leading-snug tracking-wide"
-            >
-              {item}
-            </li>
+        <div className="mt-8 grid max-w-xl gap-x-8 sm:grid-cols-2">
+          {splitInHalf(block.items).map((column, i) => (
+            <ul key={i} className="space-y-3">
+              {column.map((item) => (
+                <li
+                  key={item}
+                  className="border-b border-border pb-3 pr-4 text-sm font-light leading-snug tracking-wide"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           ))}
-        </ul>
+        </div>
       )}
 
       <p className="mt-8 text-sm font-light text-muted-foreground">
@@ -373,8 +382,8 @@ function Services() {
       <PageHeader
         centered
         eyebrow="Services"
-        title="Work with Us"
-        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge — each service is designed around your preferences and how you want travel to be experienced."
+        title="Work with Us."
+        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge — each service is designed around your preferences and how you want your travel to be experienced."
         introClassName="max-w-4xl"
       />
 

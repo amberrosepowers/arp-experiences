@@ -88,6 +88,7 @@ function About() {
         centered
         eyebrow="About"
         title="Travel, thoughtfully experienced."
+        titleClassName="w-fit whitespace-nowrap !text-[clamp(1.5rem,6vw,4.5rem)] max-w-none"
         intro="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients. We don't simply arrange travel. We create experiences around it."
         introClassName="max-w-4xl"
       />
@@ -167,8 +168,7 @@ function About() {
             <p>
               Amber is a hospitality and travel professional with more than two decades of
               experience across fashion, boutique hotels, experiential design, partnerships,
-              relationship management, and travel. She is highly relationship-driven and is
-              passionate about helping others to experience travel and gather well.
+              relationship management, and travel.
             </p>
             <p>
               Her career began in fashion, with a degree in Apparel Design and experience spanning
@@ -186,6 +186,10 @@ function About() {
               In 2022, Amber brought that hospitality perspective into travel advising, developing a
               deep network of industry relationships and firsthand knowledge of the hotels,
               destinations, and partners that create exceptional guest experiences.
+            </p>
+            <p className="font-display text-xl italic leading-snug text-foreground">
+              She is highly relationship-driven and is passionate about helping others to experience
+              travel and gather well.
             </p>
           </div>
           <div className="space-y-4">

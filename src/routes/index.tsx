@@ -34,28 +34,28 @@ const services = [
   {
     n: "01",
     label: "Hotel Only Booking",
-    body: "Preferred rates and VIP perks, with a personal relationship connected to the property. Complimentary.",
+    body: "A personal introduction to the property before you arrive, plus preferred partner perks — daily breakfast, room upgrades, early check-in, and resort credit where available. Complimentary.",
     to: "hotel-only-bookings",
     img: cardHotel,
   },
   {
     n: "02",
     label: "Itinerary Planning",
-    body: "From the essentials to full concierge service, planned around how you want the trip to feel.",
+    body: "From accommodations and ground transportation to dining reservations, spa appointments, and concierge-level details — planned around how you want the trip to feel, from the essentials to fully personalized.",
     to: "essential-itinerary-planning",
     img: cardItinerary,
   },
   {
     n: "03",
     label: "Group Bookings",
-    body: "Room blocks, rate negotiation, and logistics for weddings, retreats, and corporate gatherings.",
+    body: "Room blocks, rate negotiation, and on-the-ground logistics sourced and negotiated on your behalf for weddings, retreats, and corporate gatherings.",
     to: "group-bookings-experiences",
     img: cardGroup,
   },
   {
     n: "04",
     label: "A La Carte Services",
-    body: "Cruises, flights, villas, yachts, and concierge services — arranged whenever you need them.",
+    body: "Cruises, flights, villas, yacht charters, and private aviation — plus tickets to hard-to-get events — arranged whenever you need them.",
     to: "cruise-bookings",
     img: cardALaCarte,
   },
@@ -84,7 +84,7 @@ function Home() {
       <section className="bg-walnut text-primary-foreground">
         <div className="mx-auto max-w-[1400px] px-6 py-16 text-center md:px-12 md:py-20">
           <h1 className="mx-auto max-w-4xl text-3xl leading-tight md:text-5xl">
-            Where travel, hospitality, and experience design come together.
+            Where travel, hospitality, and experience design align.
           </h1>
           <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-relaxed !text-primary-foreground/80 md:text-lg">
             ARP Experiences is a relationship-led travel and hospitality company creating

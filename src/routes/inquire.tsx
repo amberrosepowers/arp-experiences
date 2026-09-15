@@ -3,10 +3,17 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { PageHeader, Section } from "@/components/page-shell";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import { submitInquiry } from "@/lib/inquiries.functions";
 
 const inquireImage = "/photos/inquire-st-tropez-alley.jpg";
 const processImage = "/photos/inquire-seine-bridge-dusk.jpg";
+const faqImage = "/photos/inquire-faq-drawing-room.jpg";
 
 export const Route = createFileRoute("/inquire")({
   validateSearch: (search: Record<string, unknown>): { type?: string | undefined } => ({
@@ -93,6 +100,41 @@ const roomTypes = [
 ];
 
 const flightClasses = ["Premium Economy", "Business Class", "First Class", "No flights needed"];
+
+const faqs = [
+  {
+    q: "Why are hotel & cruise bookings complimentary?",
+    a: "Hotels, cruise lines, and other preferred hospitality partners compensate us when we arrange eligible bookings through our professional relationships. This allows us to provide the booking service at no additional cost to you while still offering personal planning, property or cruise line communication, and ongoing support.",
+  },
+  {
+    q: "Why do you charge a planning fee for itinerary planning?",
+    a: "This work involves considerably more than making reservations. The planning fee covers the time, research, expertise, creative direction, supplier communication, itinerary development, revisions, coordination, and ongoing support required to design a trip around you. It also allows us to remain focused on your experience rather than relying only on supplier commissions. Once the planning fee is settled, we can thoughtfully research and select the right options, even when a particular recommendation does not generate commission. The fee is based on the scope and complexity of your trip and is discussed before work begins.",
+  },
+  {
+    q: "I already booked my hotel directly. Can we still work together?",
+    a: "Potentially. If your reservation is eligible, we may be able to add ARP Experiences to the booking and provide support before and during your stay. Preferred partner benefits generally need to be arranged before arrival, so the sooner you reach out, the more we may be able to do.",
+  },
+  {
+    q: "Can I earn hotel loyalty points or cruise loyalty benefits when booking through you?",
+    a: "Yes. Loyalty program eligibility depends on the hotel brand, property, cruise line, rate, booking method, and program terms. We're happy to add your membership details and confirm what applies to your reservation.",
+  },
+  {
+    q: "If I already have a credit card that offers travel benefits, is it the same thing?",
+    a: "No. Credit card benefits are tied to the card and its third-party booking channel. Our preferred partner benefits come through our direct relationships with hotels, villas, cruise lines, and hospitality partners. We also communicate with the property or cruise line about your preferences, arrival, and stay. ARP Experiences is your direct line of communication to your trip.",
+  },
+  {
+    q: "Can I use credit card points toward a hotel, villa, or cruise booking?",
+    a: "No. We are not able to utilize your points when booking directly with our preferred partners.",
+  },
+  {
+    q: "Can I work with ARP Experiences for a short weekend away?",
+    a: "Absolutely. We work with travelers planning everything from a single hotel stay to a longer, more layered trip. For itinerary planning, the scope and planning fee will depend on the destination, length, complexity, and level of support required.",
+  },
+  {
+    q: "Do you work with Airbnb or VRBO?",
+    a: "No. We generally focus on hotels, villas, private residences, resorts, cruise lines, and other hospitality partners with whom we can provide a high level of service and support. We do have access to book apartments and homes in select locations through our preferred partners, so please inquire if interested.",
+  },
+];
 
 function CheckboxRow({ name, options }: { name: string; options: string[] }) {
   return (
@@ -226,7 +268,7 @@ function Inquire() {
       />
 
       <Section className="!pt-0">
-        <div className="grid gap-14 md:grid-cols-[1.2fr_1fr] md:items-start">
+        <div className="grid gap-14 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
             <div className="mb-14 flex w-fit border border-walnut">
               <button
@@ -305,11 +347,10 @@ function Inquire() {
                       >
                         <option>Hotel Only Booking</option>
                         <option>Essential Itinerary Planning</option>
-                        <option>Full Itinerary Planning with Concierge</option>
+                        <option>Full Itinerary Planning</option>
                         <option>Group Booking</option>
                         <option>Cruise</option>
                         <option>A La Carte Service</option>
-                        <option>Not Sure Yet</option>
                       </select>
                     </div>
                   </div>
@@ -712,7 +753,7 @@ function Inquire() {
       <Section className="!pt-0">
         <div className="border-t border-border pt-16">
           <p className="eyebrow text-center">Our Process</p>
-          <div className="mt-14 grid gap-14 md:grid-cols-[1fr_1.2fr]">
+          <div className="mt-14 grid gap-14 md:grid-cols-[1fr_1.2fr] md:items-center">
             <img
               src={processImage}
               alt="Stone bridge over the Seine at blue hour"
@@ -735,6 +776,35 @@ function Inquire() {
               ))}
             </div>
           </div>
+        </div>
+      </Section>
+
+      <Section className="!pt-0">
+        <div className="grid gap-14 border-t border-border pt-16 md:grid-cols-[1.2fr_1fr] md:items-center">
+          <div>
+            <p className="eyebrow">FAQ</p>
+            <h2 className="mt-6 text-4xl md:text-5xl">Frequently Asked Questions</h2>
+            <Accordion type="single" collapsible className="mt-10 w-full">
+              {faqs.map((item, i) => (
+                <AccordionItem key={item.q} value={`item-${i}`} className="border-border py-2">
+                  <AccordionTrigger className="font-display text-xl font-normal normal-case tracking-normal hover:no-underline">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm font-light leading-relaxed text-muted-foreground">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+          <img
+            src={faqImage}
+            alt="Grand drawing room with crystal chandelier and gilded mirror"
+            loading="lazy"
+            width={900}
+            height={1125}
+            className="aspect-[4/5] w-full object-cover"
+          />
         </div>
       </Section>
     </>
