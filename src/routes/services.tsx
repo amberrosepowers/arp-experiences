@@ -383,7 +383,7 @@ function Services() {
         centered
         eyebrow="Services"
         title="Work with Us."
-        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge — each service is designed around your preferences and how you want your travel to be experienced."
+        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge service — each offering is designed around your preferences and how you want your travel to be experienced."
         introClassName="max-w-4xl"
       />
 
