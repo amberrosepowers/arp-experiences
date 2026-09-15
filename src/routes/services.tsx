@@ -258,24 +258,24 @@ function Services() {
           alt="Travel"
           loading="lazy"
           width={720}
-          height={480}
-          className="aspect-[3/2] w-full object-cover"
+          height={900}
+          className="aspect-[4/5] w-full object-cover"
         />
         <img
           src={gathering}
           alt="Gatherings"
           loading="lazy"
           width={720}
-          height={480}
-          className="aspect-[3/2] w-full object-cover"
+          height={900}
+          className="aspect-[4/5] w-full object-cover"
         />
         <img
           src={lobby}
           alt="Concierge"
           loading="lazy"
           width={720}
-          height={480}
-          className="aspect-[3/2] w-full object-cover"
+          height={900}
+          className="aspect-[4/5] w-full object-cover"
         />
       </div>
 
