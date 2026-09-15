@@ -31,7 +31,10 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link to="/inquire" className="btn-arp !px-7 !py-3">
+          <Link
+            to="/inquire"
+            className="eyebrow link-underline text-foreground/70 transition-colors hover:text-foreground"
+          >
             Contact
           </Link>
         </nav>
