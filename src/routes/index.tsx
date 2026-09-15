@@ -74,20 +74,24 @@ function Home() {
             height={1920}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-walnut/45" />
-          <div className="absolute inset-0 flex items-center justify-center px-6 text-center md:px-12">
-            <h1 className="fade-up font-display text-3xl leading-[1.3] text-white md:text-5xl">
-              <span className="block">Where you go matters.</span>
-              <span className="block">How you experience it matters more.</span>
-              <span className="block">Travel, thoughtfully experienced.</span>
-            </h1>
+          <div className="absolute inset-x-0 bottom-10 mx-auto max-w-[1400px] px-6 md:px-12">
+            <div className="fade-up">
+              <Link to="/inquire" className="btn-arp">
+                Inquire
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Statement */}
       <section className="mx-auto max-w-[1400px] px-6 pb-16 pt-14 md:px-12 md:pb-20 md:pt-16">
-        <p className="mx-auto max-w-2xl text-center text-lg font-light leading-relaxed text-muted-foreground">
+        <h1 className="text-center font-display text-3xl leading-[1.3] md:text-5xl">
+          <span className="block">Where you go matters.</span>
+          <span className="block">How you experience it matters more.</span>
+          <span className="block">Travel, thoughtfully experienced.</span>
+        </h1>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-lg font-light leading-relaxed text-muted-foreground">
           ARP Experiences is a relationship-led travel and hospitality company creating exceptional
           travel and gathering experiences for discerning clients. We don't simply arrange travel.
           We create experiences around it.
