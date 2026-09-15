@@ -54,7 +54,7 @@ const services = [
   },
   {
     n: "04",
-    label: "A La Carte Bookings & Services",
+    label: "A La Carte Services",
     body: "Cruises, flights, villas, yachts, and concierge services — arranged whenever you need them.",
     to: "cruise-bookings",
     img: cardALaCarte,
@@ -86,7 +86,7 @@ function Home() {
           <h1 className="mx-auto max-w-4xl text-3xl leading-tight md:text-5xl">
             Where travel, hospitality, and experience design come together.
           </h1>
-          <p className="mx-auto mt-8 max-w-3xl text-lg font-light leading-relaxed !text-primary-foreground/80">
+          <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-relaxed !text-primary-foreground/80 md:text-lg">
             ARP Experiences is a relationship-led travel and hospitality company creating
             exceptional travel and gathering experiences for discerning clients. We don't simply
             arrange travel. We create experiences around it.
@@ -159,8 +159,7 @@ function Home() {
                 Amber is a hospitality and travel professional with more than two decades of
                 experience across fashion, boutique hotels, experiential design, partnerships,
                 relationship management, and travel. She is highly relationship-driven and is
-                passionate about guiding her clients to beautiful destinations, paired with
-                incredible experiences.
+                passionate about helping others to experience travel and gather well.
               </p>
               <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
                 Read her story

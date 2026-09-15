@@ -64,6 +64,7 @@ const partners = [
   "Hilton for Luxury",
   "Hyatt Privé",
   "IHG Destined",
+  "Langham — Couture",
   "Mandarin Oriental — Fan Club",
   "Marriott — STARS & Luminous",
   "Maybourne — Illustrated",
@@ -91,7 +92,7 @@ function About() {
         introClassName="max-w-4xl"
       />
 
-      <Section className="!pb-0">
+      <Section className="!pt-0 !pb-0">
         <div className="grid items-center gap-14 md:grid-cols-2">
           <img
             src={approachImage}
@@ -104,7 +105,7 @@ function About() {
           <div>
             <p className="eyebrow">Our Approach</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
-              We begin with the person, then design the experience.
+              We begin with the person, then the experience.
             </h2>
             <div className="mt-10 space-y-6">
               {approach.map((a) => (
@@ -158,7 +159,18 @@ function About() {
       </Section>
 
       <Section>
-        <div className="grid items-center gap-14 md:grid-cols-[1fr_1.3fr]">
+        <div className="grid items-center gap-14 md:grid-cols-[1.3fr_1fr]">
+          <div className="space-y-6 text-base font-light leading-relaxed text-muted-foreground">
+            <p className="font-display text-3xl leading-snug text-foreground">
+              Amber Rose Powers — Founder
+            </p>
+            <p>
+              Amber is a hospitality and travel professional with more than two decades of
+              experience across fashion, boutique hotels, experiential design, partnerships,
+              relationship management, and travel. She is highly relationship-driven and is
+              passionate about helping others to experience travel and gather well.
+            </p>
+          </div>
           <div className="space-y-4">
             <img
               src={founderPortrait}
@@ -169,37 +181,6 @@ function About() {
               className="aspect-[4/5] w-full object-cover"
             />
             <p className="eyebrow">Amber Rose Powers · Founder</p>
-          </div>
-          <div className="space-y-6 text-base font-light leading-relaxed text-muted-foreground">
-            <p className="font-display text-3xl leading-snug text-foreground">
-              Amber Rose Powers — Founder
-            </p>
-            <p>
-              Amber is a hospitality and travel professional with more than two decades of
-              experience across fashion, boutique hotels, experiential design, partnerships,
-              relationship management, and travel.
-            </p>
-            <p>
-              Her career began in fashion, with a degree in Apparel Design and experience spanning
-              design, PR, sales, and brand relationships, before she moved into real estate
-              development and boutique hospitality — helping launch Detroit Foundation Hotel and
-              later serving as its Director of Lifestyle, developing experiential programming and
-              managing VIP relationships alongside a Michelin-starred chef.
-            </p>
-            <p>
-              She subsequently joined Aparium Hotel Group headquarters in Chicago as Chief
-              Relationship Officer, working across a portfolio of boutique hotels with a focus on
-              relationships, partnerships, culture, and lifestyle-driven initiatives.
-            </p>
-            <p>
-              In 2022, Amber brought that hospitality perspective into travel advising, developing a
-              deep network of industry relationships and firsthand knowledge of the hotels,
-              destinations, and partners that create exceptional guest experiences.
-            </p>
-            <p className="font-display text-xl italic leading-snug text-foreground">
-              She is highly relationship-driven and passionate about guiding her clients into the
-              best possible travel experiences &amp; gatherings.
-            </p>
           </div>
         </div>
       </Section>

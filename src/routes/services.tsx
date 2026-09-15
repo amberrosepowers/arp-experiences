@@ -50,7 +50,7 @@ const offerings: Offering[] = [
     imgAlt: "Elegant seafront hotel room with arched balcony doors",
     blocks: [
       {
-        title: "Hotel Only Bookings",
+        title: "Hotel Only Booking",
         num: "01",
         inquireType: "Hotel Only Booking",
         inquireLabel: "Inquire about Hotel Booking",
@@ -79,7 +79,7 @@ const offerings: Offering[] = [
     imgAlt: "Quiet suite sitting area with desk by a window",
     blocks: [
       {
-        title: "Hotel Self-Booking Client Portal",
+        title: "Hotel Booking Client Portal",
         num: "02",
         lede: "For the traveler who already knows where they want to stay, or prefers to research independently.",
         paragraphs: [
@@ -91,7 +91,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         externalLink: "https://trips.foratravel.com/amber-rose-powers/book",
-        externalLinkLabel: "Go to the Booking Portal",
+        externalLinkLabel: "Go to Client Portal",
       },
     ],
   },
@@ -104,18 +104,22 @@ const offerings: Offering[] = [
         title: "Essential Itinerary Planning",
         num: "03",
         inquireType: "Essential Itinerary Planning",
-        inquireLabel: "Inquire about Essential Itinerary Planning",
+        inquireLabel: "Inquire about Essential Itinerary",
         lede: "For travelers who want accommodations, tours, and transportation handled — without the full concierge layer.",
         paragraphs: [
           "We take a tailored approach to every itinerary, designing each one around your preferences and how you want your travel experience to feel. We take care of the essential parts of your trip, so you know where you're staying, how you're getting there, and what you will experience.",
         ],
         items: [
-          "Research and selection of accommodations tailored to your preferences and travel style",
-          "Booking and management of tours, activities, and immersive experiences",
-          "Ground transportation — private transfers, drivers, trains, ferries, and rental vehicles",
-          "A beautifully organized digital itinerary with confirmations and essential travel documents",
-          "Direct connection with the hotel concierge team for reservation scheduling",
-          "Post-trip follow-up to gather feedback and refine future travel",
+          "Consultation call to discuss your travel details, style and goals for this trip",
+          "Research & selection of accommodations tailored to your preferences and travel style",
+          "VIP hotel booking perks where applicable",
+          "Assistance booking all transfers and tours",
+          "Introduction to hotel concierge team for direct reservation scheduling",
+          "Breakdown of entry requirements",
+          "Access to our trusted local partners throughout your time away",
+          "Digital itinerary and app access",
+          "Pre-trip call a week before departure",
+          "Post-trip call to gather feedback & refine future travel experiences",
         ],
         investment: "Starting at $525 per week of travel",
       },
@@ -130,22 +134,24 @@ const offerings: Offering[] = [
         title: "Full Itinerary Planning with Concierge Services",
         num: "04",
         inquireType: "Full Itinerary Planning with Concierge",
-        inquireLabel: "Inquire about Full Itinerary Planning",
-        lede: "For travelers who want more than just the essentials — every detail of the trip, planned strategically throughout.",
+        inquireLabel: "Inquire about Full Itinerary",
+        lede: "For travelers who want more than just the essentials — every detail of your travel, planned strategically and intentionally for you.",
         paragraphs: [
-          "From accommodations, tours, and transportation to dining reservations, spa appointments, golf tee times, wellness activities, and any other experience you'd like, we design your itinerary around your preferences and how you want your trip to feel.",
+          "From accommodations, tours, and transportation to dining reservations, spa appointments, golf tee times, wellness activities, or any other experience you'd like, we design your itinerary around your preferences and how you want your trip to feel.",
         ],
         items: [
-          "Research and selection of accommodations tailored to your preferences and travel style",
+          "Consultation call to discuss your travel details, style and goals for this trip",
+          "Research & selection of accommodations tailored to your preferences and travel style",
+          "VIP hotel booking perks where applicable",
           "Booking and management of tours, activities, and immersive experiences",
           "Ground transportation — private transfers, drivers, trains, ferries, and rental vehicles",
-          "Concierge-level restaurant and cocktail reservations",
-          "Spa appointments and wellness experiences",
-          "Golf tee times",
+          "Concierge-level restaurant and cocktail reservations, Spa appointments and wellness experiences, Golf tee times",
           "A beautifully organized digital itinerary with confirmations and essential travel documents",
+          "Breakdown of entry requirements",
           "Access to our trusted local partners throughout your time away",
           "Special requests and personal touches arranged throughout your stay",
-          "Post-trip follow-up to gather feedback and refine future travel",
+          "Pre-trip call a week before departure",
+          "Post-trip call to gather feedback & refine future travel experiences",
         ],
         investment: "Starting at $1,050 per week of travel",
       },
@@ -178,7 +184,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         finenote:
-          "If you'd like us to source hotels, negotiate rates, and request proposals for your group, a $750 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences. If you'd like any on-site logistics, or offsite activities, dining, or transportation coordinated for your gathering, fees may apply based on scope.",
+          "If you'd like us to source hotels, negotiate rates, and request proposals for your group, a $750 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences. If you'd like any on-site logistics, or offsite activities, dining, or transportation coordinated for your gathering, fees apply based on scope.",
       },
     ],
   },
@@ -194,7 +200,7 @@ const offerings: Offering[] = [
         inquireLabel: "Inquire about Cruise Booking",
         lede: "That same personal layer to cruise bookings — whether you know exactly which sailing you want, or you're looking for us to uncover the right one.",
         paragraphs: [
-          "We research, recommend, and book on your behalf with the same care and attention as any hotel reservation. Cruises often include onboard credit depending on the ship and specific sailing — among the cruise lines we work with are Explora Journeys, Ponant, Aman at Sea, Orient Express Sailing Yachts, Celebrity Cruises, Four Seasons Yachts, The Ritz-Carlton Yacht Collection, Uniworld, Sea Cloud Cruises, Belmond, Silversea, and National Geographic | Lindblad Expeditions.",
+          "We research, recommend, and book on your behalf with the same care and attention as any hotel reservation. Cruises often include onboard credit depending on the ship and specific sailing — among the cruise lines we work with are Aman at Sea, Belmond, Explora Journeys, Four Seasons Yachts, National Geographic | Lindblad Expeditions, Orient Express Sailing Yachts, Ponant, Sea Cloud Cruises, Silversea, The Ritz-Carlton Yacht Collection, and Uniworld.",
         ],
         investment: "Complimentary",
         finenote:
@@ -203,11 +209,11 @@ const offerings: Offering[] = [
       {
         title: "Flight Services",
         num: "07",
-        inquireType: "A La Carte Bookings & Services",
+        inquireType: "A La Carte Service",
         inquireLabel: "Inquire about Flight Services",
         lede: "From premium economy through first class, arranged and managed alongside the rest of your itinerary.",
         paragraphs: [
-          "We keep every moving piece connected — and when plans change, we're there. Our 24/7 support means you have someone to turn to when a flight is delayed, a connection shifts, or the unexpected happens mid-trip. No waiting in an airport queue. No navigating another time zone alone. Just someone who already knows where you're going — and what comes next.",
+          "We keep every moving piece connected — and when plans change, our flights desk team is there. Our 24/7 support means you have someone to turn to when a flight is delayed, a connection shifts, or the unexpected happens mid-trip. No waiting in an airport queue. No navigating another time zone alone. Just someone who already knows where you're going — and will help you get there.",
         ],
         investment: "$50 ticketing fee per passenger",
       },
@@ -215,18 +221,17 @@ const offerings: Offering[] = [
   },
   {
     slug: "a-la-carte-offerings",
-    img: "/photos/offering-alacarte-staircase-orbs.jpg",
-    imgAlt: "Grand curved staircase viewed from above, hung with glass orb lighting",
+    img: "/photos/offering-alacarte-drawing-room.jpg",
+    imgAlt: "Grand drawing room with crystal chandelier and gilded mirror",
     blocks: [
       {
-        title: "A La Carte Bookings & Services",
+        title: "A La Carte Services",
         num: "08",
-        inquireType: "A La Carte Bookings & Services",
-        inquireLabel: "Inquire about A La Carte Bookings & Services",
+        inquireType: "A La Carte Service",
+        inquireLabel: "Inquire about A La Carte Services",
         lede: "Individual travel offerings, each thoughtfully tailored to your needs.",
         items: [
           "Villa bookings",
-          "Apartment bookings",
           "Yacht charters",
           "Private aviation",
           "Concierge services",
@@ -367,8 +372,8 @@ function Services() {
       <PageHeader
         centered
         eyebrow="Services"
-        title="How to Work with Us"
-        intro="From a single, complimentary hotel booking to a fully planned itinerary with concierge services — each one is designed around your preferences and how you want the trip to be experienced."
+        title="Work with Us"
+        intro="From a single, complimentary hotel booking to a fully planned itinerary with concierge — each service is designed around your preferences and how you want travel to be experienced."
         introClassName="max-w-4xl"
       />
 

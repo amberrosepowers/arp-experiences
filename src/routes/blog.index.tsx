@@ -28,7 +28,7 @@ function BlogIndex() {
         centered
         eyebrow="Journal"
         title="Notes on places, people, and hospitality."
-        intro="Observations from inside the industry — the hotels worth knowing, the way a gathering comes together, and the thinking behind how we plan."
+        intro="Observations from inside the industry — the hotels & destinations worth knowing, the way a gathering comes together, and the thinking behind how we plan."
       />
 
       <Section className="!pt-0">
