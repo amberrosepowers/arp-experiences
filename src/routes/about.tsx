@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
 import founderPortraitAsset from "@/assets/founder-portrait.jpg.asset.json";
-import conciergeAsset from "@/assets/service-concierge.jpg.asset.json";
 
 const founderPortrait = founderPortraitAsset.url;
-const closingImage = conciergeAsset.url;
+const closingImage = "/photos/about-closing-staircase.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -39,6 +38,60 @@ const expertise = [
   "Group Travel & Gatherings",
 ];
 
+const approach = [
+  {
+    title: "Relationship-Led",
+    body: "Exceptional travel begins with understanding people. We build relationships with our clients, our hospitality partners, and the destinations we represent.",
+  },
+  {
+    title: "Hospitality-Rooted",
+    body: "We understand what makes people feel welcomed, cared for, and genuinely considered — because we have lived it from inside the industry.",
+  },
+  {
+    title: "Experience-Driven",
+    body: "We think about where you stay, where you gather, what you do, who you meet, and how it all comes together.",
+  },
+  {
+    title: "Well-Connected",
+    body: "Our relationships across hotels, destinations, and hospitality professionals bring insight, access, value, and a personal touch.",
+  },
+  {
+    title: "Personally Edited",
+    body: "We don't believe in overwhelming clients with endless options. We believe in knowing enough to recommend the right ones.",
+  },
+  {
+    title: "Detail-Oriented",
+    body: "The location, the atmosphere, the welcome, the room choice, the amenities, the F&B, the design, the hospitality — it all matters to us.",
+  },
+];
+
+const partners = [
+  "The Peninsula — PenClub",
+  "Rosewood — Elite",
+  "Marriott — STARS",
+  "Hilton for Luxury",
+  "Virtuoso",
+  "Shangri-La Hotels & Resorts",
+  "Rocco Forte — Knights",
+  "Relais & Châteaux",
+  "Preferred Hotels & Resorts",
+  "Oetker Hotels — Masterpiece Collection",
+  "Maybourne — Illustrated",
+  "Luminous",
+  "Dorchester Collection — Diamond Club",
+  "Four Seasons — Preferred Partner",
+  "Hyatt Privé",
+  "Belmond — Bellini Club",
+  "Mandarin Oriental — Fan Club",
+  "The Leading Hotels of the World",
+  "Langham — Couture",
+  "IHG Destined",
+  "Waldorf Astoria Hotels & Residences",
+  "Aman",
+  "One&Only",
+  "Auberge Collection",
+];
+
 function About() {
   return (
     <>
@@ -58,6 +111,23 @@ function About() {
           </p>
         </div>
       </section>
+
+      <Section className="!pb-0">
+        <p className="eyebrow text-center">Our Approach</p>
+        <h2 className="mx-auto mt-6 max-w-2xl text-center text-4xl md:text-5xl">
+          We begin with the person, then design the experience.
+        </h2>
+        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {approach.map((a) => (
+            <div key={a.title} className="border-t border-border pt-6">
+              <h3 className="font-display text-2xl text-oxblood">{a.title}</h3>
+              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
+                {a.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Section>
 
       <Section>
         <div className="grid gap-14 md:grid-cols-2">
@@ -105,9 +175,32 @@ function About() {
         </div>
       </Section>
 
+      <section className="bg-secondary/70">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12">
+          <p className="eyebrow">Preferred Partners</p>
+          <h2 className="mt-6 max-w-2xl text-3xl md:text-4xl">
+            Direct relationships, meaningful benefits.
+          </h2>
+          <p className="mt-6 max-w-2xl text-sm font-light leading-relaxed text-muted-foreground">
+            We invest significant time building direct relationships with the properties we
+            recommend, so our clients receive priority consideration, exclusive rates, access to
+            unpublished availability, and meaningful benefits — at no additional cost to you. Some
+            of the preferred partner programs we work with:
+          </p>
+          <div className="mt-12 columns-1 gap-x-10 sm:columns-2 lg:columns-3">
+            {partners.map((p) => (
+              <p
+                key={p}
+                className="break-inside-avoid border-b border-border py-3 font-display text-lg"
+              >
+                {p}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
 
-
-      <Section className="!pt-0">
+      <Section>
         <div className="grid items-center gap-14 md:grid-cols-2">
           <div>
             <p className="eyebrow">The ARP difference</p>
@@ -129,7 +222,7 @@ function About() {
           </div>
           <img
             src={closingImage}
-            alt="Wood-panelled hotel library bar in warm evening light"
+            alt="Grand curved staircase with wrought-iron railing and glass orb lighting"
             loading="lazy"
             width={1440}
             height={1920}
