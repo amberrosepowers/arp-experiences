@@ -30,7 +30,8 @@ type Block = {
   items?: string[];
   investment: string;
   finenote?: string;
-  inquireType: string;
+  inquireType?: string;
+  inquireLabel?: string;
   externalLink?: string;
   externalLinkLabel?: string;
 };
@@ -52,6 +53,7 @@ const offerings: Offering[] = [
         title: "Hotel Only Bookings",
         num: "01",
         inquireType: "Hotel Only Booking",
+        inquireLabel: "Inquire about Hotel Booking",
         lede: "A more personal layer to hotel bookings — whether you know exactly where you want to stay, or you're looking for us to uncover the right place.",
         paragraphs: [
           "We connect directly with the property before you arrive, sharing who you are, what matters to you, and how you'd like the stay to feel — so the right people know you're coming. Because the experience isn't simply what comes with the room. It's how you're welcomed into it.",
@@ -79,7 +81,6 @@ const offerings: Offering[] = [
       {
         title: "Hotel Self-Booking Client Portal",
         num: "02",
-        inquireType: "Hotel Only Booking",
         lede: "For the traveler who already knows where they want to stay, or prefers to research independently.",
         paragraphs: [
           "Our client booking portal gives you access to select preferred partner rates while allowing you to browse and book on your own time. Once reserved, your stay is still personally serviced by ARP Experiences — we'll connect with the property ahead of your arrival, arrange your preferred partner amenities, note your preferences, advocate for upgrades, and make sure your reservation receives the attention it deserves.",
@@ -103,6 +104,7 @@ const offerings: Offering[] = [
         title: "Essential Itinerary Planning",
         num: "03",
         inquireType: "Essential Itinerary Planning",
+        inquireLabel: "Inquire about Essential Itinerary Planning",
         lede: "For travelers who want accommodations, tours, and transportation handled — without the full concierge layer.",
         paragraphs: [
           "We take a tailored approach to every itinerary, designing each one around your preferences and how you want your travel experience to feel. We take care of the essential parts of your trip, so you know where you're staying, how you're getting there, and what you will experience.",
@@ -128,6 +130,7 @@ const offerings: Offering[] = [
         title: "Full Itinerary Planning with Concierge Services",
         num: "04",
         inquireType: "Full Itinerary Planning with Concierge",
+        inquireLabel: "Inquire about Full Itinerary Planning",
         lede: "For travelers who want more than just the essentials — every detail of the trip, planned strategically throughout.",
         paragraphs: [
           "From accommodations, tours, and transportation to dining reservations, spa appointments, golf tee times, wellness activities, and any other experience you'd like, we design your itinerary around your preferences and how you want your trip to feel.",
@@ -157,6 +160,7 @@ const offerings: Offering[] = [
         title: "Group Bookings & Experiences",
         num: "05",
         inquireType: "Group Booking",
+        inquireLabel: "Inquire about Group Booking",
         lede: "Some of the most meaningful travel happens together — and it starts with the right location and logistics.",
         paragraphs: [
           "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, retreats, and milestone celebrations.",
@@ -187,6 +191,7 @@ const offerings: Offering[] = [
         title: "Cruise Bookings",
         num: "06",
         inquireType: "Cruise",
+        inquireLabel: "Inquire about Cruise Booking",
         lede: "That same personal layer to cruise bookings — whether you know exactly which sailing you want, or you're looking for us to uncover the right one.",
         paragraphs: [
           "We research, recommend, and book on your behalf with the same care and attention as any hotel reservation. Cruises often include onboard credit depending on the ship and specific sailing — among the cruise lines we work with are Explora Journeys, Ponant, Aman at Sea, Orient Express Sailing Yachts, Celebrity Cruises, Four Seasons Yachts, The Ritz-Carlton Yacht Collection, Uniworld, Sea Cloud Cruises, Belmond, Silversea, and National Geographic | Lindblad Expeditions.",
@@ -199,6 +204,7 @@ const offerings: Offering[] = [
         title: "Flight Services",
         num: "07",
         inquireType: "A La Carte Bookings & Services",
+        inquireLabel: "Inquire about Flight Services",
         lede: "From premium economy through first class, arranged and managed alongside the rest of your itinerary.",
         paragraphs: [
           "We keep every moving piece connected — and when plans change, we're there. Our 24/7 support means you have someone to turn to when a flight is delayed, a connection shifts, or the unexpected happens mid-trip. No waiting in an airport queue. No navigating another time zone alone. Just someone who already knows where you're going — and what comes next.",
@@ -216,6 +222,7 @@ const offerings: Offering[] = [
         title: "A La Carte Bookings & Services",
         num: "08",
         inquireType: "A La Carte Bookings & Services",
+        inquireLabel: "Inquire about A La Carte Bookings & Services",
         lede: "Individual travel offerings, each thoughtfully tailored to your needs.",
         items: [
           "Villa bookings",
@@ -280,11 +287,9 @@ function BlockContent({ block }: { block: Block }) {
         </ul>
       )}
 
-      <div className="mt-8 flex flex-wrap items-center gap-4">
-        <span className="eyebrow border border-border px-5 py-3 text-oxblood">
-          Investment — {block.investment}
-        </span>
-      </div>
+      <p className="mt-8 text-sm font-light text-muted-foreground">
+        Investment — {block.investment}
+      </p>
 
       {block.finenote && (
         <p className="mt-4 max-w-xl text-xs font-light italic leading-relaxed text-muted-foreground/80">
@@ -292,24 +297,28 @@ function BlockContent({ block }: { block: Block }) {
         </p>
       )}
 
-      <Link
-        to="/inquire"
-        search={{ type: block.inquireType }}
-        className="eyebrow link-underline mt-6 inline-block"
-      >
-        Inquire about this
-      </Link>
+      <div className="mt-6 flex flex-wrap items-center gap-4">
+        {block.inquireType && (
+          <Link
+            to="/inquire"
+            search={{ type: block.inquireType }}
+            className="eyebrow border border-border px-5 py-3 text-oxblood transition-colors hover:bg-oxblood hover:text-primary-foreground"
+          >
+            {block.inquireLabel ?? "Inquire about this"}
+          </Link>
+        )}
 
-      {block.externalLink && (
-        <a
-          href={block.externalLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="eyebrow link-underline mt-6 ml-8 inline-block text-oxblood"
-        >
-          {block.externalLinkLabel ?? "Learn more"}
-        </a>
-      )}
+        {block.externalLink && (
+          <a
+            href={block.externalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="eyebrow border border-border px-5 py-3 text-oxblood transition-colors hover:bg-oxblood hover:text-primary-foreground"
+          >
+            {block.externalLinkLabel ?? "Learn more"}
+          </a>
+        )}
+      </div>
     </div>
   );
 }
@@ -324,14 +333,14 @@ function OfferingRow({ offering, index }: { offering: Offering; index: number })
       className="scroll-mt-28 border-t border-border py-14 first:pt-0 md:py-16"
     >
       {hasImage ? (
-        <div className="grid gap-10 md:grid-cols-[2fr_3fr] md:gap-14">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-14">
           <div className={imageFirst ? "md:order-1" : "md:order-2"}>
             <img
               src={offering.img}
               alt={offering.imgAlt}
               loading="lazy"
-              width={700}
-              height={875}
+              width={900}
+              height={1125}
               className="aspect-[4/5] w-full object-cover"
             />
           </div>
