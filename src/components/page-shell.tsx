@@ -6,12 +6,14 @@ export function PageHeader({
   intro,
   centered,
   introClassName = "max-w-2xl",
+  titleClassName = "",
 }: {
   eyebrow: string;
   title: ReactNode;
   intro?: string;
   centered?: boolean;
   introClassName?: string;
+  titleClassName?: string;
 }) {
   return (
     <section
@@ -19,7 +21,7 @@ export function PageHeader({
     >
       <p className="eyebrow fade-up">{eyebrow}</p>
       <h1
-        className={`fade-up mt-6 max-w-4xl text-5xl leading-[1.05] md:text-7xl ${centered ? "mx-auto" : ""}`}
+        className={`fade-up mt-6 max-w-4xl text-5xl leading-[1.05] md:text-7xl ${centered ? "mx-auto" : ""} ${titleClassName}`}
       >
         {title}
       </h1>
