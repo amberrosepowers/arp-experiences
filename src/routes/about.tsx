@@ -130,7 +130,7 @@ function About() {
       <Section>
         <div className="bg-secondary/70">
           <div className="grid items-stretch gap-0 md:grid-cols-2">
-            <div className="px-6 py-16 md:px-12 md:py-20">
+            <div className="order-2 px-6 py-16 md:order-1 md:px-12 md:py-20">
               <p className="eyebrow">Preferred Partners</p>
               <h2 className="mt-6 max-w-lg text-3xl md:text-4xl">
                 Direct relationships, meaningful benefits.
@@ -158,7 +158,7 @@ function About() {
               loading="lazy"
               width={900}
               height={1200}
-              className="h-full min-h-[420px] w-full object-cover"
+              className="order-1 h-full min-h-[420px] w-full object-cover md:order-2"
             />
           </div>
         </div>
@@ -182,9 +182,10 @@ function About() {
               Amber Rose Powers — Founder
             </p>
             <p>
-              Amber is a hospitality and travel professional with more than two decades of
-              experience across fashion, boutique hotels, experiential design, partnerships,
-              relationship management, and travel.
+              Amber is a hospitality and travel professional with over two decades of experience
+              across fashion, boutique hotels, experiential design, partnerships, relationship
+              management, and travel. She is highly relationship-driven and is passionate about
+              helping others to experience travel and gather well.
             </p>
             <p>
               Her career began in fashion, with a degree in Apparel Design and experience spanning
@@ -202,10 +203,6 @@ function About() {
               In 2022, Amber brought that hospitality perspective into travel advising, developing a
               deep network of industry relationships and firsthand knowledge of the hotels,
               destinations, and partners that create exceptional guest experiences.
-            </p>
-            <p className="font-display text-xl italic leading-snug text-foreground">
-              She is highly relationship-driven and is passionate about helping others to experience
-              travel and gather well.
             </p>
           </div>
         </div>
