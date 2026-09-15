@@ -22,8 +22,12 @@ export type Database = {
           details: string | null
           email: string
           experience_type: string | null
+          form_type: string
           id: string
+          intake_details: Json
           name: string
+          phone: string | null
+          referral_source: string | null
           travelers: string | null
           updated_at: string
         }
@@ -34,8 +38,12 @@ export type Database = {
           details?: string | null
           email: string
           experience_type?: string | null
+          form_type?: string
           id?: string
+          intake_details?: Json
           name: string
+          phone?: string | null
+          referral_source?: string | null
           travelers?: string | null
           updated_at?: string
         }
@@ -46,8 +54,12 @@ export type Database = {
           details?: string | null
           email?: string
           experience_type?: string | null
+          form_type?: string
           id?: string
+          intake_details?: Json
           name?: string
+          phone?: string | null
+          referral_source?: string | null
           travelers?: string | null
           updated_at?: string
         }
