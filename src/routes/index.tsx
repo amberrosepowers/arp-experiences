@@ -83,7 +83,7 @@ function Home() {
       {/* Statement */}
       <section className="bg-walnut text-primary-foreground">
         <div className="mx-auto max-w-[1400px] px-6 py-16 text-center md:px-12 md:py-20">
-          <h1 className="mx-auto max-w-4xl text-3xl leading-tight md:text-5xl">
+          <h1 className="mx-auto max-w-4xl text-5xl leading-[1.05] md:text-7xl">
             Where travel, hospitality, and experience design align.
           </h1>
           <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-relaxed !text-primary-foreground/80 md:text-lg">
