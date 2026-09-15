@@ -74,32 +74,30 @@ function Home() {
             height={1920}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-x-0 bottom-10 mx-auto max-w-[1400px] px-6 md:px-12">
-            <div className="fade-up">
-              <Link to="/inquire" className="btn-arp">
-                Inquire
-              </Link>
-            </div>
+          <div className="absolute inset-x-0 top-[16%] flex justify-center px-6 text-center md:px-12">
+            <h1 className="fade-up font-display text-2xl text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] md:text-4xl">
+              Travel, thoughtfully experienced.
+            </h1>
           </div>
         </div>
       </section>
 
       {/* Statement */}
-      <section className="mx-auto max-w-[1400px] px-6 pb-16 pt-14 md:px-12 md:pb-20 md:pt-16">
-        <h1 className="text-center font-display text-3xl leading-[1.3] md:text-5xl">
-          <span className="block">Where you go matters.</span>
-          <span className="block">How you experience it matters more.</span>
-          <span className="block">Travel, thoughtfully experienced.</span>
-        </h1>
-        <p className="mx-auto mt-8 max-w-2xl text-center text-lg font-light leading-relaxed text-muted-foreground">
-          ARP Experiences is a relationship-led travel and hospitality company creating exceptional
-          travel and gathering experiences for discerning clients. We don't simply arrange travel.
-          We create experiences around it.
-        </p>
+      <section className="bg-walnut text-primary-foreground">
+        <div className="mx-auto max-w-[1400px] px-6 py-16 text-center md:px-12 md:py-20">
+          <h2 className="mx-auto max-w-3xl text-3xl leading-tight md:text-5xl">
+            Where travel, hospitality, and experience design come together.
+          </h2>
+          <p className="mx-auto mt-8 max-w-2xl text-lg font-light leading-relaxed !text-primary-foreground/80">
+            ARP Experiences is a relationship-led travel and hospitality company creating
+            exceptional travel and gathering experiences for discerning clients. We don't simply
+            arrange travel. We create experiences around it.
+          </p>
+        </div>
       </section>
 
       {/* Services */}
-      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
+      <section className="mx-auto max-w-[1400px] px-6 pt-16 pb-24 md:px-12 md:pt-20 md:pb-32">
         <div className="grid gap-x-10 gap-y-14 sm:grid-cols-2">
           {services.map((s) => (
             <Link key={s.label} to="/services" hash={s.to} className="group block">
