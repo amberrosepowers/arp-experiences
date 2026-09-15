@@ -1,10 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
 
-const destination = "/photos/service-travel-malta.jpg";
-const gathering = "/photos/service-gatherings-dining.jpg";
-const lobby = "/photos/service-concierge-balcony.jpg";
-
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
@@ -17,7 +13,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Services — ARP Experiences" },
       {
         property: "og:description",
-        content: "Nine ways ARP Experiences can take care of your trip.",
+        content: "How ARP Experiences takes care of your trip.",
       },
     ],
   }),
@@ -27,6 +23,8 @@ export const Route = createFileRoute("/services")({
 type Offering = {
   title: string;
   slug: string;
+  img: string;
+  imgAlt: string;
   lede: string;
   paragraphs?: string[];
   quote?: string;
@@ -40,6 +38,8 @@ const offerings: Offering[] = [
   {
     title: "Hotel Only Bookings",
     slug: "hotel-only-bookings",
+    img: "/photos/offering-hotel-seafront-room.jpg",
+    imgAlt: "Elegant seafront hotel room with arched balcony doors",
     lede: "A more personal layer to hotel bookings — whether you know exactly where you want to stay, or you're looking for us to uncover the right place.",
     paragraphs: [
       "We connect directly with the property before you arrive, sharing who you are, what matters to you, and how you'd like the stay to feel — so the right people know you're coming. Because the experience isn't simply what comes with the room. It's how you're welcomed into it.",
@@ -60,6 +60,8 @@ const offerings: Offering[] = [
   {
     title: "Hotel Self-Booking Client Portal",
     slug: "hotel-self-booking-portal",
+    img: "/photos/offering-portal-suite-desk.jpg",
+    imgAlt: "Quiet suite sitting area with desk by a window",
     lede: "For the traveler who already knows where they want to stay, or prefers to research independently.",
     paragraphs: [
       "Our client booking portal gives you access to select preferred partner rates while allowing you to browse and book on your own time. Once reserved, your stay is still personally serviced by ARP Experiences — we'll connect with the property ahead of your arrival, arrange your preferred partner amenities, note your preferences, advocate for upgrades, and make sure your reservation receives the attention it deserves.",
@@ -73,6 +75,8 @@ const offerings: Offering[] = [
   {
     title: "Essential Itinerary Planning",
     slug: "essential-itinerary-planning",
+    img: "/photos/offering-itinerary-colonnade.jpg",
+    imgAlt: "Sunlit stone colonnade with long shadows",
     lede: "For travelers who want accommodations, tours, and transportation handled — without the full concierge layer.",
     paragraphs: [
       "We take a tailored approach to every itinerary, designing each one around your preferences and how you want your travel experience to feel. We take care of the essential parts of your trip, so you know where you're staying, how you're getting there, and what you will experience.",
@@ -90,6 +94,8 @@ const offerings: Offering[] = [
   {
     title: "Full Itinerary Planning with Concierge Services",
     slug: "full-itinerary-planning",
+    img: "/photos/service-concierge-balcony.jpg",
+    imgAlt: "Champagne chilling on a Paris balcony at golden hour",
     lede: "For travelers who want more than just the essentials — every detail of the trip, planned strategically throughout.",
     paragraphs: [
       "From accommodations, tours, and transportation to dining reservations, spa appointments, golf tee times, wellness activities, and any other experience you'd like, we design your itinerary around your preferences and how you want your trip to feel.",
@@ -111,6 +117,8 @@ const offerings: Offering[] = [
   {
     title: "Group Bookings & Experiences",
     slug: "group-bookings-experiences",
+    img: "/photos/service-gatherings-dining.jpg",
+    imgAlt: "Wood-paneled dining room set for a group, with a statement ring-light fixture",
     lede: "Some of the most meaningful travel happens together — and it starts with the right location and logistics.",
     paragraphs: [
       "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, retreats, and milestone celebrations.",
@@ -133,6 +141,8 @@ const offerings: Offering[] = [
   {
     title: "Cruise Bookings",
     slug: "cruise-bookings",
+    img: "/photos/service-travel-malta.jpg",
+    imgAlt: "Stone archway framing a yacht in a Malta harbor",
     lede: "That same personal layer to cruise bookings — whether you know exactly which sailing you want, or you're looking for us to uncover the right one.",
     paragraphs: [
       "We research, recommend, and book on your behalf with the same care and attention as any hotel reservation. Cruises often include onboard credit depending on the ship and specific sailing — among the cruise lines we work with are Explora Journeys, Ponant, Aman at Sea, Orient Express Sailing Yachts, Celebrity Cruises, Four Seasons Yachts, The Ritz-Carlton Yacht Collection, Uniworld, Sea Cloud Cruises, Belmond, Silversea, and National Geographic | Lindblad Expeditions.",
@@ -144,6 +154,8 @@ const offerings: Offering[] = [
   {
     title: "Flight Services",
     slug: "flight-services",
+    img: "/photos/offering-flights-paris-dusk.jpg",
+    imgAlt: "City skyline over the Seine at dusk",
     lede: "From premium economy through first class, arranged and managed alongside the rest of your itinerary.",
     paragraphs: [
       "We keep every moving piece connected — and when plans change, we're there. Our 24/7 support means you have someone to turn to when a flight is delayed, a connection shifts, or the unexpected happens mid-trip. No waiting in an airport queue. No navigating another time zone alone. Just someone who already knows where you're going — and what comes next.",
@@ -153,6 +165,8 @@ const offerings: Offering[] = [
   {
     title: "A La Carte Offerings",
     slug: "a-la-carte-offerings",
+    img: "/photos/offering-alacarte-staircase-orbs.jpg",
+    imgAlt: "Grand curved staircase viewed from above, hung with glass orb lighting",
     lede: "Individual travel offerings, each thoughtfully tailored to your needs.",
     items: [
       "Villa bookings",
@@ -170,23 +184,34 @@ const offerings: Offering[] = [
 ];
 
 function OfferingRow({ offering, index }: { offering: Offering; index: number }) {
+  const imageFirst = index % 2 === 0;
   return (
     <div
       id={offering.slug}
       className="scroll-mt-28 border-t border-border py-14 first:pt-0 md:py-16"
     >
-      <div className="grid gap-8 md:grid-cols-[100px_1fr]">
-        <p className="font-display text-2xl text-brass md:text-3xl">{`0${index + 1}`}</p>
-        <div>
-          <h2 className="text-3xl md:text-4xl">{offering.title}</h2>
-          <p className="mt-4 max-w-2xl text-base font-light leading-relaxed text-muted-foreground">
+      <div className="grid gap-10 md:grid-cols-2 md:gap-14">
+        <div className={imageFirst ? "md:order-1" : "md:order-2"}>
+          <img
+            src={offering.img}
+            alt={offering.imgAlt}
+            loading="lazy"
+            width={900}
+            height={1125}
+            className="aspect-[4/5] w-full object-cover"
+          />
+        </div>
+        <div className={imageFirst ? "md:order-2" : "md:order-1"}>
+          <p className="font-display text-2xl text-brass">{`0${index + 1}`}</p>
+          <h2 className="mt-2 text-3xl md:text-4xl">{offering.title}</h2>
+          <p className="mt-4 max-w-xl text-base font-light leading-relaxed text-muted-foreground">
             {offering.lede}
           </p>
 
           {offering.paragraphs?.map((p) => (
             <p
               key={p.slice(0, 24)}
-              className="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted-foreground"
+              className="mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground"
             >
               {p}
             </p>
@@ -201,14 +226,14 @@ function OfferingRow({ offering, index }: { offering: Offering; index: number })
           {offering.paragraphs2?.map((p) => (
             <p
               key={p.slice(0, 24)}
-              className="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted-foreground"
+              className="mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground"
             >
               {p}
             </p>
           ))}
 
           {offering.items && (
-            <ul className="mt-8 grid max-w-3xl gap-y-3 sm:grid-cols-2">
+            <ul className="mt-8 grid max-w-xl gap-y-3 sm:grid-cols-2">
               {offering.items.map((item) => (
                 <li
                   key={item}
@@ -227,7 +252,7 @@ function OfferingRow({ offering, index }: { offering: Offering; index: number })
           </div>
 
           {offering.finenote && (
-            <p className="mt-4 max-w-2xl text-xs font-light italic leading-relaxed text-muted-foreground/80">
+            <p className="mt-4 max-w-xl text-xs font-light italic leading-relaxed text-muted-foreground/80">
               {offering.finenote}
             </p>
           )}
@@ -243,43 +268,11 @@ function Services() {
       <PageHeader
         centered
         eyebrow="Services"
-        title={
-          <>
-            <span className="block">Nine ways we can</span>
-            <span className="block">take care of a trip.</span>
-          </>
-        }
-        intro="From a single, complimentary hotel booking to a fully planned journey with concierge services — each one designed around your preferences and how you want the trip to feel."
+        title="How to Work with Us"
+        intro="From a single, complimentary hotel booking to a fully planned itinerary with concierge services — each one is designed around your preferences and how you want the trip to be experienced."
       />
 
-      <div className="grid grid-cols-3 gap-1 px-1">
-        <img
-          src={destination}
-          alt="Travel"
-          loading="lazy"
-          width={720}
-          height={900}
-          className="aspect-[4/5] w-full object-cover"
-        />
-        <img
-          src={gathering}
-          alt="Gatherings"
-          loading="lazy"
-          width={720}
-          height={900}
-          className="aspect-[4/5] w-full object-cover"
-        />
-        <img
-          src={lobby}
-          alt="Concierge"
-          loading="lazy"
-          width={720}
-          height={900}
-          className="aspect-[4/5] w-full object-cover"
-        />
-      </div>
-
-      <Section>
+      <Section className="!pt-0">
         {offerings.map((offering, i) => (
           <OfferingRow key={offering.title} offering={offering} index={i} />
         ))}
