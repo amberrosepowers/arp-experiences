@@ -298,9 +298,9 @@ function Inquire() {
                       <option>Hotel Only Booking</option>
                       <option>Essential Itinerary Planning</option>
                       <option>Full Itinerary Planning with Concierge</option>
-                      <option>Group Booking or Experience</option>
+                      <option>Group Booking</option>
                       <option>Cruise</option>
-                      <option>A La Carte Bookings</option>
+                      <option>A La Carte Bookings & Services</option>
                     </select>
                   </div>
                 </div>

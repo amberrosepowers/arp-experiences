@@ -54,7 +54,7 @@ const services = [
   },
   {
     n: "04",
-    label: "A La Carte Bookings",
+    label: "A La Carte Bookings & Services",
     body: "Cruises, flights, villas, yachts, and concierge services — arranged whenever you need them.",
     to: "cruise-bookings",
     img: cardALaCarte,
@@ -77,18 +77,21 @@ function Home() {
         </div>
       </section>
 
+      {/* Cream spacer */}
+      <div className="h-10 md:h-16" />
+
       {/* Statement */}
       <section className="bg-walnut text-primary-foreground">
         <div className="mx-auto max-w-[1400px] px-6 py-16 text-center md:px-12 md:py-20">
-          <h1 className="mx-auto max-w-3xl text-3xl leading-tight md:text-5xl">
+          <h1 className="mx-auto max-w-4xl text-3xl leading-tight md:text-5xl">
             Where travel, hospitality, and experience design come together.
           </h1>
-          <p className="mx-auto mt-8 max-w-2xl text-lg font-light leading-relaxed !text-primary-foreground/80">
+          <p className="mx-auto mt-8 max-w-3xl text-lg font-light leading-relaxed !text-primary-foreground/80">
             ARP Experiences is a relationship-led travel and hospitality company creating
             exceptional travel and gathering experiences for discerning clients. We don't simply
             arrange travel. We create experiences around it.
           </p>
-          <p className="mx-auto mt-10 max-w-3xl font-display text-3xl leading-tight md:text-5xl">
+          <p className="mx-auto mt-10 max-w-4xl font-display text-2xl leading-tight md:text-4xl">
             Travel, thoughtfully experienced.
           </p>
         </div>

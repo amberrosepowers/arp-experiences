@@ -1,9 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
 import founderPortraitAsset from "@/assets/founder-portrait.jpg.asset.json";
 
 const founderPortrait = founderPortraitAsset.url;
-const closingImage = "/photos/about-closing-staircase.jpg";
+const partnersImage = "/photos/about-closing-staircase.jpg";
 const approachImage = "/photos/about-approach-window-flowers.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -27,17 +27,6 @@ export const Route = createFileRoute("/about")({
   }),
   component: About,
 });
-
-const expertise = [
-  "Relationship Building",
-  "Experience Design",
-  "Partnership Development",
-  "Brand Strategy",
-  "Hospitality Management",
-  "Travel & Destination Expertise",
-  "VIP & High-Touch Service",
-  "Group Travel & Gatherings",
-];
 
 const approach = [
   {
@@ -98,23 +87,12 @@ function About() {
     <>
       <PageHeader
         centered
-        eyebrow="About"
-        title="Where travel, hospitality, and experience design come together."
-        intro="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients."
+        eyebrow="Mission"
+        title="To create exceptional travel and gathering experiences through deep relationships, genuine hospitality, and a discerning understanding of people and place."
       />
 
-      <section className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
-          <p className="eyebrow">Mission</p>
-          <p className="mx-auto mt-6 max-w-3xl font-display text-3xl leading-snug md:text-4xl">
-            To create exceptional travel and gathering experiences through deep relationships,
-            genuine hospitality, and a discerning understanding of people and place.
-          </p>
-        </div>
-      </section>
-
       <Section className="!pb-0">
-        <div className="grid items-start gap-14 md:grid-cols-2">
+        <div className="grid items-center gap-14 md:grid-cols-2">
           <img
             src={approachImage}
             alt="Fresh flowers on a desk beside a tall window"
@@ -143,19 +121,54 @@ function About() {
       </Section>
 
       <Section>
-        <div className="grid gap-14 md:grid-cols-2">
-          <div className="space-y-4">
-            <div className="mx-auto max-w-[300px] space-y-4">
-              <img
-                src={founderPortrait}
-                alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
-                loading="lazy"
-                width={933}
-                height={1400}
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <p className="eyebrow">Amber Rose Powers · Founder</p>
+        <div className="bg-secondary/70">
+          <div className="grid items-center gap-0 md:grid-cols-2">
+            <div className="px-6 py-16 md:px-12 md:py-20">
+              <p className="eyebrow">Preferred Partners</p>
+              <h2 className="mt-6 max-w-lg text-3xl md:text-4xl">
+                Direct relationships, meaningful benefits.
+              </h2>
+              <p className="mt-6 max-w-lg text-sm font-light leading-relaxed text-muted-foreground">
+                We invest significant time building direct relationships with the properties we
+                recommend, so our clients receive priority consideration, exclusive rates, access to
+                unpublished availability, and meaningful benefits — at no additional cost to you.
+                Some of the preferred partner programs we work with:
+              </p>
+              <div className="mt-10 columns-2 gap-x-8">
+                {partners.map((p) => (
+                  <p
+                    key={p}
+                    className="break-inside-avoid border-b border-border py-2.5 font-display text-base"
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
             </div>
+            <img
+              src={partnersImage}
+              alt="Grand curved staircase with wrought-iron railing and glass orb lighting"
+              loading="lazy"
+              width={900}
+              height={1200}
+              className="h-full min-h-[420px] w-full object-cover"
+            />
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="grid items-center gap-14 md:grid-cols-[1fr_1.3fr]">
+          <div className="space-y-4">
+            <img
+              src={founderPortrait}
+              alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
+              loading="lazy"
+              width={933}
+              height={1400}
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <p className="eyebrow">Amber Rose Powers · Founder</p>
           </div>
           <div className="space-y-6 text-base font-light leading-relaxed text-muted-foreground">
             <p className="font-display text-3xl leading-snug text-foreground">
@@ -184,62 +197,6 @@ function About() {
               partners that create exceptional guest experiences.
             </p>
           </div>
-        </div>
-      </Section>
-
-      <section className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12">
-          <p className="eyebrow">Preferred Partners</p>
-          <h2 className="mt-6 max-w-2xl text-3xl md:text-4xl">
-            Direct relationships, meaningful benefits.
-          </h2>
-          <p className="mt-6 max-w-2xl text-sm font-light leading-relaxed text-muted-foreground">
-            We invest significant time building direct relationships with the properties we
-            recommend, so our clients receive priority consideration, exclusive rates, access to
-            unpublished availability, and meaningful benefits — at no additional cost to you. Some
-            of the preferred partner programs we work with:
-          </p>
-          <div className="mt-12 columns-1 gap-x-10 sm:columns-2 lg:columns-3">
-            {partners.map((p) => (
-              <p
-                key={p}
-                className="break-inside-avoid border-b border-border py-3 font-display text-lg"
-              >
-                {p}
-              </p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Section>
-        <div className="grid items-center gap-14 md:grid-cols-2">
-          <div>
-            <p className="eyebrow">The ARP difference</p>
-            <h2 className="mt-6 text-4xl md:text-5xl">It begins with the person.</h2>
-            <ul className="mt-8 space-y-3 text-base font-light text-muted-foreground">
-              <li>Who are you traveling with?</li>
-              <li>Why are you going?</li>
-              <li>How do you want the experience to feel?</li>
-              <li>What matters most?</li>
-              <li>What will make it effortless?</li>
-              <li>What will make it memorable?</li>
-            </ul>
-            <p className="mt-8 font-display text-2xl leading-snug">
-              Exceptional travel isn't about having more choices. It's about knowing the right ones.
-            </p>
-            <Link to="/inquire" className="btn-arp mt-10">
-              Inquire
-            </Link>
-          </div>
-          <img
-            src={closingImage}
-            alt="Grand curved staircase with wrought-iron railing and glass orb lighting"
-            loading="lazy"
-            width={1440}
-            height={1920}
-            className="aspect-[4/5] w-full object-cover"
-          />
         </div>
       </Section>
     </>

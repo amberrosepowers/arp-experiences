@@ -163,7 +163,7 @@ const offerings: Offering[] = [
     investment: "$50 ticketing fee per passenger",
   },
   {
-    title: "A La Carte Bookings",
+    title: "A La Carte Bookings & Services",
     slug: "a-la-carte-offerings",
     img: "/photos/offering-alacarte-staircase-orbs.jpg",
     imgAlt: "Grand curved staircase viewed from above, hung with glass orb lighting",
