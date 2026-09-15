@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Section } from "@/components/page-shell";
 import founderPortraitAsset from "@/assets/founder-portrait.jpg.asset.json";
 
@@ -92,6 +92,12 @@ function About() {
         intro="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients. We don't simply arrange travel. We create experiences around it."
         introClassName="max-w-4xl"
       />
+
+      <div className="-mt-10 mb-10 text-center md:-mt-14">
+        <Link to="/inquire" className="btn-arp">
+          Inquire
+        </Link>
+      </div>
 
       <Section className="!pt-0 !pb-0">
         <div className="grid items-center gap-14 md:grid-cols-2">
