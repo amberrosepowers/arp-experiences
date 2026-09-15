@@ -1,14 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroAsset from "@/assets/hero-balzac-lounge.jpg.asset.json";
-import gatheringsAsset from "@/assets/service-gatherings.jpg.asset.json";
-import conciergeAsset from "@/assets/service-concierge.jpg.asset.json";
-import travelAsset from "@/assets/service-travel.jpg.asset.json";
 import founderAsset from "@/assets/founder-portrait.jpg.asset.json";
 
-const heroPlaceholder = heroAsset.url;
-const serviceGatheringsPlaceholder = gatheringsAsset.url;
-const serviceConciergePlaceholder = conciergeAsset.url;
-const serviceTravelPlaceholder = travelAsset.url;
+const heroPlaceholder = "/photos/hero-dining-room.jpg";
 const founderPortrait = founderAsset.url;
 
 export const Route = createFileRoute("/")({
@@ -59,9 +52,6 @@ const approach = [
   },
 ];
 
-
-
-
 function Home() {
   return (
     <>
@@ -70,7 +60,7 @@ function Home() {
         <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
           <img
             src={heroPlaceholder}
-            alt="Walnut-panelled hotel lounge with oxblood and cream marble floor"
+            alt="Warm dining room with painted sky ceiling and gilded palm lamps"
             width={1440}
             height={1920}
             className="h-full w-full object-cover"
@@ -102,48 +92,51 @@ function Home() {
         </p>
       </section>
 
-      {/* Services trio */}
+      {/* Services */}
       <section className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="max-w-2xl">
+          <p className="eyebrow">What we do</p>
+          <h2 className="mt-6 text-4xl md:text-5xl">Four ways we take care of a trip.</h2>
+        </div>
+        <div className="mt-16 grid gap-x-10 gap-y-14 sm:grid-cols-2">
           {[
             {
-              img: serviceTravelPlaceholder,
-              w: 1440,
-              h: 1920,
-              label: "Travel",
-              body: "Personalized planning and access for clients seeking exceptional places — hotels, villas, private aviation, yachts, and multi-destination itineraries.",
+              n: "01",
+              label: "Hotel Only Booking",
+              body: "Preferred rates and VIP perks, with a personal introduction to every property. Complimentary.",
+              to: "hotel-only-bookings",
             },
             {
-              img: serviceGatheringsPlaceholder,
-              w: 1440,
-              h: 1920,
-              label: "Groups & Gatherings",
-              body: "Retreats, off-sites, destination weddings, celebrations, and reunions in places that elevate the occasion.",
+              n: "02",
+              label: "Itinerary Planning",
+              body: "From the essentials to full concierge service, planned around how you want the trip to feel.",
+              to: "essential-itinerary-planning",
             },
             {
-              img: serviceConciergePlaceholder,
-              w: 1440,
-              h: 1920,
-              label: "Experiences & Concierge",
-              body: "Private dining, cultural experiences, guides, transportation, and the details that transform a trip into something more.",
+              n: "03",
+              label: "Group Bookings",
+              body: "Room blocks, rate negotiation, and logistics for weddings, retreats, and corporate gatherings.",
+              to: "group-bookings-experiences",
+            },
+            {
+              n: "04",
+              label: "A La Carte",
+              body: "Cruises, flights, villas, and yachts — arranged whenever you need them.",
+              to: "cruise-bookings",
             },
           ].map((s) => (
-            <article key={s.label} className="group">
-              <div className="overflow-hidden">
-                <img
-                  src={s.img}
-                  alt={s.label}
-                  loading="lazy"
-                  width={s.w}
-                  height={s.h}
-                  className="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-                />
-              </div>
-              <h2 className="mt-7 text-3xl">{s.label}</h2>
-              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
+            <Link
+              key={s.label}
+              to="/services"
+              hash={s.to}
+              className="group block border-t border-border pt-6"
+            >
+              <p className="font-display text-2xl text-brass">{s.n}</p>
+              <h3 className="link-underline mt-3 inline-block text-2xl">{s.label}</h3>
+              <p className="mt-4 max-w-sm text-sm font-light leading-relaxed text-muted-foreground">
                 {s.body}
               </p>
-            </article>
+            </Link>
           ))}
         </div>
         <div className="mt-14">
@@ -204,7 +197,11 @@ function Home() {
               <p className="eyebrow">The founder</p>
               <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
               <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
-                Amber is a hospitality and travel professional with more than two decades of experience across fashion, boutique hotels, experiential design, partnerships, relationship management, and travel. She is highly relationship-driven and is passionate about guiding her clients to beautiful destinations, paired with incredible experiences. 
+                Amber is a hospitality and travel professional with more than two decades of
+                experience across fashion, boutique hotels, experiential design, partnerships,
+                relationship management, and travel. She is highly relationship-driven and is
+                passionate about guiding her clients to beautiful destinations, paired with
+                incredible experiences.
               </p>
               <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
                 Read her story
