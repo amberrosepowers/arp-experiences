@@ -5,11 +5,13 @@ export function PageHeader({
   title,
   intro,
   centered,
+  introClassName = "max-w-2xl",
 }: {
   eyebrow: string;
   title: ReactNode;
   intro?: string;
   centered?: boolean;
+  introClassName?: string;
 }) {
   return (
     <section
@@ -23,7 +25,7 @@ export function PageHeader({
       </h1>
       {intro && (
         <p
-          className={`fade-up mt-8 max-w-2xl text-lg font-light leading-relaxed text-muted-foreground ${centered ? "mx-auto" : ""}`}
+          className={`fade-up mt-8 text-lg font-light leading-relaxed text-muted-foreground ${introClassName} ${centered ? "mx-auto" : ""}`}
         >
           {intro}
         </p>
@@ -32,13 +34,7 @@ export function PageHeader({
   );
 }
 
-export function Section({
-  children,
-  className = "",
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+export function Section({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <section className={`mx-auto max-w-[1400px] px-6 py-16 md:px-12 md:py-24 ${className}`}>
       {children}
