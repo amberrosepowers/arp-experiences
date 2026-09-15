@@ -246,14 +246,6 @@ function Inquire() {
         </div>
 
         <div className="mx-auto max-w-2xl">
-          <img
-            src={inquireImage}
-            alt="Narrow sunlit alley leading toward the sea in Saint-Tropez"
-            loading="lazy"
-            width={900}
-            height={1125}
-            className="mb-14 aspect-[4/5] w-full object-cover"
-          />
           {mode === "quick" ? (
             <form onSubmit={onSubmitQuick} className="space-y-10">
               <div className="grid gap-10 sm:grid-cols-2">
@@ -676,6 +668,19 @@ function Inquire() {
               )}
             </form>
           )}
+        </div>
+      </Section>
+
+      <Section className="!pt-0">
+        <div className="mx-auto max-w-2xl">
+          <img
+            src={inquireImage}
+            alt="Narrow sunlit alley leading toward the sea in Saint-Tropez"
+            loading="lazy"
+            width={900}
+            height={1125}
+            className="aspect-[4/5] w-full object-cover"
+          />
         </div>
       </Section>
 
