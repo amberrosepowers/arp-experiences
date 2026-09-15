@@ -32,8 +32,8 @@ export const posts: Post[] = [
       "Retreats, weddings, and reunions succeed on the same principle: the place should do some of the work.",
     date: "2026-05-02",
     category: "Gatherings",
-    image: "/photos/blog-gathering-tropical-restaurant.jpg",
-    imageAlt: "Open-air restaurant with a statement palm-leaf chandelier at night",
+    image: "/photos/offering-flights-paris-dusk.jpg",
+    imageAlt: "City skyline over the Seine at dusk",
     body: [
       "A group gathering is an act of hospitality at scale. The property sets the tone, but the moments between the scheduled hours are where connection happens — the long table at dusk, the walk into town, the unplanned second drink.",
       "We build gatherings with those spaces left open on purpose, then quietly prepare for them: the table already held, the guide already briefed, the transportation already waiting.",
@@ -46,8 +46,8 @@ export const posts: Post[] = [
     excerpt: "Choice is not the same as service. Knowing the right recommendation is the work.",
     date: "2026-03-27",
     category: "Approach",
-    image: "/photos/blog-fewer-options-spa.jpg",
-    imageAlt: "Dark marble spa corridor with a sauna beyond",
+    image: "/photos/blog-fewer-options-ocean-room.jpg",
+    imageAlt: "Ocean-view bedroom with private terrace",
     body: [
       "Clients rarely need more options. They need someone who has narrowed the field honestly, and can explain why one place is right for this trip and this group of people.",
       "We would rather present three properties we know deeply than twelve we have only read about. That editing is the value.",
