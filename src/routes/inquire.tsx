@@ -13,7 +13,7 @@ import { submitInquiry } from "@/lib/inquiries.functions";
 
 const inquireImage = "/photos/inquire-st-tropez-alley.jpg";
 const processImage = "/photos/inquire-seine-bridge-dusk.jpg";
-const faqImage = "/photos/inquire-faq-drawing-room.jpg";
+const faqImage = "/photos/offering-alacarte-drawing-room.jpg";
 
 export const Route = createFileRoute("/inquire")({
   validateSearch: (search: Record<string, unknown>): { type?: string | undefined } => ({
@@ -264,7 +264,7 @@ function Inquire() {
         centered
         eyebrow="Inquiry"
         title="Let's start planning."
-        intro="Please fill out the Inquiry or Trip Intake form, and we will personally follow up to set up your complimentary consultation call shortly."
+        intro="We're so glad you're here. Please fill out the Inquiry or Trip Intake form, and we will personally follow up shortly to set up your complimentary consultation call."
       />
 
       <Section className="!pt-0">
@@ -753,16 +753,16 @@ function Inquire() {
       <Section className="!pt-0">
         <div className="border-t border-border pt-16">
           <p className="eyebrow text-center">Our Process</p>
-          <div className="mt-14 grid gap-14 md:grid-cols-[1fr_1.2fr] md:items-center">
+          <div className="mt-14 grid gap-14 md:grid-cols-[1fr_1.2fr] md:items-start">
             <img
               src={processImage}
               alt="Stone bridge over the Seine at blue hour"
               loading="lazy"
               width={900}
               height={1125}
-              className="aspect-[4/5] w-full object-cover"
+              className="order-2 aspect-[4/5] w-full object-cover md:order-1"
             />
-            <div className="space-y-10">
+            <div className="order-1 space-y-10 md:order-2">
               {process.map((p) => (
                 <div key={p.title} className="flex gap-6 border-t border-border pt-6">
                   <p className="font-display text-2xl text-brass">{p.n}</p>

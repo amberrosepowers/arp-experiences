@@ -124,85 +124,81 @@ function About() {
 
       <Section>
         <div className="bg-secondary/70">
-          <div className="grid items-center gap-0 md:grid-cols-2">
-            <div className="px-6 py-16 md:px-12 md:py-20">
-              <p className="eyebrow">Preferred Partners</p>
-              <h2 className="mt-6 max-w-lg text-3xl md:text-4xl">
-                Direct relationships, meaningful benefits.
-              </h2>
-              <p className="mt-6 max-w-lg text-sm font-light leading-relaxed text-muted-foreground">
-                We invest significant time building direct relationships with the properties we
-                recommend, so our clients receive priority consideration, exclusive rates, access to
-                unpublished availability, and meaningful benefits — at no additional cost to you.
-                Some of the preferred partner programs we work with:
-              </p>
-              <div className="mt-10 columns-2 gap-x-8">
-                {partners.map((p) => (
-                  <p
-                    key={p}
-                    className="break-inside-avoid border-b border-border py-2.5 font-display text-base"
-                  >
-                    {p}
-                  </p>
-                ))}
-              </div>
+          <img
+            src={partnersImage}
+            alt="Grand curved staircase with wrought-iron railing and glass orb lighting"
+            loading="lazy"
+            width={1400}
+            height={700}
+            className="aspect-[2/1] w-full object-cover"
+          />
+          <div className="px-6 py-16 md:px-12 md:py-20">
+            <p className="eyebrow">Preferred Partners</p>
+            <h2 className="mt-6 max-w-lg text-3xl md:text-4xl">
+              Direct relationships, meaningful benefits.
+            </h2>
+            <p className="mt-6 max-w-lg text-sm font-light leading-relaxed text-muted-foreground">
+              We invest significant time building direct relationships with the properties we
+              recommend, so our clients receive priority consideration, exclusive rates, access to
+              unpublished availability, and meaningful benefits — at no additional cost to you. Some
+              of the preferred partner programs we work with:
+            </p>
+            <div className="mt-10 columns-2 gap-x-8 md:columns-3">
+              {partners.map((p) => (
+                <p
+                  key={p}
+                  className="break-inside-avoid border-b border-border py-2.5 font-display text-base"
+                >
+                  {p}
+                </p>
+              ))}
             </div>
-            <img
-              src={partnersImage}
-              alt="Grand curved staircase with wrought-iron railing and glass orb lighting"
-              loading="lazy"
-              width={900}
-              height={1200}
-              className="h-full min-h-[420px] w-full object-cover"
-            />
           </div>
         </div>
       </Section>
 
       <Section>
-        <div className="grid items-center gap-14 md:grid-cols-[1.3fr_1fr]">
-          <div className="space-y-6 text-base font-light leading-relaxed text-muted-foreground">
-            <p className="font-display text-3xl leading-snug text-foreground">
-              Amber Rose Powers — Founder
-            </p>
-            <p>
-              Amber is a hospitality and travel professional with more than two decades of
-              experience across fashion, boutique hotels, experiential design, partnerships,
-              relationship management, and travel.
-            </p>
-            <p>
-              Her career began in fashion, with a degree in Apparel Design and experience spanning
-              design, PR, sales, and brand relationships, before she moved into real estate
-              development and boutique hospitality — helping launch Detroit Foundation Hotel and
-              later serving as its Director of Lifestyle, developing experiential programming and
-              managing VIP relationships alongside a Michelin-starred chef.
-            </p>
-            <p>
-              She subsequently joined Aparium Hotel Group headquarters in Chicago as Chief
-              Relationship Officer, working across a portfolio of boutique hotels with a focus on
-              relationships, partnerships, culture, and lifestyle-driven initiatives.
-            </p>
-            <p>
-              In 2022, Amber brought that hospitality perspective into travel advising, developing a
-              deep network of industry relationships and firsthand knowledge of the hotels,
-              destinations, and partners that create exceptional guest experiences.
-            </p>
-            <p className="font-display text-xl italic leading-snug text-foreground">
-              She is highly relationship-driven and is passionate about helping others to experience
-              travel and gather well.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <img
-              src={founderPortrait}
-              alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
-              loading="lazy"
-              width={933}
-              height={1400}
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <p className="eyebrow">Amber Rose Powers · Founder</p>
-          </div>
+        <div className="mx-auto max-w-2xl text-center">
+          <img
+            src={founderPortrait}
+            alt="Portrait of Amber Rose Powers, founder of ARP Experiences"
+            loading="lazy"
+            width={933}
+            height={1400}
+            className="mx-auto aspect-[4/5] w-full max-w-sm object-cover"
+          />
+          <p className="eyebrow mt-6">Our Founder</p>
+        </div>
+        <div className="mx-auto mt-10 max-w-2xl space-y-6 text-base font-light leading-relaxed text-muted-foreground">
+          <p className="font-display text-3xl leading-snug text-foreground">
+            Amber Rose Powers — Founder
+          </p>
+          <p>
+            Amber is a hospitality and travel professional with more than two decades of experience
+            across fashion, boutique hotels, experiential design, partnerships, relationship
+            management, and travel.
+          </p>
+          <p>
+            Her career began in fashion, with a degree in Apparel Design and experience spanning
+            design, PR, sales, and brand relationships, before she moved into real estate
+            development and boutique hospitality — helping launch Detroit Foundation Hotel and later
+            serving as its Director of Lifestyle, developing experiential programming and managing
+            VIP relationships alongside a Michelin-starred chef.
+          </p>
+          <p>
+            She subsequently joined Aparium Hotel Group headquarters in Chicago as Chief
+            Relationship Officer, working across a portfolio of boutique hotels with a focus on
+            relationships, partnerships, culture, and lifestyle-driven initiatives.
+          </p>
+          <p>
+            In 2022, Amber brought that hospitality perspective into travel advising, developing a
+            deep network of industry relationships and firsthand knowledge of the hotels,
+            destinations, and partners that create exceptional guest experiences.
+          </p>
+          <p className="font-display text-xl italic leading-snug text-foreground">
+            She is highly relationship-driven and is passionate about helping others to experience
+            travel and gather well.
+          </p>
         </div>
       </Section>
     </>

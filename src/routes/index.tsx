@@ -153,7 +153,7 @@ function Home() {
               className="aspect-[4/5] w-full max-w-[300px] mx-auto object-cover"
             />
             <div>
-              <p className="eyebrow">The founder</p>
+              <p className="eyebrow">Our Founder</p>
               <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
               <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
                 Amber is a hospitality and travel professional with more than two decades of
