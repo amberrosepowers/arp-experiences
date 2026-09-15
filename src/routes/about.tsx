@@ -93,7 +93,7 @@ function About() {
       />
 
       <div className="-mt-10 mb-10 text-center md:-mt-14">
-        <Link to="/inquire" className="btn-arp">
+        <Link to="/inquire" className="btn-arp-outline">
           Inquire
         </Link>
       </div>

@@ -31,6 +31,15 @@ function BlogIndex() {
         intro="Observations from inside the industry — the hotels & destinations worth knowing, the way a gathering comes together, and the thinking behind how we plan."
       />
 
+      <div className="-mt-10 mb-10 text-center md:-mt-14">
+        <a
+          href="mailto:hello@arpexperiences.com?subject=Subscribe%20to%20the%20Journal"
+          className="btn-arp-outline"
+        >
+          Subscribe
+        </a>
+      </div>
+
       <Section className="!pt-0">
         <div className="mx-auto max-w-5xl">
           {posts.map((post, i) => (
