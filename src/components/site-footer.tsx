@@ -1,5 +1,14 @@
 import { Link } from "@tanstack/react-router";
 
+const instagramPreview = [
+  "/photos/hero-balzac-lobby.jpg",
+  "/photos/service-travel-malta.jpg",
+  "/photos/blog-fewer-options-spa.jpg",
+  "/photos/inquire-st-tropez-alley.jpg",
+  "/photos/offering-flights-paris-dusk.jpg",
+  "/photos/about-closing-staircase.jpg",
+];
+
 export function SiteFooter() {
   return (
     <footer className="mt-32 bg-walnut text-primary-foreground">
@@ -38,22 +47,53 @@ export function SiteFooter() {
             <p className="eyebrow !text-primary-foreground/60">Connect</p>
             <ul className="mt-6 space-y-3 text-sm font-light">
               <li>
+                <Link to="/inquire" className="link-underline">
+                  Begin an Inquiry
+                </Link>
+              </li>
+              <li>
                 <a href="mailto:hello@arpexperiences.com" className="link-underline">
                   hello@arpexperiences.com
                 </a>
-              </li>
-              <li>
-                <Link to="/inquire" className="link-underline">
-                  Begin an inquiry
-                </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-primary-foreground/20 pt-8 text-xs font-light tracking-wide text-primary-foreground/60 md:flex-row md:justify-between">
+        <div className="mt-16 border-t border-primary-foreground/20 pt-10">
+          <a
+            href="https://www.instagram.com/arpexperiences"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="eyebrow link-underline !text-primary-foreground/70"
+          >
+            @arpexperiences
+          </a>
+          <div className="mt-5 grid grid-cols-3 gap-2 sm:grid-cols-6">
+            {instagramPreview.map((src) => (
+              <a
+                key={src}
+                href="https://www.instagram.com/arpexperiences"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden"
+              >
+                <img
+                  src={src}
+                  alt=""
+                  loading="lazy"
+                  width={200}
+                  height={200}
+                  className="aspect-square w-full object-cover opacity-90 transition-opacity hover:opacity-100"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-3 border-t border-primary-foreground/20 pt-8 text-xs font-light tracking-wide text-primary-foreground/60 md:flex-row md:justify-between">
           <p>&copy; {new Date().getFullYear()} ARP Experiences</p>
-          <p>Exceptional places. Personal relationships. Experiences worth remembering.</p>
+          <p>An Independent Affiliate of Fora Travel, a Virtuoso Company</p>
         </div>
       </div>
     </footer>
