@@ -31,6 +31,8 @@ type Block = {
   investment: string;
   finenote?: string;
   inquireType: string;
+  externalLink?: string;
+  externalLinkLabel?: string;
 };
 
 type Offering = {
@@ -87,6 +89,8 @@ const offerings: Offering[] = [
           "Portal access is reserved for registered ARP Experiences clients — reach out through our inquiry page to be welcomed in. Not every hotel partner is available in the portal just yet; if you don't see the hotel you're looking for, simply reach out and we'll arrange it directly, with applicable preferred partner benefits applied.",
         ],
         investment: "Complimentary",
+        externalLink: "https://trips.foratravel.com/amber-rose-powers/book",
+        externalLinkLabel: "Go to the Booking Portal",
       },
     ],
   },
@@ -293,6 +297,17 @@ function BlockContent({ block }: { block: Block }) {
       >
         Inquire about this
       </Link>
+
+      {block.externalLink && (
+        <a
+          href={block.externalLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="eyebrow link-underline mt-6 ml-8 inline-block text-oxblood"
+        >
+          {block.externalLinkLabel ?? "Learn more"}
+        </a>
+      )}
     </div>
   );
 }
