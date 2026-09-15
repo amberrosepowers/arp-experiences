@@ -8,6 +8,9 @@ import { submitInquiry } from "@/lib/inquiries.functions";
 const inquireImage = "/photos/inquire-st-tropez-alley.jpg";
 
 export const Route = createFileRoute("/inquire")({
+  validateSearch: (search: Record<string, unknown>): { type?: string | undefined } => ({
+    type: typeof search["type"] === "string" ? search["type"] : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Inquiry — ARP Experiences" },
@@ -104,6 +107,7 @@ function CheckboxRow({ name, options }: { name: string; options: string[] }) {
 }
 
 function Inquire() {
+  const { type: prefillType } = Route.useSearch();
   const send = useServerFn(submitInquiry);
   const [mode, setMode] = useState<"quick" | "detailed">("quick");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -293,7 +297,7 @@ function Inquire() {
                   <label className={labelClass} htmlFor="type">
                     Type of experience
                   </label>
-                  <select id="type" name="type" className={fieldClass}>
+                  <select id="type" name="type" defaultValue={prefillType} className={fieldClass}>
                     <option>Hotel Only Booking</option>
                     <option>Essential Itinerary Planning</option>
                     <option>Full Itinerary Planning with Concierge</option>
