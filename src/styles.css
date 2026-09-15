@@ -45,9 +45,9 @@
 :root {
   --radius: 0.125rem;
 
-  --parchment: oklch(0.919 0.010 67.7);
+  --parchment: oklch(0.955 0.017 88);
   --sand: oklch(0.915 0.025 84);
-  --walnut: oklch(0.403 0.086 51.9);
+  --walnut: oklch(0.32 0.038 55);
   --oxblood: oklch(0.34 0.088 27);
   --brass: oklch(0.62 0.078 72);
 
