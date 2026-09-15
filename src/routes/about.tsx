@@ -86,7 +86,9 @@ function About() {
       <PageHeader
         centered
         eyebrow="About"
-        title="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients. We don't simply arrange travel. We create experiences around it."
+        title="Travel, thoughtfully experienced."
+        intro="ARP Experiences is a relationship-led travel and hospitality company creating exceptional travel and gathering experiences for discerning clients. We don't simply arrange travel. We create experiences around it."
+        introClassName="max-w-4xl"
       />
 
       <Section className="!pb-0">
