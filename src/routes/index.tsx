@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import founderAsset from "@/assets/founder-portrait.jpg.asset.json";
 
 const heroPlaceholder = "/photos/hero-balzac-lobby.jpg";
-const founderPortrait = founderAsset.url;
+const founderPortrait = "/photos/founder-amber.jpg";
 
 const cardHotel = "/photos/offering-hotel-seafront-room.jpg";
 const cardItinerary = "/photos/offering-itinerary-colonnade.jpg";
