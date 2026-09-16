@@ -152,7 +152,7 @@ function Home() {
               loading="lazy"
               width={1440}
               height={1920}
-              className="aspect-[4/5] w-full max-w-[300px] mx-auto object-cover"
+              className="aspect-[4/5] w-full max-w-[300px] mx-auto object-cover object-[center_65%]"
             />
             <div>
               <p className="eyebrow">Our Founder</p>

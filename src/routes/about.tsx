@@ -172,7 +172,7 @@ function About() {
               loading="lazy"
               width={933}
               height={1400}
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/5] w-full object-cover object-[center_65%]"
             />
             <p className="eyebrow">Our Founder</p>
           </div>
