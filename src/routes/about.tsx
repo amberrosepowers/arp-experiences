@@ -181,27 +181,32 @@ function About() {
               Amber Rose Powers — Founder
             </p>
             <p>
-              Amber is a hospitality and travel professional with over two decades of experience
-              across fashion, boutique hotels, experiential design, partnerships, relationship
-              management, and travel. She is highly relationship-driven and is passionate about
-              helping others to experience travel and gather well.
+              Amber Rose Powers is a luxury travel and hospitality leader with more than two decades
+              of experience building the kinds of places and experiences people never forget. She is
+              highly relationship-driven, with an instinct for what makes people feel genuinely
+              cared for, connected, and at home.
             </p>
             <p>
               Her career began in fashion, with a degree in Apparel Design and experience spanning
               design, PR, sales, and brand relationships, before she moved into real estate
-              development and boutique hospitality — helping launch Detroit Foundation Hotel and
-              later serving as its Director of Lifestyle, developing experiential programming and
-              managing VIP relationships alongside a Michelin-starred chef.
+              development and boutique hospitality.
             </p>
             <p>
-              She subsequently joined Aparium Hotel Group headquarters in Chicago as Chief
-              Relationship Officer, working across a portfolio of boutique hotels with a focus on
-              relationships, partnerships, culture, and lifestyle-driven initiatives.
+              As Director of Lifestyle at Detroit Foundation Hotel — where she developed
+              experiential programming and managed VIP relationships alongside a Michelin-starred
+              chef — and later as Chief Relationship Officer for Aparium Hotel Group, she built
+              culture-driven, community-rooted hospitality across a portfolio of fourteen boutique
+              hotels nationwide.
             </p>
             <p>
-              In 2022, Amber brought that hospitality perspective into travel advising, developing a
-              deep network of industry relationships and firsthand knowledge of the hotels,
-              destinations, and partners that create exceptional guest experiences.
+              In 2022, Amber brought that same instinct into travel advising, developing a deep
+              network of industry relationships and firsthand knowledge of the hotels, destinations,
+              and partners that create exceptional guest experiences. In 2026, she founded ARP
+              Experiences at the intersection of travel, hospitality, and experience design.
+            </p>
+            <p className="font-display text-xl italic leading-snug text-foreground">
+              She is drawn to environments where those elements converge — building experiences
+              worth belonging to.
             </p>
           </div>
         </div>
