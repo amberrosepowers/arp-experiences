@@ -57,11 +57,6 @@ export function SiteFooter() {
                   Begin an Inquiry
                 </Link>
               </li>
-              <li>
-                <a href="mailto:hello@arpexperiences.com" className="link-underline">
-                  hello@arpexperiences.com
-                </a>
-              </li>
             </ul>
           </div>
         </div>
