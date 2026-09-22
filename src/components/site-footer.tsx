@@ -20,12 +20,6 @@ export function SiteFooter() {
             <p className="mt-8 max-w-sm font-display text-2xl leading-snug text-primary-foreground/90">
               Travel, thoughtfully experienced.
             </p>
-            <a
-              href="mailto:hello@arpexperiences.com?subject=Subscribe%20to%20the%20Journal"
-              className="btn-arp-ghost mt-8"
-            >
-              Subscribe to our Journal
-            </a>
           </div>
 
           <div>
@@ -39,11 +33,6 @@ export function SiteFooter() {
               <li>
                 <Link to="/services" className="link-underline">
                   Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="link-underline">
-                  Journal
                 </Link>
               </li>
             </ul>
