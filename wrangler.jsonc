@@ -1,0 +1,6 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "vars": {
+    "SUPABASE_URL": "https://xhgywmhaibfffnkzgixr.supabase.co"
+  }
+}
