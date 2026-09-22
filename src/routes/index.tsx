@@ -141,7 +141,7 @@ function Home() {
 
       {/* Founder */}
       <section className="bg-secondary/70">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-6 pb-12 pt-24 md:px-12 md:pb-16 md:pt-32">
           <div className="grid items-center gap-14 md:grid-cols-2">
             <img
               src={founderPortrait}

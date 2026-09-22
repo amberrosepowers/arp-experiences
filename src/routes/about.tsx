@@ -126,7 +126,7 @@ function About() {
         </div>
       </Section>
 
-      <Section>
+      <Section className="!pb-12 md:!pb-16">
         <div className="bg-secondary/70">
           <div className="grid items-stretch gap-0 md:grid-cols-2">
             <div className="order-2 px-6 py-16 md:order-1 md:px-12 md:py-20">
@@ -163,7 +163,7 @@ function About() {
         </div>
       </Section>
 
-      <Section>
+      <Section className="!pt-12 !pb-12 md:!pt-16 md:!pb-16">
         <div className="grid items-center gap-14 md:grid-cols-[1fr_1.3fr]">
           <div className="space-y-4">
             <img

@@ -776,7 +776,7 @@ function Inquire() {
         </div>
       </Section>
 
-      <Section className="!pt-0">
+      <Section className="!pt-0 !pb-12 md:!pb-16">
         <div className="grid gap-14 border-t border-border pt-16 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
             <p className="eyebrow">FAQ</p>

@@ -400,13 +400,13 @@ function Services() {
         </Link>
       </div>
 
-      <Section className="!pt-0">
+      <Section className="!pt-0 !pb-12 md:!pb-16">
         {offerings.map((offering, i) => (
           <OfferingRow key={offering.slug} offering={offering} index={i} />
         ))}
       </Section>
 
-      <Section className="!pt-0">
+      <Section className="!pt-0 !pb-12 md:!pb-16">
         <div className="text-center">
           <Link to="/inquire" className="btn-arp">
             Begin an inquiry
