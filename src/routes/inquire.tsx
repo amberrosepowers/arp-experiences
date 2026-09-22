@@ -153,8 +153,8 @@ const finePrint = [
   {
     name: "agreeFees",
     description:
-      "Please be aware that there may be a planning fee associated with our services. During our complimentary intake call, we'll discuss your travel details & goals before providing you with a detailed understanding of any associated fees based upon the scope and complexities of your trip request. I agree to pay any planning or fees if applicable to my chosen services.",
-    agreement: "Yes, I understand and agree.",
+      "Please be aware that there may be a planning fee associated with our services. During our complimentary intake call, we'll discuss your travel details & goals before providing you with a detailed understanding of any associated fees based upon the scope and complexities of your trip request.",
+    agreement: "Yes, I agree to pay any planning fees if applicable to my chosen services.",
   },
   {
     name: "agreePricing",
@@ -318,7 +318,7 @@ function Inquire() {
       />
 
       <Section className="!pt-0">
-        <div className="grid gap-14 md:grid-cols-[1.2fr_1fr] md:items-center">
+        <div className="grid gap-14 md:grid-cols-[1.2fr_1fr] md:items-start">
           <div>
             <div className="mb-14 flex w-fit border border-walnut">
               <button
@@ -337,17 +337,18 @@ function Inquire() {
                   mode === "detailed" ? "bg-walnut text-parchment" : "text-walnut"
                 }`}
               >
-                Detailed Trip Intake
+                Client Intake
               </button>
             </div>
 
             <div>
               {mode === "quick" ? (
                 <form onSubmit={onSubmitQuick} className="space-y-10">
+                  <p className="text-xs font-light text-muted-foreground">* Required</p>
                   <div className="grid gap-10 sm:grid-cols-2">
                     <div>
                       <label className={labelClass} htmlFor="name">
-                        Name
+                        Name *
                       </label>
                       <input
                         id="name"
@@ -359,7 +360,7 @@ function Inquire() {
                     </div>
                     <div>
                       <label className={labelClass} htmlFor="email">
-                        Email
+                        Email *
                       </label>
                       <input
                         id="email"
@@ -375,7 +376,7 @@ function Inquire() {
                   <div className="grid gap-10 sm:grid-cols-2">
                     <div>
                       <label className={labelClass} htmlFor="phone">
-                        Phone
+                        Phone *
                       </label>
                       <input
                         id="phone"
@@ -460,7 +461,7 @@ function Inquire() {
 
                   {status === "sent" && (
                     <p aria-live="polite" className="text-sm font-light text-muted-foreground">
-                      Thank you — your inquiry has been received. We'll follow up personally.
+                      Thank you — your inquiry has been received. We'll follow up with you shortly.
                     </p>
                   )}
                   {status === "error" && (
@@ -471,18 +472,19 @@ function Inquire() {
                 </form>
               ) : (
                 <form onSubmit={onSubmitDetailed} className="space-y-14">
+                  <p className="text-xs font-light text-muted-foreground">* Required</p>
                   <div className="space-y-8">
                     <p className="font-display text-2xl text-oxblood">Client Intake</p>
                     <div className="grid gap-10 sm:grid-cols-2">
                       <div>
                         <label className={labelClass} htmlFor="firstName">
-                          First Name
+                          First Name *
                         </label>
                         <input id="firstName" name="firstName" required className={fieldClass} />
                       </div>
                       <div>
                         <label className={labelClass} htmlFor="lastName">
-                          Last Name
+                          Last Name *
                         </label>
                         <input id="lastName" name="lastName" required className={fieldClass} />
                       </div>
@@ -490,7 +492,7 @@ function Inquire() {
                     <div className="grid gap-10 sm:grid-cols-2">
                       <div>
                         <label className={labelClass} htmlFor="d-email">
-                          Email
+                          Email *
                         </label>
                         <input
                           id="d-email"
@@ -554,7 +556,7 @@ function Inquire() {
                     <div>
                       <label className={labelClass} htmlFor="travelerNames">
                         Who will be traveling with you? Please list all full legal names (including
-                        yourself) and birthdates, as listed on passport.
+                        yourself) and birthdates, as listed on passport. *
                       </label>
                       <textarea
                         id="travelerNames"
@@ -723,7 +725,7 @@ function Inquire() {
 
                   {status === "sent" && (
                     <p aria-live="polite" className="text-sm font-light text-muted-foreground">
-                      Thank you — we've received your trip intake and will follow up personally.
+                      Thank you — your inquiry has been received. We'll follow up with you shortly.
                     </p>
                   )}
                   {status === "error" && (
