@@ -33,7 +33,17 @@ export const Route = createFileRoute("/inquire")({
         content: "Tell us about the person, the purpose, and the occasion.",
       },
       { property: "og:type", content: "website" },
+      {
+        property: "og:image",
+        content: "https://www.arpexperiences.com/photos/inquire-st-tropez-alley.jpg",
+      },
+      { property: "og:image:width", content: "1600" },
+      { property: "og:image:height", content: "2133" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content: "https://www.arpexperiences.com/photos/inquire-st-tropez-alley.jpg",
+      },
     ],
   }),
   component: Inquire,

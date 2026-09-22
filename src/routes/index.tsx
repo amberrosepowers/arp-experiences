@@ -23,7 +23,17 @@ export const Route = createFileRoute("/")({
         content: "Exceptional places. Personal relationships. Experiences worth remembering.",
       },
       { property: "og:type", content: "website" },
+      {
+        property: "og:image",
+        content: "https://www.arpexperiences.com/photos/hero-balzac-lobby.jpg",
+      },
+      { property: "og:image:width", content: "1600" },
+      { property: "og:image:height", content: "2133" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content: "https://www.arpexperiences.com/photos/hero-balzac-lobby.jpg",
+      },
     ],
   }),
   component: Home,
