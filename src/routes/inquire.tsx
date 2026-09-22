@@ -323,7 +323,7 @@ function Inquire() {
         centered
         eyebrow="Inquiry"
         title="Let's start planning."
-        intro="We're so glad you're here. Please fill out the Inquiry or Detailed Trip Inquiry form, and we will personally follow up to set up your complimentary consultation call."
+        intro="Please fill out the Inquiry or Detailed Trip Inquiry form, and we will personally follow up to set up your complimentary consultation call."
       />
 
       <Section className="!pt-0">
