@@ -40,7 +40,7 @@ const services = [
   {
     n: "02",
     label: "Itinerary Planning",
-    body: "From accommodations, transportation and tours to dining, spa, and concierge-level details — itineraries planned intentionally around how you want your travel to feel.",
+    body: "From accommodations, transportation and tours to dining, spa, and concierge-level details — itineraries planned intentionally around how you want your travel experience to feel.",
     to: "essential-itinerary-planning",
     img: cardItinerary,
   },
@@ -54,7 +54,7 @@ const services = [
   {
     n: "04",
     label: "A La Carte Services",
-    body: "Cruises, flights, villas, yacht charters, and private aviation — plus tickets to hard-to-get events — arranged whenever you need them.",
+    body: "Cruises, flights, villas, yacht charters, and private aviation — plus tickets to hard-to-get events — arranged individually or in addition to other planning services.",
     to: "cruise-bookings",
     img: cardALaCarte,
   },

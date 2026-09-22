@@ -98,7 +98,7 @@ function About() {
       </div>
 
       <Section className="!pt-0 !pb-0">
-        <div className="grid items-center gap-14 md:grid-cols-2">
+        <div className="grid items-start gap-14 md:grid-cols-2">
           <img
             src={approachImage}
             alt="Fresh flowers on a desk beside a tall window"

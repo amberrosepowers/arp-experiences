@@ -254,7 +254,6 @@ function Inquire() {
     const lastName = get("lastName");
 
     const intake_details = {
-      address: get("address"),
       travelDatesFlexible: get("datesFlexible"),
       departureCity: get("departureCity"),
       celebration: get("celebration"),
@@ -337,18 +336,19 @@ function Inquire() {
                   mode === "detailed" ? "bg-walnut text-parchment" : "text-walnut"
                 }`}
               >
-                Client Intake
+                Detailed Trip Inquiry
               </button>
             </div>
 
             <div>
               {mode === "quick" ? (
                 <form onSubmit={onSubmitQuick} className="space-y-10">
+                  <p className="font-display text-2xl text-oxblood">Client Intake</p>
                   <p className="text-xs font-light text-muted-foreground">* Required</p>
                   <div className="grid gap-10 sm:grid-cols-2">
                     <div>
                       <label className={labelClass} htmlFor="name">
-                        Name *
+                        Full Name *
                       </label>
                       <input
                         id="name"
@@ -504,16 +504,10 @@ function Inquire() {
                       </div>
                       <div>
                         <label className={labelClass} htmlFor="d-phone">
-                          Phone Number
+                          Phone Number *
                         </label>
-                        <input id="d-phone" name="phone" className={fieldClass} />
+                        <input id="d-phone" name="phone" required className={fieldClass} />
                       </div>
-                    </div>
-                    <div>
-                      <label className={labelClass} htmlFor="address">
-                        Address
-                      </label>
-                      <input id="address" name="address" className={fieldClass} />
                     </div>
                   </div>
 
