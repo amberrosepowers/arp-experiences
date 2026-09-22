@@ -76,9 +76,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Cream spacer */}
-      <div className="h-10 md:h-16" />
-
       {/* Statement */}
       <section className="bg-walnut text-primary-foreground">
         <div className="mx-auto max-w-[1400px] px-6 py-16 text-center md:px-12 md:py-20">
