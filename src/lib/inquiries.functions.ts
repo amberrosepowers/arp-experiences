@@ -43,6 +43,17 @@ const intakeLabels: Record<string, string> = {
   agreedPassportValidity: "Agreed to Passport Validity",
 };
 
+function formatPhone(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length === 10) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+  if (digits.length === 11 && digits.startsWith("1")) {
+    return `(${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7)}`;
+  }
+  return phone;
+}
+
 function formatIntakeValue(value: unknown): string | null {
   if (value === null || value === undefined || value === "") return null;
   if (Array.isArray(value)) return value.length ? value.join(", ") : null;
@@ -63,7 +74,7 @@ function buildEmailHtml(data: z.infer<typeof inquirySchema>): string {
     ["Name", data.name],
     ["Email", data.email],
   ];
-  if (data.phone) rows.push(["Phone", data.phone]);
+  if (data.phone) rows.push(["Phone", formatPhone(data.phone)]);
   if (data.experience_type) rows.push(["Experience", data.experience_type]);
   if (data.destination) rows.push(["Destination", data.destination]);
   if (data.dates) rows.push(["Dates", data.dates]);
@@ -130,7 +141,7 @@ function buildEmailText(data: z.infer<typeof inquirySchema>): string {
     `Type: ${data.form_type === "detailed" ? "Detailed Trip Intake" : "Quick Inquiry"}`,
     `Name: ${data.name}`,
     `Email: ${data.email}`,
-    data.phone && `Phone: ${data.phone}`,
+    data.phone && `Phone: ${formatPhone(data.phone)}`,
     data.experience_type && `Experience: ${data.experience_type}`,
     data.destination && `Destination: ${data.destination}`,
     data.dates && `Dates: ${data.dates}`,
