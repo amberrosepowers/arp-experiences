@@ -409,20 +409,27 @@ function Inquire() {
                   <div className="grid gap-10 sm:grid-cols-2">
                     <div>
                       <label className={labelClass} htmlFor="destination">
-                        Destination
+                        Destination *
                       </label>
                       <input
                         id="destination"
                         name="destination"
+                        required
                         maxLength={200}
                         className={fieldClass}
                       />
                     </div>
                     <div>
                       <label className={labelClass} htmlFor="dates">
-                        Dates or timing
+                        Dates or timing *
                       </label>
-                      <input id="dates" name="dates" maxLength={200} className={fieldClass} />
+                      <input
+                        id="dates"
+                        name="dates"
+                        required
+                        maxLength={200}
+                        className={fieldClass}
+                      />
                     </div>
                   </div>
 
@@ -515,16 +522,21 @@ function Inquire() {
                     <p className="font-display text-2xl text-oxblood">Trip Details</p>
                     <div>
                       <label className={labelClass} htmlFor="d-destination">
-                        Where would you like to go?
+                        Where would you like to go? *
                       </label>
-                      <input id="d-destination" name="destination" className={fieldClass} />
+                      <input
+                        id="d-destination"
+                        name="destination"
+                        required
+                        className={fieldClass}
+                      />
                     </div>
                     <div className="grid gap-10 sm:grid-cols-2">
                       <div>
                         <label className={labelClass} htmlFor="d-dates">
-                          What are your travel dates?
+                          What are your travel dates? *
                         </label>
-                        <input id="d-dates" name="dates" className={fieldClass} />
+                        <input id="d-dates" name="dates" required className={fieldClass} />
                       </div>
                       <div>
                         <label className={labelClass} htmlFor="datesFlexible">
