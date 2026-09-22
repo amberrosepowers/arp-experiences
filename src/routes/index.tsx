@@ -47,7 +47,7 @@ const services = [
   {
     n: "03",
     label: "Group Bookings",
-    body: "From location sourcing to room blocks, rate negotiation, meeting spaces, and concessions — let us help guide your off-sites, weddings, retreats, corporate gatherings, and milestone celebrations.",
+    body: "From hotel sourcing to room blocks, rate negotiation, meeting spaces, and concessions — let us help guide your off-sites, weddings, retreats, corporate gatherings, and milestone celebrations.",
     to: "group-bookings-experiences",
     img: cardGroup,
   },

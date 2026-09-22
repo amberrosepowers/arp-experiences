@@ -177,7 +177,7 @@ const offerings: Offering[] = [
           "Meeting space and F&B minimum negotiation",
           "Corporate and executive retreats",
           "Leadership gatherings and off-sites",
-          "Wedding Block",
+          "Wedding blocks",
           "Wellness retreats",
           "Multigenerational travel",
           "Milestone celebrations",
@@ -390,7 +390,7 @@ function Services() {
         centered
         eyebrow="Services"
         title="Work with Us."
-        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge service, to a large group booking — each offering is designed around your preferences and how you want travel to be experienced."
+        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge service, to group bookings — each offering is designed around your preferences and how you want to experience travel."
         introClassName="max-w-4xl"
       />
 
