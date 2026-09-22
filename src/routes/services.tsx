@@ -260,14 +260,36 @@ const offerings: Offering[] = [
           "Villa bookings",
           "Yacht charters",
           "Private aviation",
-          "Concierge services",
-          "Travel consultation session",
           "Special experiences and celebrations",
           "Other custom travel arrangements",
           "Tickets & exclusive access to sporting events, concerts and more",
         ],
-        investment: "Varies by scope",
-        finenote: "Fees may apply depending on the request and scope of planning needed.",
+        feeTiers: [
+          {
+            label: "Villa, Yacht & Private Aviation Bookings",
+            investment: "Varies by scope",
+            description:
+              "Some bookings are complimentary; others involve more extensive research, curation, or concierge-level planning. Fees, when applicable, are based on the scope and complexity of the request.",
+          },
+          {
+            label: "Concierge Services",
+            investment: "Varies by scope",
+            description:
+              "Ongoing, hands-on support before or during your trip. Fees are based on the scope and complexity of what's needed.",
+          },
+          {
+            label: "Travel Consultation Session",
+            investment: "$150 per hour",
+            description:
+              "A dedicated session to talk through your travel style, an upcoming trip, or where to begin.",
+          },
+          {
+            label: "Custom Experiences & Event Access",
+            investment: "Varies by scope",
+            description:
+              "For celebrations, special experiences, and tickets or access to sporting events, concerts, and more — scoped and priced based on the complexity of the request.",
+          },
+        ],
       },
     ],
   },
