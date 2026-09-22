@@ -256,24 +256,16 @@ const offerings: Offering[] = [
         inquireType: "A La Carte Service",
         inquireLabel: "Inquire about A La Carte Services",
         lede: "Individual travel offerings, each thoughtfully tailored to your needs.",
-        items: [
-          "Villa bookings",
-          "Yacht charters",
-          "Private aviation",
-          "Special experiences and celebrations",
-          "Other custom travel arrangements",
-          "Tickets & exclusive access to sporting events, concerts and more",
-        ],
         feeTiers: [
           {
             label: "Villa, Yacht & Private Aviation Bookings",
-            investment: "Varies by scope",
+            investment: "Fees vary by scope",
             description:
               "Some bookings are complimentary; others involve more extensive research, curation, or concierge-level planning. Fees, when applicable, are based on the scope and complexity of the request.",
           },
           {
             label: "Concierge Services",
-            investment: "Varies by scope",
+            investment: "Fees vary by scope",
             description:
               "Ongoing, hands-on support before or during your trip. Fees are based on the scope and complexity of what's needed.",
           },
@@ -281,11 +273,11 @@ const offerings: Offering[] = [
             label: "Travel Consultation Session",
             investment: "$150 per hour",
             description:
-              "A dedicated session to talk through your travel style, an upcoming trip, or where to begin.",
+              "A dedicated session to talk through any travel guidance and inspiration, if you are planning your own trip, or if you would like extra dedicated support from us at any time.",
           },
           {
             label: "Custom Experiences & Event Access",
-            investment: "Varies by scope",
+            investment: "Fees vary by scope",
             description:
               "For celebrations, special experiences, and tickets or access to sporting events, concerts, and more — scoped and priced based on the complexity of the request.",
           },
