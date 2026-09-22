@@ -575,12 +575,14 @@ function Inquire() {
                       <label className={labelClass} htmlFor="servicesWanted">
                         What travel services are you looking for?
                       </label>
-                      <textarea
-                        id="servicesWanted"
-                        name="servicesWanted"
-                        rows={2}
-                        className={fieldClass}
-                      />
+                      <select id="servicesWanted" name="servicesWanted" className={fieldClass}>
+                        <option>Hotel Only Booking</option>
+                        <option>Essential Itinerary Planning</option>
+                        <option>Full Itinerary Planning</option>
+                        <option>Group Booking</option>
+                        <option>Cruise</option>
+                        <option>A La Carte Service</option>
+                      </select>
                     </div>
                     <div className="grid gap-10 sm:grid-cols-2">
                       <div>
