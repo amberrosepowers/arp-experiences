@@ -28,7 +28,8 @@ type Block = {
   quote?: string;
   paragraphs2?: string[];
   items?: string[];
-  investment: string;
+  investment?: string;
+  feeTiers?: Array<{ label: string; investment: string; description: string }>;
   finenote?: string | string[];
   inquireType?: string;
   inquireLabel?: string;
@@ -69,7 +70,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         finenote:
-          "If you'd like us to research and select hotel options within your destination of choice, a $150 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences after work has begun.",
+          "If you'd like us to research and curate hotel options within your destination of choice, a $150 Research & Curation Fee applies.",
       },
     ],
   },
@@ -121,7 +122,9 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Starting at $525 per week of travel",
+        investment: "From $75 per day of travel — $375 minimum investment",
+        finenote:
+          "Planning fees are based on the length and complexity of your trip. Additional fees may apply for highly customized or complex travel arrangements.",
       },
     ],
   },
@@ -153,7 +156,9 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Starting at $1,050 per week of travel",
+        investment: "From $150 per day of travel — $750 minimum investment",
+        finenote:
+          "Planning fees are based on the length and complexity of your trip. Additional fees may apply for highly customized or complex travel arrangements.",
       },
     ],
   },
@@ -183,10 +188,25 @@ const offerings: Offering[] = [
           "Milestone celebrations",
           "Group cruises and sailing experiences",
         ],
-        investment: "Complimentary for Room Only Bookings.",
-        finenote: [
-          "If you'd like us to source hotels, negotiate rates, and request proposals for your group, a $750 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences after work has begun.",
-          "If you'd like help negotiating meeting spaces, F&B, room list assignments, other on-site logistics, or any offsite activities, dining, or transportation coordinated for your gathering, fees apply depending on the request and scope of planning needed.",
+        feeTiers: [
+          {
+            label: "Group Room Blocks",
+            investment: "Complimentary",
+            description:
+              "If you already know where you'd like your group to stay and only need ARP Experiences to arrange the room block and bookings, there is no planning fee.",
+          },
+          {
+            label: "Group Sourcing & Proposal Development",
+            investment: "$750",
+            description:
+              "If you'd like ARP Experiences to research properties, identify the right fit, negotiate group rates and concessions, meeting space and F&B minimums, and request and evaluate proposals on your behalf, a $750 Group Sourcing & Proposal Fee applies once planning begins.",
+          },
+          {
+            label: "Additional Group Planning",
+            investment: "Fees vary by scope",
+            description:
+              "For management of on-site logistics, off-site activities, dining, transportation, or other event and gathering needs, additional planning fees apply based on the scope and complexity of the engagement.",
+          },
         ],
       },
     ],
@@ -207,7 +227,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         finenote:
-          "If you'd like us to research and select cruise options within your destination of choice, a $150 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences after work has begun.",
+          "If you'd like us to research and curate cruise options, a $150 Research & Curation Fee applies.",
       },
       {
         title: "Flight Services",
@@ -305,9 +325,27 @@ function BlockContent({ block }: { block: Block }) {
         </div>
       )}
 
-      <p className="mt-8 text-sm font-light text-muted-foreground">
-        Investment — {block.investment}
-      </p>
+      {block.investment && (
+        <p className="mt-8 text-sm font-light text-muted-foreground">
+          Investment — {block.investment}
+        </p>
+      )}
+
+      {block.feeTiers && (
+        <div className="mt-8 space-y-6">
+          {block.feeTiers.map((tier) => (
+            <div key={tier.label} className="border-t border-border pt-5">
+              <p className="font-display text-lg text-foreground">{tier.label}</p>
+              <p className="mt-1 text-sm font-light text-muted-foreground">
+                Investment — {tier.investment}
+              </p>
+              <p className="mt-2 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
+                {tier.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
 
       {block.finenote &&
         (Array.isArray(block.finenote) ? block.finenote : [block.finenote]).map((note) => (
@@ -404,6 +442,24 @@ function Services() {
         {offerings.map((offering, i) => (
           <OfferingRow key={offering.slug} offering={offering} index={i} />
         ))}
+      </Section>
+
+      <Section className="!pt-0 !pb-12 md:!pb-16">
+        <div className="border-t border-border pt-14 text-center">
+          <p className="eyebrow">Policy</p>
+          <h2 className="mx-auto mt-6 max-w-2xl text-3xl md:text-4xl">Planning & Fee Policy</h2>
+          <div className="mx-auto mt-8 max-w-2xl space-y-4 text-sm font-light leading-relaxed text-muted-foreground">
+            <p>
+              All planning, research, curation, and service fees are due in full before work begins
+              and are non-refundable.
+            </p>
+            <p>Flight ticketing fees are due at the time of ticketing and are non-refundable.</p>
+            <p>
+              Fees are separate from travel costs, bookings, and other third-party charges unless
+              otherwise noted.
+            </p>
+          </div>
+        </div>
       </Section>
 
       <Section className="!pt-0 !pb-12 md:!pb-16">
