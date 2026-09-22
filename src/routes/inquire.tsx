@@ -149,6 +149,51 @@ function CheckboxRow({ name, options }: { name: string; options: string[] }) {
   );
 }
 
+const finePrint = [
+  {
+    name: "agreeFees",
+    description:
+      "Please be aware that there may be a planning fee associated with our services. During our complimentary intake call, we'll discuss your travel details & goals before providing you with a detailed understanding of any associated fees based upon the scope and complexities of your trip request. I agree to pay any planning or fees if applicable to my chosen services.",
+    agreement: "Yes, I understand and agree.",
+  },
+  {
+    name: "agreePricing",
+    description:
+      "Some of our essential and full itinerary planning proposals come from local partners who provide bundled rates without breaking down individual components. This protects our valued partners who may have confidential, contracted rates from local vendors, and creates a seamless, holistic approach to your travel plans.",
+    agreement:
+      "Yes, I understand my proposal may come as one packaged rate and itemized pricing may not be available.",
+  },
+  {
+    name: "agreeComm",
+    description:
+      "While planning your travel, we will primarily be in contact via email or scheduled phone calls, to ensure no important information is overlooked — we strongly discourage questions via text message. We operate with working business hours and ask you to honor them unless it's an emergency. Before your departure, we'll provide the best local contact information for prompt assistance after business hours; unscheduled calls and texts remain available for any in-travel emergencies.",
+    agreement: "Yes, I understand and agree.",
+  },
+  {
+    name: "agreePassport",
+    description:
+      "I understand that for international travel my passport is required to be valid for up to 6 months after my scheduled return date to the US.",
+    agreement: "Yes, I understand and agree.",
+  },
+];
+
+function FinePrintSection() {
+  return (
+    <div className="space-y-8 border-t border-border pt-10">
+      <p className="font-display text-2xl text-oxblood">Let's Review the Fine Print</p>
+      {finePrint.map((item) => (
+        <div key={item.name} className="text-xs font-light leading-relaxed text-muted-foreground">
+          <p>{item.description}</p>
+          <label className="mt-3 flex items-center gap-3">
+            <Checkbox name={item.name} required />
+            <strong className="text-foreground">{item.agreement}</strong>
+          </label>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Inquire() {
   const { type: prefillType } = Route.useSearch();
   const send = useServerFn(submitInquiry);
@@ -175,7 +220,12 @@ function Inquire() {
           details: String(data.get("details") ?? ""),
           referral_source: String(data.get("referral") ?? ""),
           form_type: "quick",
-          intake_details: {},
+          intake_details: {
+            agreedPlanningFees: data.get("agreeFees") === "on",
+            agreedPackagedPricing: data.get("agreePricing") === "on",
+            agreedCommunication: data.get("agreeComm") === "on",
+            agreedPassportValidity: data.get("agreePassport") === "on",
+          },
         },
       });
       form.reset();
@@ -401,6 +451,8 @@ function Inquire() {
                     </label>
                     <input id="referral" name="referral" maxLength={200} className={fieldClass} />
                   </div>
+
+                  <FinePrintSection />
 
                   <button type="submit" className="btn-arp" disabled={status === "sending"}>
                     {status === "sending" ? "Sending…" : "Send inquiry"}
@@ -663,62 +715,7 @@ function Inquire() {
                     <input id="d-referral" name="referral" className={fieldClass} />
                   </div>
 
-                  <div className="space-y-6 border-t border-border pt-10">
-                    <p className="font-display text-2xl text-oxblood">
-                      Let's Review the Fine Print
-                    </p>
-
-                    <label className="flex items-start gap-3 text-xs font-light leading-relaxed text-muted-foreground">
-                      <Checkbox name="agreeFees" required className="mt-0.5" />
-                      <span>
-                        Please be aware that there may be a planning fee associated with our
-                        services. During our complimentary intake call, we'll discuss your travel
-                        details &amp; goals before providing you with a detailed understanding of
-                        any associated fees based upon the scope and complexities of your trip
-                        request. I agree to pay any planning or fees if applicable to my chosen
-                        services.{" "}
-                        <strong className="text-foreground">Yes, I understand and agree.</strong>
-                      </span>
-                    </label>
-
-                    <label className="flex items-start gap-3 text-xs font-light leading-relaxed text-muted-foreground">
-                      <Checkbox name="agreePricing" required className="mt-0.5" />
-                      <span>
-                        Some of our essential and full itinerary planning proposals come from local
-                        partners who provide bundled rates without breaking down individual
-                        components. This protects our valued partners who may have confidential,
-                        contracted rates from local vendors, and creates a seamless, holistic
-                        approach to your travel plans.{" "}
-                        <strong className="text-foreground">
-                          I understand my proposal may come as one packaged rate and itemized
-                          pricing will not be available.
-                        </strong>
-                      </span>
-                    </label>
-
-                    <label className="flex items-start gap-3 text-xs font-light leading-relaxed text-muted-foreground">
-                      <Checkbox name="agreeComm" required className="mt-0.5" />
-                      <span>
-                        While planning your travel, we will primarily be in contact via email or
-                        scheduled phone calls, to ensure no important information is overlooked — we
-                        strongly discourage questions via text message. We operate with working
-                        business hours and ask you to honor them unless it's an emergency. Before
-                        your departure, we'll provide the best local contact information for prompt
-                        assistance after business hours; unscheduled calls and texts remain
-                        available for any in-travel emergencies.{" "}
-                        <strong className="text-foreground">Yes, I understand and agree.</strong>
-                      </span>
-                    </label>
-
-                    <label className="flex items-start gap-3 text-xs font-light leading-relaxed text-muted-foreground">
-                      <Checkbox name="agreePassport" required className="mt-0.5" />
-                      <span>
-                        I understand that for international travel my passport is required to be
-                        valid for up to 6 months after my scheduled return date to the US.{" "}
-                        <strong className="text-foreground">Yes, I understand and agree.</strong>
-                      </span>
-                    </label>
-                  </div>
+                  <FinePrintSection />
 
                   <button type="submit" className="btn-arp" disabled={status === "sending"}>
                     {status === "sending" ? "Sending…" : "Submit Trip Intake"}

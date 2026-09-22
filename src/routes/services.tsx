@@ -29,7 +29,7 @@ type Block = {
   paragraphs2?: string[];
   items?: string[];
   investment: string;
-  finenote?: string;
+  finenote?: string | string[];
   inquireType?: string;
   inquireLabel?: string;
   externalLink?: string;
@@ -69,7 +69,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         finenote:
-          "If you'd like us to research and select hotel options within your destination of choice, a $150 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences.",
+          "If you'd like us to research and select hotel options within your destination of choice, a $150 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences after work has begun.",
       },
     ],
   },
@@ -172,7 +172,7 @@ const offerings: Offering[] = [
           "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, retreats, and milestone celebrations.",
         ],
         items: [
-          "Guidance choosing your Hotel or Venue",
+          "Guidance sourcing Hotel",
           "Room category and rate negotiations",
           "Meeting space and F&B minimum negotiation",
           "Corporate and executive retreats",
@@ -182,9 +182,11 @@ const offerings: Offering[] = [
           "Milestone celebrations",
           "Group cruises and sailing experiences",
         ],
-        investment: "Complimentary",
-        finenote:
-          "If you'd like us to source hotels, negotiate rates, and request proposals for your group, a $750 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences. If you'd like any on-site logistics, or offsite activities, dining, or transportation coordinated for your gathering, fees apply based on scope.",
+        investment: "Complimentary for Room Only Bookings. Additional fees apply based on scope.",
+        finenote: [
+          "If you'd like us to source hotels, negotiate rates, and request proposals for your group, a $750 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences after work has begun.",
+          "If you'd like help negotiating meeting spaces, F&B, room list assignments, other on-site logistics, or any offsite activities, dining, or transportation coordinated for your gathering, fees apply depending on the request and scope of planning needed.",
+        ],
       },
     ],
   },
@@ -204,7 +206,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         finenote:
-          "If you'd like us to research and select cruise options within your destination of choice, a $150 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences.",
+          "If you'd like us to research and select cruise options within your destination of choice, a $150 credit card guarantee applies and is charged only if you choose not to book through ARP Experiences after work has begun.",
       },
       {
         title: "Flight Services",
@@ -306,11 +308,15 @@ function BlockContent({ block }: { block: Block }) {
         Investment — {block.investment}
       </p>
 
-      {block.finenote && (
-        <p className="mt-4 max-w-xl text-xs font-light italic leading-relaxed text-muted-foreground/80">
-          {block.finenote}
-        </p>
-      )}
+      {block.finenote &&
+        (Array.isArray(block.finenote) ? block.finenote : [block.finenote]).map((note) => (
+          <p
+            key={note.slice(0, 24)}
+            className="mt-4 max-w-xl text-xs font-light italic leading-relaxed text-muted-foreground/80"
+          >
+            {note}
+          </p>
+        ))}
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
         {block.inquireType && (
@@ -383,7 +389,7 @@ function Services() {
         centered
         eyebrow="Services"
         title="Work with Us."
-        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge service — each offering is designed around your preferences and how you want your travel to be experienced."
+        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge service, to a large group booking — each offering is designed around your preferences and how you want travel to be experienced."
         introClassName="max-w-4xl"
       />
 

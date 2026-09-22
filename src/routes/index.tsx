@@ -33,7 +33,7 @@ const services = [
   {
     n: "01",
     label: "Hotel Only Booking",
-    body: "Preferred partner perks and VIP treatment, booked through our direct hotel relationships — breakfast, upgrades, and early check-in, where available.",
+    body: "Preferred partner perks and VIP treatment, booked through our direct hotel relationships — breakfast, upgrades, hotel credits, early check-in & late check-out, where available.",
     to: "hotel-only-bookings",
     img: cardHotel,
   },
@@ -158,10 +158,10 @@ function Home() {
               <p className="eyebrow">Our Founder</p>
               <h2 className="mt-6 text-4xl md:text-5xl">Amber Rose Powers</h2>
               <p className="mt-8 text-base font-light leading-relaxed text-muted-foreground">
-                Amber Rose Powers is a luxury travel and hospitality leader with more than two
-                decades of experience building the kinds of places and experiences people never
-                forget. She is highly relationship-driven, with an instinct for what makes people
-                feel genuinely cared for, connected, and at home.
+                Amber Rose Powers is a luxury travel and hospitality leader with over two decades of
+                experience building the kinds of places and experiences people never forget. She is
+                highly relationship-driven, with an instinct for what makes people feel genuinely
+                cared for, connected, and at home.
               </p>
               <Link to="/about" className="eyebrow link-underline mt-10 inline-block">
                 Read her story

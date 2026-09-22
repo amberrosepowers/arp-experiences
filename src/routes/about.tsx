@@ -136,9 +136,9 @@ function About() {
               </h2>
               <p className="mt-6 max-w-lg text-sm font-light leading-relaxed text-muted-foreground">
                 We invest significant time building direct relationships with the properties we
-                recommend, so our clients receive priority consideration, exclusive rates, access to
-                unpublished availability, and meaningful benefits — at no additional cost to you.
-                Some of the preferred partner programs we work with:
+                recommend, so our clients receive priority consideration, exclusive experiences,
+                access to unpublished availability, and meaningful benefits — at no additional cost
+                to you. Some of the preferred partner programs we work with:
               </p>
               <div className="mt-10 columns-2 gap-x-8">
                 {partners.map((p) => (
@@ -181,8 +181,8 @@ function About() {
               Amber Rose Powers — Founder
             </p>
             <p>
-              Amber Rose Powers is a luxury travel and hospitality leader with more than two decades
-              of experience building the kinds of places and experiences people never forget. She is
+              Amber Rose Powers is a luxury travel and hospitality leader with over two decades of
+              experience building the kinds of places and experiences people never forget. She is
               highly relationship-driven, with an instinct for what makes people feel genuinely
               cared for, connected, and at home.
             </p>
