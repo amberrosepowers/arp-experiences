@@ -29,6 +29,7 @@ type Block = {
   paragraphs2?: string[];
   items?: string[];
   investment?: string;
+  investmentNote?: string;
   feeTiers?: Array<{ label: string; investment: string; description: string }>;
   finenote?: string | string[];
   inquireType?: string;
@@ -122,7 +123,8 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "From $75 per day of travel — $375 minimum investment",
+        investment: "From $75 per day of travel",
+        investmentNote: "$375 minimum investment",
         finenote:
           "Planning fees are based on the length and complexity of your trip. Additional fees may apply for highly customized or complex travel arrangements.",
       },
@@ -156,7 +158,8 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "From $150 per day of travel — $750 minimum investment",
+        investment: "From $150 per day of travel",
+        investmentNote: "$750 minimum investment",
         finenote:
           "Planning fees are based on the length and complexity of your trip. Additional fees may apply for highly customized or complex travel arrangements.",
       },
@@ -193,13 +196,13 @@ const offerings: Offering[] = [
             label: "Group Room Blocks",
             investment: "Complimentary",
             description:
-              "If you already know where you'd like your group to stay and only need ARP Experiences to arrange the room block and bookings, there is no planning fee.",
+              "If you already know where you'd like your group to stay and only need us to arrange the room block and bookings, there is no planning fee.",
           },
           {
             label: "Group Sourcing & Proposal Development",
             investment: "$750",
             description:
-              "If you'd like ARP Experiences to research properties, identify the right fit, negotiate group rates and concessions, meeting space and F&B minimums, and request and evaluate proposals on your behalf, a $750 Group Sourcing & Proposal Fee applies once planning begins.",
+              "If you'd like us to research properties, identify the right fit, negotiate group rates and concessions, meeting space and F&B minimums, and request and evaluate proposals on your behalf, a $750 Group Sourcing & Proposal Fee applies before planning begins.",
           },
           {
             label: "Additional Group Planning",
@@ -329,6 +332,9 @@ function BlockContent({ block }: { block: Block }) {
         <p className="mt-8 text-sm font-light text-muted-foreground">
           Investment — {block.investment}
         </p>
+      )}
+      {block.investmentNote && (
+        <p className="mt-1 text-sm font-medium text-foreground">{block.investmentNote}</p>
       )}
 
       {block.feeTiers && (

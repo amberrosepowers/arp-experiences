@@ -313,7 +313,7 @@ function Inquire() {
         centered
         eyebrow="Inquiry"
         title="Let's start planning."
-        intro="We're so glad you're here. Please fill out the Inquiry or Detailed Trip Inquiry form, and we will personally follow up after, to set up your complimentary consultation call."
+        intro="We're so glad you're here. Please fill out the Inquiry or Detailed Trip Inquiry form, and we will personally follow up to set up your complimentary consultation call."
       />
 
       <Section className="!pt-0">
@@ -479,9 +479,9 @@ function Inquire() {
                 </form>
               ) : (
                 <form onSubmit={onSubmitDetailed} className="space-y-14">
-                  <p className="text-xs font-light text-muted-foreground">* Required</p>
                   <div className="space-y-8">
                     <p className="font-display text-2xl text-oxblood">Client Intake</p>
+                    <p className="text-xs font-light text-muted-foreground">* Required</p>
                     <div className="grid gap-10 sm:grid-cols-2">
                       <div>
                         <label className={labelClass} htmlFor="firstName">
