@@ -189,7 +189,7 @@ function About() {
             <p>
               Her career began in fashion, with a degree in Apparel Design and experience spanning
               design, PR, sales, and brand relationships, before she moved into real estate
-              development and boutique hospitality.
+              development and boutique hospitality operations.
             </p>
             <p>
               As Director of Lifestyle at Detroit Foundation Hotel — where she developed
