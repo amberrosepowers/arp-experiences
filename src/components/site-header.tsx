@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 
-const logoSrc = "/photos/arp-logo-walnut.png";
+const logoSrc = "/photos/arp-logo-v2.png";
 
 const nav = [
   { to: "/", label: "Home" },
