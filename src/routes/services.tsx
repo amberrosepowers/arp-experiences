@@ -30,6 +30,7 @@ type Block = {
   items?: string[];
   investment?: string;
   investmentNote?: string;
+  pricingNote?: string;
   feeTiers?: Array<{ label: string; investment: string; description: string }>;
   finenote?: string | string[];
   inquireType?: string;
@@ -70,7 +71,7 @@ const offerings: Offering[] = [
           "Additional benefits based on the property and partner program",
         ],
         investment: "Complimentary",
-        finenote:
+        pricingNote:
           "If you'd like us to research and curate hotel options within your destination of choice, a $150 Research & Curation Fee applies.",
       },
     ],
@@ -229,7 +230,7 @@ const offerings: Offering[] = [
           "We research, recommend, and book on your behalf with the same care and attention as any hotel reservation. Cruises often include onboard credit depending on the ship and specific sailing — among the cruise lines we work with are Aman at Sea, Belmond, Explora Journeys, Four Seasons Yachts, National Geographic | Lindblad Expeditions, Orient Express Sailing Yachts, Ponant, Sea Cloud Cruises, Silversea, The Ritz-Carlton Yacht Collection, and Uniworld.",
         ],
         investment: "Complimentary",
-        finenote:
+        pricingNote:
           "If you'd like us to research and curate cruise options, a $150 Research & Curation Fee applies.",
       },
       {
@@ -349,6 +350,12 @@ function BlockContent({ block }: { block: Block }) {
       )}
       {block.investmentNote && (
         <p className="mt-1 text-sm font-medium text-foreground">{block.investmentNote}</p>
+      )}
+
+      {block.pricingNote && (
+        <p className="mt-3 max-w-xl text-sm font-light leading-relaxed text-foreground/90">
+          {block.pricingNote}
+        </p>
       )}
 
       {block.feeTiers && (
