@@ -83,6 +83,8 @@ const offerings: Offering[] = [
           "Additional benefits based on the property and partner program",
         ],
         investment: "Complimentary",
+        pricingNote:
+          "If you'd like us to research and curate hotel options within your destination of choice, a $150 Research & Curation Fee applies.",
       },
     ],
   },
@@ -103,8 +105,6 @@ const offerings: Offering[] = [
           "Portal access is reserved for registered ARP Experiences clients — reach out through our inquiry page to be welcomed in. Not every hotel partner is available in the portal just yet; if you don't see the hotel you're looking for, simply reach out and we'll arrange it directly, with applicable preferred partner benefits applied.",
         ],
         investment: "Complimentary",
-        pricingNote:
-          "If you'd like us to research and curate hotel options within your destination of choice, a $150 Research & Curation Fee applies.",
         externalLink: "https://trips.foratravel.com/amber-rose-powers/book",
         externalLinkLabel: "Go to Client Portal",
       },
