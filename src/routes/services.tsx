@@ -237,11 +237,12 @@ const offerings: Offering[] = [
         inquireLabel: "Inquire about Cruise Booking",
         lede: "That same personal layer to cruise bookings — whether you know exactly which sailing you want, or you're looking for us to uncover the right one.",
         paragraphs: [
-          "We research, recommend, and book on your behalf with the same care and attention as any hotel reservation. Cruises often include onboard credit depending on the ship and specific sailing — among the cruise lines we work with are Aman at Sea, Belmond, Explora Journeys, Four Seasons Yachts, National Geographic | Lindblad Expeditions, Orient Express Sailing Yachts, Ponant, Sea Cloud Cruises, Silversea, The Ritz-Carlton Yacht Collection, and Uniworld.",
+          "If you already know which cruise line and sailing you'd like to book, we can arrange it on your behalf with the same care and attention as any hotel reservation. Cruises often include onboard credit and other benefits depending on the ship, sailing, and partner program.",
+          "Among the cruise lines we work with are Aman at Sea, Belmond, Explora Journeys, Four Seasons Yachts, National Geographic | Lindblad Expeditions, Orient Express Sailing Yachts, Ponant, Sea Cloud Cruises, Silversea, The Ritz-Carlton Yacht Collection, and Uniworld.",
         ],
         investment: "Complimentary",
         pricingNote:
-          "If you'd like us to research and curate cruise options, a $150 Research & Curation Fee applies.",
+          "If you'd like us to research and curate cruise options based on your preferences, a $150 Research & Curation Fee applies.",
       },
       {
         title: "Flight Services",
