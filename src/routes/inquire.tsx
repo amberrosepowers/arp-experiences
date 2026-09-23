@@ -185,6 +185,13 @@ const finePrint = [
       "I understand that for international travel my passport is required to be valid for up to 6 months after my scheduled return date to the US.",
     agreement: "Yes, I understand and agree.",
   },
+  {
+    name: "optInEmail",
+    description:
+      "From time to time, we'd love to share travel inspiration, hotel finds, and updates from ARP Experiences. This is completely optional and separate from your inquiry.",
+    agreement: "Yes, I'd like to receive occasional travel updates from ARP Experiences.",
+    optional: true,
+  },
 ];
 
 function FinePrintSection() {
@@ -195,7 +202,7 @@ function FinePrintSection() {
         <div key={item.name} className="text-xs font-light leading-relaxed text-muted-foreground">
           <p>{item.description}</p>
           <label className="mt-3 flex items-center gap-3">
-            <Checkbox name={item.name} required />
+            <Checkbox name={item.name} required={!item.optional} />
             <strong className="text-foreground">{item.agreement}</strong>
           </label>
         </div>
@@ -235,6 +242,7 @@ function Inquire() {
             agreedPackagedPricing: data.get("agreePricing") === "on",
             agreedCommunication: data.get("agreeComm") === "on",
             agreedPassportValidity: data.get("agreePassport") === "on",
+            emailOptIn: data.get("optInEmail") === "on",
           },
         },
       });
@@ -286,6 +294,7 @@ function Inquire() {
       agreedPackagedPricing: data.get("agreePricing") === "on",
       agreedCommunication: data.get("agreeComm") === "on",
       agreedPassportValidity: data.get("agreePassport") === "on",
+      emailOptIn: data.get("optInEmail") === "on",
     };
 
     setStatus("sending");
