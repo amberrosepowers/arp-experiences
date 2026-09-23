@@ -83,8 +83,6 @@ const offerings: Offering[] = [
           "Additional benefits based on the property and partner program",
         ],
         investment: "Complimentary",
-        pricingNote:
-          "If you'd like us to research and curate hotel options within your destination of choice, a $150 Research & Curation Fee applies.",
       },
     ],
   },
@@ -105,6 +103,8 @@ const offerings: Offering[] = [
           "Portal access is reserved for registered ARP Experiences clients — reach out through our inquiry page to be welcomed in. Not every hotel partner is available in the portal just yet; if you don't see the hotel you're looking for, simply reach out and we'll arrange it directly, with applicable preferred partner benefits applied.",
         ],
         investment: "Complimentary",
+        pricingNote:
+          "If you'd like us to research and curate hotel options within your destination of choice, a $150 Research & Curation Fee applies.",
         externalLink: "https://trips.foratravel.com/amber-rose-powers/book",
         externalLinkLabel: "Go to Client Portal",
       },
@@ -136,10 +136,9 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "From $75 per day of travel",
-        investmentNote: "$375 minimum investment",
+        investment: "Starting at $375",
         finenote:
-          "Planning fees are based on the length and complexity of your trip. Additional fees may apply for highly customized or complex travel arrangements.",
+          "Final planning fees are based on the length, complexity, and scope of your itinerary. Additional fees may apply for highly customized or complex travel arrangements.",
       },
     ],
   },
@@ -171,10 +170,9 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "From $150 per day of travel",
-        investmentNote: "$750 minimum investment",
+        investment: "Starting at $750",
         finenote:
-          "Planning fees are based on the length and complexity of your trip. Additional fees may apply for highly customized or complex travel arrangements.",
+          "Final planning fees are based on the length, complexity, and scope of your itinerary. Additional fees may apply for highly customized or complex travel arrangements.",
       },
     ],
   },
@@ -274,25 +272,25 @@ const offerings: Offering[] = [
             label: "Villa, Yacht & Private Aviation Bookings",
             investment: "Fees vary by scope",
             description:
-              "Some bookings are complimentary; others involve more extensive research, curation, or concierge-level planning. Fees, when applicable, are based on the scope and complexity of the request.",
+              "Some bookings are complimentary; others involve more extensive research, curation, negotiation, or concierge-level planning. Fees, when applicable, are based on the scope and complexity of the request.",
           },
           {
             label: "Concierge Services",
             investment: "Fees vary by scope",
             description:
-              "Ongoing, hands-on support before or during your trip. Fees are based on the scope and complexity of what's needed.",
+              "Ongoing, hands-on support before, during or after your trip. Fees are based on the scope and complexity of what's needed.",
           },
           {
             label: "Travel Consultation Session",
             investment: "$150 per hour",
             description:
-              "A dedicated session to talk through any travel guidance and inspiration, if you are planning your own trip, or if you would like extra dedicated support from us at any time.",
+              "A dedicated session for travel guidance, inspiration, and personalized recommendations — whether you're planning your own trip or looking for additional support along the way.",
           },
           {
             label: "Custom Experiences & Event Access",
             investment: "Fees vary by scope",
             description:
-              "For celebrations, special experiences, and tickets or access to sporting events, concerts, and more — scoped and priced based on the complexity of the request.",
+              "For celebrations, special experiences, and access to sporting events, concerts, and more — each request is scoped and priced based on the experience and level of planning required.",
           },
         ],
       },
@@ -356,9 +354,7 @@ function BlockContent({ block }: { block: Block }) {
       )}
 
       {block.investment && (
-        <p className="mt-8 text-sm font-light text-muted-foreground">
-          Investment — {block.investment}
-        </p>
+        <p className="mt-8 text-sm font-light text-muted-foreground">{block.investment}</p>
       )}
       {block.investmentNote && (
         <p className="mt-1 text-sm font-medium text-foreground">{block.investmentNote}</p>
@@ -375,9 +371,7 @@ function BlockContent({ block }: { block: Block }) {
           {block.feeTiers.map((tier) => (
             <div key={tier.label} className="border-t border-border pt-5">
               <p className="font-display text-lg text-foreground">{tier.label}</p>
-              <p className="mt-1 text-sm font-light text-muted-foreground">
-                Investment — {tier.investment}
-              </p>
+              <p className="mt-1 text-sm font-light text-muted-foreground">{tier.investment}</p>
               <p className="mt-2 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
                 {tier.description}
               </p>
