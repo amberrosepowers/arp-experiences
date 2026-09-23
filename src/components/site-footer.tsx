@@ -83,6 +83,14 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-primary-foreground/20 pt-8 text-xs font-light tracking-wide text-primary-foreground/60 md:flex-row md:justify-between">
           <p>&copy; {new Date().getFullYear()} ARP Experiences</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link to="/privacy-policy" className="link-underline">
+              Privacy Policy
+            </Link>
+            <Link to="/terms-conditions" className="link-underline">
+              Terms &amp; Conditions
+            </Link>
+          </div>
           <p>An Independent Affiliate of Fora Travel, a Virtuoso Company</p>
         </div>
       </div>
