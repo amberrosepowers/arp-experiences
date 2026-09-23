@@ -81,9 +81,20 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-primary-foreground/20 pt-8 text-xs font-light tracking-wide text-primary-foreground/60 md:flex-row md:justify-between">
-          <p>&copy; {new Date().getFullYear()} ARP Experiences</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
+        <div className="mt-10 flex flex-col gap-3 border-t border-primary-foreground/20 pt-8 text-xs font-light tracking-wide text-primary-foreground/60 md:grid md:grid-cols-3 md:items-center">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p>&copy; {new Date().getFullYear()} ARP Experiences</p>
+            <div className="flex gap-x-4 md:hidden">
+              <Link to="/privacy-policy" className="link-underline">
+                Privacy Policy
+              </Link>
+              <Link to="/terms-conditions" className="link-underline">
+                Terms &amp; Conditions
+              </Link>
+            </div>
+          </div>
+
+          <div className="hidden items-center justify-center gap-x-6 md:flex">
             <Link to="/privacy-policy" className="link-underline">
               Privacy Policy
             </Link>
@@ -91,7 +102,10 @@ export function SiteFooter() {
               Terms &amp; Conditions
             </Link>
           </div>
-          <p>An Independent Affiliate of Fora Travel, a Virtuoso Company</p>
+
+          <p className="md:text-right">
+            An Independent Affiliate of Fora Travel, a Virtuoso Company
+          </p>
         </div>
       </div>
     </footer>
