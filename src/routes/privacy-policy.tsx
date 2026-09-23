@@ -34,14 +34,14 @@ const sections = [
     heading: "How We Use Your Information",
     body: [
       "We use the information you provide to respond to your inquiry, plan and coordinate your travel, communicate with hotels, cruise lines, and other travel partners on your behalf, and provide the services you've requested.",
-      "We may also use your information to follow up about your inquiry, provide updates relevant to your trip, and improve the services we offer. We do not sell your personal information to third parties.",
+      "We may also use your information to follow up about your inquiry and provide updates relevant to your trip. We do not sell your personal information to third parties.",
     ],
   },
   {
     heading: "How We Store and Share Information",
     body: [
       "Information submitted through our forms is stored in a secure database (Supabase) and, for the purpose of responding to your inquiry, is also sent to our email via a transactional email service (Resend).",
-      "We share information with third parties only as necessary to arrange your travel — for example, with hotels, cruise lines, airlines, and other travel partners required to fulfill a booking or reservation on your behalf. We do not share your information with third parties for their own marketing purposes.",
+      "We share information with third parties only as necessary to arrange your travel — for example, with hotels, cruise lines, airlines, and other travel partners required to fulfill a booking or reservation on your behalf — or when required by law or to protect our legal rights. We do not share your information with third parties for their own marketing purposes.",
       "Our Site is hosted on Cloudflare's infrastructure, which may process standard technical information (such as IP address and browser type) as part of delivering the Site to you securely.",
     ],
   },
@@ -49,6 +49,12 @@ const sections = [
     heading: "Cookies & Tracking",
     body: [
       "This Site does not use advertising cookies or third-party tracking pixels. Our hosting provider may retain standard server logs for security and performance purposes.",
+    ],
+  },
+  {
+    heading: "How We Protect Your Data",
+    body: [
+      "We use reasonable technical and organizational measures to protect the information you share with us from unauthorized access, alteration, or disclosure. That said, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.",
     ],
   },
   {
@@ -60,14 +66,14 @@ const sections = [
   {
     heading: "Your Rights & Choices",
     body: [
-      "You may request access to, correction of, or deletion of the personal information we hold about you by contacting us at amber@arpexperiences.com. We will respond to reasonable requests in a timely manner.",
-      "Depending on where you live, you may have additional rights under applicable privacy laws, including the right to know what personal information we collect and the right to request deletion of that information.",
+      "You may request access to, correction of, or deletion of the personal information we hold about you by contacting us at hello@arpexperiences.com. We will respond to reasonable requests in a timely manner.",
+      "Depending on where you live, you may have additional rights under applicable privacy laws, including the right to know what personal information we collect, the right to request deletion of that information, and the right to lodge a complaint with your local data protection authority.",
     ],
   },
   {
     heading: "Children's Privacy",
     body: [
-      "This Site is not directed to children under 13, and we do not knowingly collect personal information from children under 13.",
+      "Our services are intended for adults planning travel, and this Site is not directed to children under 13. We do not knowingly collect personal information from children under 13.",
     ],
   },
   {
@@ -79,7 +85,7 @@ const sections = [
   {
     heading: "Contact Us",
     body: [
-      "If you have questions about this Privacy Policy or how we handle your information, please reach out to us at amber@arpexperiences.com.",
+      "If you have questions about this Privacy Policy or how we handle your information, please reach out to us at hello@arpexperiences.com.",
     ],
   },
 ];
