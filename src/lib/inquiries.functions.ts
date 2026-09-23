@@ -41,6 +41,7 @@ const intakeLabels: Record<string, string> = {
   agreedPackagedPricing: "Agreed to Packaged Pricing",
   agreedCommunication: "Agreed to Communication Terms",
   agreedPassportValidity: "Agreed to Passport Validity",
+  emailOptIn: "Opted In to Email Updates",
 };
 
 function formatPhone(phone: string): string {
