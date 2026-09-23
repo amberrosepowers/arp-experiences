@@ -174,22 +174,22 @@ const finePrint = [
       "Yes, I understand my proposal may come as one packaged rate and itemized pricing may not be available.",
   },
   {
-    name: "agreeComm",
-    description:
-      "While planning your travel, we will primarily be in contact via email or scheduled phone calls, to ensure no important information is overlooked — we strongly discourage questions via text message. We operate with working business hours and ask you to honor them unless it's an emergency. Before your departure, we'll provide the best local contact information for prompt assistance after business hours; unscheduled calls and texts remain available for any in-travel emergencies.",
-    agreement: "Yes, I understand and agree.",
-  },
-  {
     name: "agreePassport",
     description:
       "I understand that for international travel my passport is required to be valid for up to 6 months after my scheduled return date to the US.",
     agreement: "Yes, I understand and agree.",
   },
   {
+    name: "agreeComm",
+    description:
+      "While planning your travel, we will primarily be in contact via email or scheduled phone calls, to ensure no important information is overlooked — we strongly discourage questions via text message. We operate with working business hours and ask you to honor them unless it's an emergency. Before your departure, we'll provide the best local contact information for prompt assistance after business hours; unscheduled calls and texts remain available for any in-travel emergencies.",
+    agreement: "Yes, I understand and agree.",
+  },
+  {
     name: "optInEmail",
     description:
       "From time to time, we'd love to share travel inspiration, hotel finds, and updates from ARP Experiences. This is completely optional and separate from your inquiry.",
-    agreement: "Yes, I'd like to receive occasional travel updates from ARP Experiences.",
+    agreement: "Yes, I'd like to receive occasional email updates from ARP Experiences.",
     optional: true,
   },
 ];
