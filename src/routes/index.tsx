@@ -168,7 +168,7 @@ function Home() {
       </section>
 
       {/* Cream spacer */}
-      <div className="h-10 md:h-16" />
+      <div className="h-16 md:h-24" />
 
       {/* Statement */}
       <section className="bg-walnut text-primary-foreground">
