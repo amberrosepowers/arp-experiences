@@ -262,7 +262,7 @@ function Home() {
         </div>
       </section>
       {/* Testimonials */}
-      <section className="mx-auto max-w-[1400px] px-6 py-14 md:px-12 md:py-16">
+      <section className="mx-auto max-w-[1400px] px-6 pt-14 pb-12 md:px-12 md:pt-16 md:pb-16">
         <div className="text-center">
           <p className="eyebrow">Client Stories</p>
           <h2 className="mx-auto mt-6 max-w-2xl text-4xl md:text-5xl">

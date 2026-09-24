@@ -94,7 +94,7 @@ function PrivacyPolicy() {
   return (
     <>
       <PageHeader eyebrow="Legal" title="Privacy Policy" intro="Last updated September 2026." />
-      <Section className="!pt-0">
+      <Section className="!pt-0 !pb-12 md:!pb-16">
         <div className="mx-auto max-w-2xl space-y-12">
           {sections.map((section) => (
             <div key={section.heading}>
