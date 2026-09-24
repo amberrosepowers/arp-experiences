@@ -90,9 +90,33 @@ const testimonials = [
   },
   {
     name: "Ashley G.",
-    context: "Grande Real Villa Itália, Portugal",
+    context: "Il Borro, Tuscany",
     quote:
       "Working with Amber was so easy! I told her what I was looking for and she found the most amazing places to stay. Could not be happier!",
+  },
+  {
+    name: "Scott C.",
+    context: "Amanera, Dominican Republic",
+    quote:
+      "Amber is a consummate professional — always knowledgeable about the resorts and great with communication and details.",
+  },
+  {
+    name: "Patricia P.",
+    context: "Southall Farm & Inn, Franklin",
+    quote:
+      "Amber is terrific and we enjoy working with her. She is very responsive, and we appreciate her customer service and attention to detail.",
+  },
+  {
+    name: "Elizabeth J.",
+    context: "Four Seasons Hotel at The Surf Club, Miami",
+    quote:
+      "Amber was so helpful! She got everything we needed booked, checked in regularly, and was absolutely a pleasure to work with. We will definitely use her again!",
+  },
+  {
+    name: "Meagan R.",
+    context: "COMO Parrot Cay, Turks and Caicos",
+    quote:
+      "Amber had great suggestions to accommodate our desired locations, priorities, and price range. She was informative and efficient, and made the process smooth and seamless.",
   },
 ];
 
@@ -238,7 +262,7 @@ function Home() {
         </div>
       </section>
       {/* Testimonials */}
-      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
+      <section className="mx-auto max-w-[1400px] px-6 py-14 md:px-12 md:py-16">
         <div className="text-center">
           <p className="eyebrow">Client Stories</p>
           <h2 className="mx-auto mt-6 max-w-2xl text-4xl md:text-5xl">
