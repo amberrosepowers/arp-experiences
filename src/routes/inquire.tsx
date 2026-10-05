@@ -68,7 +68,7 @@ const process = [
   {
     n: "03",
     title: "Formalize",
-    body: "Hotel, villa, and cruise bookings are complimentary. For research, a $150 credit card guarantee applies, charged only if you choose not to book through ARP Experiences. For itinerary and group planning, a contract is signed and the planning fee is settled before work begins.",
+    body: "Hotel and cruise bookings are complimentary. If you'd like us to research and curate options, a $150 Research & Curation Fee applies. For itinerary and group planning, a contract is signed and the planning fee is settled before work begins.",
   },
   {
     n: "04",
@@ -594,12 +594,14 @@ function Inquire() {
 
                     <p className="border-l-2 border-oxblood/60 bg-secondary/60 p-5 text-xs font-light italic leading-relaxed text-muted-foreground">
                       Note on Planning Fees: Hotel-only bookings are complimentary, and I will add
-                      my preferred partner perks &amp; VIP you at no additional cost. If you are
-                      looking for help with accommodations, transfers, activities and tours, my
-                      planning fees start at $525 per week of travel. For full itinerary planning
-                      including concierge services (dinner recommendations &amp; reservations, spa
-                      appointments, golf tee times, etc.), my planning fees start at $1,050 per week
-                      of travel.
+                      my preferred partner perks &amp; VIP you at no additional cost. If you&apos;d
+                      like me to research and curate hotel options within your destination of
+                      choice, a $150 Research &amp; Curation Fee applies. For Essential Itinerary
+                      Planning (help with accommodations, transfers, activities and tours), my
+                      planning fees start at $375. For Full Itinerary Planning with concierge
+                      services (dinner recommendations &amp; reservations, spa appointments, golf
+                      tee times, etc.), my planning fees start at $750. Final planning fees are
+                      based on the length, complexity, and scope of your itinerary.
                     </p>
 
                     <div>
