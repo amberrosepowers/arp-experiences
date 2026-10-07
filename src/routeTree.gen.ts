@@ -12,8 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as InquireRouteImport } from './routes/inquire'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TermsConditionsRouteImport } from './routes/terms-conditions'
+import { Route as AdminInquiriesRouteImport } from './routes/admin.inquiries'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
@@ -32,14 +36,34 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InquireRoute = InquireRouteImport.update({
   id: '/inquire',
   path: '/inquire',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsConditionsRoute = TermsConditionsRouteImport.update({
+  id: '/terms-conditions',
+  path: '/terms-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminInquiriesRoute = AdminInquiriesRouteImport.update({
+  id: '/admin/inquiries',
+  path: '/admin/inquiries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -57,16 +81,24 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
+  '/faq': typeof FaqRoute
   '/inquire': typeof InquireRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms-conditions': typeof TermsConditionsRoute
+  '/admin/inquiries': typeof AdminInquiriesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/faq': typeof FaqRoute
   '/inquire': typeof InquireRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms-conditions': typeof TermsConditionsRoute
+  '/admin/inquiries': typeof AdminInquiriesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -75,8 +107,12 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
+  '/faq': typeof FaqRoute
   '/inquire': typeof InquireRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms-conditions': typeof TermsConditionsRoute
+  '/admin/inquiries': typeof AdminInquiriesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -86,19 +122,37 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
+    | '/faq'
     | '/inquire'
+    | '/privacy-policy'
     | '/services'
+    | '/terms-conditions'
+    | '/admin/inquiries'
     | '/blog/$slug'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/inquire' | '/services' | '/blog/$slug' | '/blog'
+  to:
+    | '/'
+    | '/about'
+    | '/faq'
+    | '/inquire'
+    | '/privacy-policy'
+    | '/services'
+    | '/terms-conditions'
+    | '/admin/inquiries'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/blog'
+    | '/faq'
     | '/inquire'
+    | '/privacy-policy'
     | '/services'
+    | '/terms-conditions'
+    | '/admin/inquiries'
     | '/blog/$slug'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -107,8 +161,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRouteWithChildren
+  FaqRoute: typeof FaqRoute
   InquireRoute: typeof InquireRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
+  TermsConditionsRoute: typeof TermsConditionsRoute
+  AdminInquiriesRoute: typeof AdminInquiriesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -134,6 +192,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/inquire': {
       id: '/inquire'
       path: '/inquire'
@@ -141,11 +206,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InquireRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-conditions': {
+      id: '/terms-conditions'
+      path: '/terms-conditions'
+      fullPath: '/terms-conditions'
+      preLoaderRoute: typeof TermsConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/inquiries': {
+      id: '/admin/inquiries'
+      path: '/admin/inquiries'
+      fullPath: '/admin/inquiries'
+      preLoaderRoute: typeof AdminInquiriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -181,8 +267,12 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRouteWithChildren,
+  FaqRoute: FaqRoute,
   InquireRoute: InquireRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
+  TermsConditionsRoute: TermsConditionsRoute,
+  AdminInquiriesRoute: AdminInquiriesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

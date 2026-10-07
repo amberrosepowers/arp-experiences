@@ -6,6 +6,7 @@ interface D1Result {
 interface D1PreparedStatement {
   bind(...values: unknown[]): D1PreparedStatement;
   run(): Promise<D1Result>;
+  all<T = Record<string, unknown>>(): Promise<D1Result & { results: T[] }>;
 }
 
 interface D1Database {
