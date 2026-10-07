@@ -1,6 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import type { Json } from "@/integrations/supabase/types";
 
 const inquirySchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -165,25 +164,68 @@ function buildEmailText(data: z.infer<typeof inquirySchema>): string {
   return lines.join("\n");
 }
 
+// Writes the inquiry to the Cloudflare D1 database bound as `DB` (arp-inquiries).
+// Column names match migrations/0001_create_inquiries.sql.
+async function saveInquiry(data: z.infer<typeof inquirySchema>): Promise<void> {
+  const { env } = await import("cloudflare:workers");
+  const intake = data.intake_details ?? {};
+  const text = (key: string) => formatIntakeValue(intake[key]);
+  const flag = (key: string) => (intake[key] === true ? 1 : 0);
+
+  const row: Record<string, string | number | null> = {
+    id: crypto.randomUUID(),
+    form_type: data.form_type,
+    name: data.name,
+    email: data.email,
+    phone: data.phone || null,
+    experience_type: data.experience_type || null,
+    dates: data.dates || null,
+    destination: data.destination || null,
+    travelers: data.travelers || null,
+    details: data.details || null,
+    referral_source: data.referral_source || null,
+    address: text("address"),
+    travel_dates_flexible: text("travelDatesFlexible"),
+    departure_city: text("departureCity"),
+    celebration: text("celebration"),
+    traveler_names: text("travelerNames"),
+    services_wanted: text("servicesWanted"),
+    nightly_budget: text("nightlyBudget"),
+    total_budget: text("totalBudget"),
+    accommodation_type: text("accommodationType"),
+    room_type: text("roomType"),
+    amenities: text("amenities"),
+    flight_classes: text("flightClasses"),
+    preferred_airline: text("preferredAirline"),
+    small_plane_ok: text("smallPlaneOk"),
+    best_experience: text("bestExperience"),
+    personal_style: text("personalStyle"),
+    allergies: text("allergies"),
+    mobility: text("mobility"),
+    drink_preferences: text("drinkPreferences"),
+    agreed_planning_fees: flag("agreedPlanningFees"),
+    agreed_packaged_pricing: flag("agreedPackagedPricing"),
+    agreed_communication: flag("agreedCommunication"),
+    agreed_passport_validity: flag("agreedPassportValidity"),
+    email_opt_in: flag("emailOptIn"),
+    intake_details: JSON.stringify(intake),
+  };
+
+  const columns = Object.keys(row);
+  await env.DB.prepare(
+    `INSERT INTO inquiries (${columns.join(", ")}) VALUES (${columns.map(() => "?").join(", ")})`,
+  )
+    .bind(...Object.values(row))
+    .run();
+}
+
 export const submitInquiry = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => inquirySchema.parse(data))
   .handler(async ({ data }) => {
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    const { error } = await supabaseAdmin.from("inquiries").insert({
-      name: data.name,
-      email: data.email,
-      phone: data.phone || null,
-      experience_type: data.experience_type || null,
-      dates: data.dates || null,
-      destination: data.destination || null,
-      travelers: data.travelers || null,
-      details: data.details || null,
-      referral_source: data.referral_source || null,
-      form_type: data.form_type,
-      intake_details: (data.intake_details ?? {}) as Json,
-    });
-    if (error) {
-      console.error("Failed to save inquiry", error.message);
+    try {
+      await saveInquiry(data);
+    } catch (error) {
+      console.error("Failed to save inquiry", error);
       throw new Error("We couldn't save your inquiry. Please try again.");
     }
 

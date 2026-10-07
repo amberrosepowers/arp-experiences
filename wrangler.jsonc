@@ -1,6 +1,12 @@
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
-  "vars": {
-    "SUPABASE_URL": "https://xhgywmhaibfffnkzgixr.supabase.co"
-  }
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "arp-inquiries",
+      // Paste the database_id printed by `npx wrangler d1 create arp-inquiries`.
+      "database_id": "REPLACE_WITH_ARP_INQUIRIES_DATABASE_ID",
+      "migrations_dir": "migrations",
+    },
+  ],
 }
