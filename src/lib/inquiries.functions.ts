@@ -266,7 +266,12 @@ async function saveInquiry(data: z.infer<typeof inquirySchema>): Promise<void> {
 // (docs/inquiries-sheet-apps-script.js) adds the date and writes the header row.
 async function appendToSheet(data: z.infer<typeof inquirySchema>): Promise<void> {
   const sheetUrl = process.env["INQUIRIES_SHEET_URL"];
-  if (!sheetUrl) return;
+  if (!sheetUrl) {
+    console.warn(
+      "INQUIRIES_SHEET_URL is not set, so the inquiry was not added to the Google Sheet",
+    );
+    return;
+  }
 
   const intake = data.intake_details ?? {};
   const columns: Array<[string, string]> = [
@@ -295,8 +300,11 @@ async function appendToSheet(data: z.infer<typeof inquirySchema>): Promise<void>
       values: columns.map(([, value]) => value),
     }),
   });
-  if (!response.ok) {
-    console.error("Failed to add inquiry to Google Sheet", response.status);
+  // The Apps Script answers "ok"; anything else (often a Google sign-in page when the
+  // web app isn't shared with "Anyone") means the row was not added.
+  const body = await response.text();
+  if (!response.ok || body.trim() !== "ok") {
+    console.error("Google Sheet did not accept the inquiry", response.status, body.slice(0, 300));
   }
 }
 

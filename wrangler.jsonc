@@ -2,6 +2,8 @@
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
   // Matches the Worker that Cloudflare Workers Builds deploys this repo to.
   "name": "arp-experiences",
+  // Keeps Worker logs so failed emails or Google Sheet rows can be looked up in the dashboard.
+  "observability": { "enabled": true },
   "d1_databases": [
     {
       "binding": "DB",
