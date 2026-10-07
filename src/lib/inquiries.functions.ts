@@ -69,12 +69,26 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;");
 }
 
+// ARP Experiences brand palette and type, with email-safe fallbacks for clients
+// (like Gmail) that don't load web fonts.
+const brand = {
+  parchment: "#F5F0E4",
+  card: "#FBF8F1",
+  walnut: "#422E20",
+  oxblood: "#5D221E",
+  brass: "#A47F50",
+  rule: "#E4D9C6",
+  display: "'Cormorant Garamond', Georgia, 'Times New Roman', serif",
+  body: "Archivo, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  logo: "https://www.arpexperiences.com/photos/arp-logo-walnut.png",
+};
+
 function buildEmailHtml(data: z.infer<typeof inquirySchema>): string {
-  const rows: Array<[string, string]> = [
-    ["Name", data.name],
-    ["Email", data.email],
-  ];
-  if (data.phone) rows.push(["Phone", formatPhone(data.phone)]);
+  const isDetailed = data.form_type === "detailed";
+  const intake = data.intake_details ?? {};
+  const optedIn = intake["emailOptIn"] === true;
+
+  const rows: Array<[string, string]> = [];
   if (data.experience_type) rows.push(["Experience", data.experience_type]);
   if (data.destination) rows.push(["Destination", data.destination]);
   if (data.dates) rows.push(["Dates", data.dates]);
@@ -82,58 +96,86 @@ function buildEmailHtml(data: z.infer<typeof inquirySchema>): string {
   if (data.referral_source) rows.push(["Referred By", data.referral_source]);
 
   const detailRows: Array<[string, string]> = [];
-  for (const [key, value] of Object.entries(data.intake_details ?? {})) {
+  for (const [key, value] of Object.entries(intake)) {
+    if (key === "emailOptIn") continue;
     const formatted = formatIntakeValue(value);
     if (formatted === null) continue;
+    // The detailed form also copies these answers into the summary fields above.
+    if (key === "bestExperience" && formatted === data.details) continue;
+    if (key === "servicesWanted" && formatted === data.experience_type) continue;
+    if (key === "travelerNames" && formatted === data.travelers) continue;
     detailRows.push([intakeLabels[key] ?? key, formatted]);
   }
 
-  const rowHtml = (label: string, value: string) => `
+  const label = (text: string) =>
+    `<p style="margin:0;font-family:${brand.body};font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:${brand.brass};">${escapeHtml(text)}</p>`;
+
+  const rowHtml = ([name, value]: [string, string]) => `
     <tr>
-      <td style="padding:12px 16px;border-bottom:1px solid #e5ded2;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8a7b68;white-space:nowrap;vertical-align:top;width:160px;">${escapeHtml(label)}</td>
-      <td style="padding:12px 16px;border-bottom:1px solid #e5ded2;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#442500;vertical-align:top;">${escapeHtml(value)}</td>
+      <td style="padding:14px 0;border-bottom:1px solid ${brand.rule};vertical-align:top;width:170px;">${label(name)}</td>
+      <td style="padding:14px 0 14px 16px;border-bottom:1px solid ${brand.rule};vertical-align:top;font-family:${brand.body};font-size:15px;line-height:1.5;color:${brand.walnut};">${escapeHtml(value)}</td>
     </tr>`;
 
+  const table = (items: Array<[string, string]>) =>
+    `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">${items.map(rowHtml).join("")}</table>`;
+
+  const contact = [
+    `<a href="mailto:${escapeHtml(data.email)}" style="color:${brand.walnut};text-decoration:underline;">${escapeHtml(data.email)}</a>`,
+    data.phone
+      ? `<a href="tel:${escapeHtml(data.phone.replace(/[^\d+]/g, ""))}" style="color:${brand.walnut};text-decoration:underline;">${escapeHtml(formatPhone(data.phone))}</a>`
+      : "",
+  ]
+    .filter(Boolean)
+    .join(`<span style="color:${brand.brass};padding:0 10px;">&middot;</span>`);
+
   const detailsBlock = data.details
-    ? `<div style="margin-top:24px;padding:20px;background:#f5f0e4;border:1px solid #e5ded2;">
-         <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8a7b68;">Trip Details</p>
-         <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.6;color:#442500;">${escapeHtml(data.details).replace(/\n/g, "<br>")}</p>
+    ? `<div style="margin-top:28px;padding:22px 24px;background:${brand.parchment};border-left:2px solid ${brand.brass};">
+         ${label(isDetailed ? "Best Travel Experience" : "Trip Details")}
+         <p style="margin:10px 0 0;font-family:${brand.display};font-size:19px;line-height:1.5;font-style:italic;color:${brand.walnut};">${escapeHtml(data.details).replace(/\n/g, "<br>")}</p>
        </div>`
     : "";
 
   const intakeSection =
     detailRows.length > 0
-      ? `<div style="margin-top:32px;">
-           <p style="margin:0 0 4px;font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#442500;">Full Trip Intake</p>
-           <table style="width:100%;border-collapse:collapse;margin-top:12px;">
-             ${detailRows.map(([label, value]) => rowHtml(label, value)).join("")}
-           </table>
-         </div>`
+      ? `<p style="margin:36px 0 4px;font-family:${brand.display};font-size:24px;font-weight:400;color:${brand.walnut};">${isDetailed ? "Full Trip Intake" : "Fine Print"}</p>
+         ${table(detailRows)}`
       : "";
 
-  return `
-  <div style="background:#f5f0e4;padding:40px 20px;">
-    <div style="max-width:600px;margin:0 auto;background:#ffffff;border:1px solid #e5ded2;">
-      <div style="padding:32px 32px 24px;border-bottom:2px solid #442500;">
-        <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:26px;letter-spacing:0.12em;text-transform:uppercase;color:#442500;">ARP Experiences</p>
-        <p style="margin:8px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#8a7b68;">
-          New ${data.form_type === "detailed" ? "Detailed Trip Intake" : "Quick Inquiry"}
-        </p>
+  return `<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0;padding:0;background:${brand.parchment};">
+  <div style="background:${brand.parchment};padding:40px 16px;">
+    <div style="max-width:620px;margin:0 auto;">
+      <div style="text-align:center;padding:8px 0 28px;">
+        <img src="${brand.logo}" width="150" alt="ARP Experiences" style="display:inline-block;width:150px;height:auto;border:0;">
       </div>
-      <div style="padding:24px 32px 32px;">
-        <table style="width:100%;border-collapse:collapse;">
-          ${rows.map(([label, value]) => rowHtml(label, value)).join("")}
-        </table>
+      <div style="background:${brand.card};border:1px solid ${brand.rule};padding:40px 36px 36px;">
+        ${label(isDetailed ? "New Detailed Trip Intake" : "New Quick Inquiry")}
+        <h1 style="margin:12px 0 0;font-family:${brand.display};font-size:34px;line-height:1.15;font-weight:400;color:${brand.walnut};">${escapeHtml(data.name)}</h1>
+        <p style="margin:14px 0 0;font-family:${brand.body};font-size:15px;line-height:1.6;color:${brand.walnut};">${contact}</p>
+        <p style="margin:16px 0 0;font-family:${brand.body};font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:${optedIn ? brand.oxblood : brand.brass};">
+          ${optedIn ? "Opted in to email updates" : "Not opted in to email updates"}
+        </p>
+        <div style="height:1px;background:${brand.brass};margin:28px 0 8px;line-height:1px;font-size:1px;">&nbsp;</div>
+        ${rows.length > 0 ? table(rows) : ""}
         ${detailsBlock}
         ${intakeSection}
+        <div style="margin-top:36px;text-align:center;">
+          <a href="mailto:${escapeHtml(data.email)}" style="display:inline-block;background:${brand.walnut};color:${brand.parchment};font-family:${brand.body};font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;padding:15px 30px;">Reply to ${escapeHtml(data.name.split(" ")[0] ?? data.name)}</a>
+        </div>
       </div>
-      <div style="padding:20px 32px;background:#442500;">
-        <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:0.06em;color:#f5f0e4;">
-          Reply directly to this email to respond to ${escapeHtml(data.name)}.
-        </p>
+      <div style="background:${brand.walnut};padding:22px 36px;text-align:center;">
+        <p style="margin:0;font-family:${brand.display};font-size:17px;font-style:italic;color:${brand.parchment};">Travel, thoughtfully experienced.</p>
       </div>
     </div>
-  </div>`;
+  </div>
+</body>
+</html>`;
 }
 
 function buildEmailText(data: z.infer<typeof inquirySchema>): string {
