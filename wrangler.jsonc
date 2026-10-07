@@ -1,6 +1,13 @@
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
-  "vars": {
-    "SUPABASE_URL": "https://xhgywmhaibfffnkzgixr.supabase.co"
-  }
+  // Matches the Worker that Cloudflare Workers Builds deploys this repo to.
+  "name": "arp-experiences",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "arp-inquiries",
+      "database_id": "2aaf68d7-9b22-464a-b54a-9889275610f7",
+      "migrations_dir": "migrations",
+    },
+  ],
 }

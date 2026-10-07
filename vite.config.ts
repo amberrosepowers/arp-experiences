@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    // The Cloudflare Workers runtime provides this module (D1 binding for inquiries);
+    // nitro wires it up for the Worker build, so the SSR bundle leaves it alone.
+    build: { rollupOptions: { external: ["cloudflare:workers"] } },
+  },
 });
