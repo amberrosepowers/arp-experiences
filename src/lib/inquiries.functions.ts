@@ -219,6 +219,45 @@ async function saveInquiry(data: z.infer<typeof inquirySchema>): Promise<void> {
     .run();
 }
 
+// Adds the inquiry as a row in Amber's private Google Sheet, via the Apps Script
+// web app whose URL is stored in the INQUIRIES_SHEET_URL secret. The script
+// (docs/inquiries-sheet-apps-script.js) adds the date and writes the header row.
+async function appendToSheet(data: z.infer<typeof inquirySchema>): Promise<void> {
+  const sheetUrl = process.env["INQUIRIES_SHEET_URL"];
+  if (!sheetUrl) return;
+
+  const intake = data.intake_details ?? {};
+  const columns: Array<[string, string]> = [
+    ["Form", data.form_type === "detailed" ? "Detailed Trip Intake" : "Quick Inquiry"],
+    ["Name", data.name],
+    ["Email", data.email],
+    ["Phone", data.phone ? formatPhone(data.phone) : ""],
+    ["Opted In to Email Updates", intake["emailOptIn"] === true ? "Yes" : "No"],
+    ["Experience", data.experience_type],
+    ["Destination", data.destination],
+    ["Dates", data.dates],
+    ["Travelers", data.travelers],
+    ["Trip Details", data.details],
+    ["Referred By", data.referral_source],
+  ];
+  for (const [key, label] of Object.entries(intakeLabels)) {
+    if (key === "emailOptIn") continue;
+    columns.push([label, formatIntakeValue(intake[key]) ?? ""]);
+  }
+
+  const response = await fetch(sheetUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      headers: columns.map(([label]) => label),
+      values: columns.map(([, value]) => value),
+    }),
+  });
+  if (!response.ok) {
+    console.error("Failed to add inquiry to Google Sheet", response.status);
+  }
+}
+
 export const submitInquiry = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => inquirySchema.parse(data))
   .handler(async ({ data }) => {
@@ -227,6 +266,13 @@ export const submitInquiry = createServerFn({ method: "POST" })
     } catch (error) {
       console.error("Failed to save inquiry", error);
       throw new Error("We couldn't save your inquiry. Please try again.");
+    }
+
+    // The Google Sheet copy is best-effort too: D1 already holds the inquiry.
+    try {
+      await appendToSheet(data);
+    } catch (sheetError) {
+      console.error("Inquiry Google Sheet error", sheetError);
     }
 
     // Email notification is best-effort: a saved inquiry is the source of truth,
