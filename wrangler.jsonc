@@ -1,5 +1,7 @@
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  // Matches the Worker that Cloudflare Workers Builds deploys this repo to.
+  "name": "arp-experiences",
   "d1_databases": [
     {
       "binding": "DB",
