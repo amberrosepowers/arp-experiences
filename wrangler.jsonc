@@ -6,8 +6,7 @@
     {
       "binding": "DB",
       "database_name": "arp-inquiries",
-      // Paste the database_id printed by `npx wrangler d1 create arp-inquiries`.
-      "database_id": "REPLACE_WITH_ARP_INQUIRIES_DATABASE_ID",
+      "database_id": "2aaf68d7-9b22-464a-b54a-9889275610f7",
       "migrations_dir": "migrations",
     },
   ],
