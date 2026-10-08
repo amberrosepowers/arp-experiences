@@ -600,7 +600,7 @@ function Inquire() {
                       Planning (help with accommodations, transfers, activities and tours), my
                       planning fees start at $525. For Full Itinerary Planning with concierge
                       services (dinner recommendations &amp; reservations, spa appointments, golf
-                      tee times, etc.), my planning fees start at $975. Final planning fees are
+                      tee times, etc.), my planning fees start at $1,050. Final planning fees are
                       based on the length, complexity, and scope of your itinerary.
                     </p>
 
