@@ -84,7 +84,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         pricingNote:
-          "If you'd like us to research and curate hotel options within your destination of choice, a $150 Research & Curation Fee applies.",
+          "Share your travel dates and destination, and we'll send a curated selection of hotel options at no cost.",
       },
     ],
   },
@@ -242,7 +242,7 @@ const offerings: Offering[] = [
         ],
         investment: "Complimentary",
         pricingNote:
-          "If you'd like us to research and curate cruise options based on your preferences, a $150 Research & Curation Fee applies.",
+          "Share your travel dates and preferences, and we'll send a curated selection of sailings at no cost.",
       },
       {
         title: "Flight Services",
