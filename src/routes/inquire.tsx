@@ -598,9 +598,9 @@ function Inquire() {
                       like me to research and curate hotel options within your destination of
                       choice, a $150 Research &amp; Curation Fee applies. For Essential Itinerary
                       Planning (help with accommodations, transfers, activities and tours), my
-                      planning fees start at $375. For Full Itinerary Planning with concierge
+                      planning fees start at $525. For Full Itinerary Planning with concierge
                       services (dinner recommendations &amp; reservations, spa appointments, golf
-                      tee times, etc.), my planning fees start at $750. Final planning fees are
+                      tee times, etc.), my planning fees start at $975. Final planning fees are
                       based on the length, complexity, and scope of your itinerary.
                     </p>
 
