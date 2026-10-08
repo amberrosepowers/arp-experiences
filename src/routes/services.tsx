@@ -170,7 +170,7 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Starting at $975",
+        investment: "Starting at $1,050",
         finenote:
           "Final planning fees are based on the length, complexity, and scope of your itinerary. Additional fees may apply for highly customized or complex travel arrangements.",
       },
