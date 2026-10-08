@@ -282,10 +282,10 @@ const offerings: Offering[] = [
               "Ongoing, hands-on support before, during or after your trip. Fees are based on the scope and complexity of what's needed.",
           },
           {
-            label: "Travel Consultation Session",
-            investment: "$150 per hour",
+            label: "Private Travel Consultation",
+            investment: "$200 per hour",
             description:
-              "A dedicated session for travel guidance, inspiration, and personalized recommendations — whether you're planning your own trip or looking for additional support along the way.",
+              "For travelers who would like our expertise while planning the trip themselves. A dedicated session for travel guidance, inspiration, and personalized recommendations, followed by a short written summary of our recommendations.",
           },
           {
             label: "Custom Experiences & Event Access",
