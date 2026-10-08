@@ -68,7 +68,7 @@ const process = [
   {
     n: "03",
     title: "Formalize",
-    body: "Hotel and cruise bookings are complimentary. If you'd like us to research and curate options, a $150 Research & Curation Fee applies. For itinerary and group planning, a contract is signed and the planning fee is settled before work begins.",
+    body: "Hotel and cruise bookings are complimentary, including a curated selection of options when you share your dates and destination. For itinerary and group planning, a contract is signed and the planning fee is settled before work begins.",
   },
   {
     n: "04",
@@ -594,9 +594,9 @@ function Inquire() {
 
                     <p className="border-l-2 border-oxblood/60 bg-secondary/60 p-5 text-xs font-light italic leading-relaxed text-muted-foreground">
                       Note on Planning Fees: Hotel-only bookings are complimentary, and I will add
-                      my preferred partner perks &amp; VIP you at no additional cost. If you&apos;d
-                      like me to research and curate hotel options within your destination of
-                      choice, a $150 Research &amp; Curation Fee applies. For Essential Itinerary
+                      my preferred partner perks &amp; VIP you at no additional cost. Share your
+                      dates and destination, and I&apos;ll send a curated selection of hotel
+                      options at no cost as well. For Essential Itinerary
                       Planning (help with accommodations, transfers, activities and tours), my
                       planning fees start at $525. For Full Itinerary Planning with concierge
                       services (dinner recommendations &amp; reservations, spa appointments, golf
