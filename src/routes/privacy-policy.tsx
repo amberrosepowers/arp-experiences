@@ -40,7 +40,7 @@ const sections = [
   {
     heading: "How We Store and Share Information",
     body: [
-      "Information submitted through our forms is stored in a secure database (Supabase) and, for the purpose of responding to your inquiry, is also sent to our email via a transactional email service (Resend).",
+      "Information submitted through our forms is stored in a secure database hosted by Cloudflare and copied to a private Google Sheet that only we can access. For the purpose of responding to your inquiry, it is also sent to our email via a transactional email service (Resend).",
       "We share information with third parties only as necessary to arrange your travel — for example, with hotels, cruise lines, airlines, and other travel partners required to fulfill a booking or reservation on your behalf — or when required by law or to protect our legal rights. We do not share your information with third parties for their own marketing purposes.",
       "Our Site is hosted on Cloudflare's infrastructure, which may process standard technical information (such as IP address and browser type) as part of delivering the Site to you securely.",
     ],
@@ -93,7 +93,7 @@ const sections = [
 function PrivacyPolicy() {
   return (
     <>
-      <PageHeader eyebrow="Legal" title="Privacy Policy" intro="Last updated September 2026." />
+      <PageHeader eyebrow="Legal" title="Privacy Policy" intro="Last updated October 2026." />
       <Section className="!pt-0 !pb-12 md:!pb-16">
         <div className="mx-auto max-w-2xl space-y-12">
           {sections.map((section) => (
