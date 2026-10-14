@@ -121,6 +121,10 @@ const faqs = [
     a: "This work involves considerably more than making reservations. The planning fee covers the time, research, expertise, creative direction, supplier communication, itinerary development, revisions, coordination, and ongoing support required to design a trip around you. It also allows us to remain focused on your experience rather than relying only on supplier commissions. Once the planning fee is settled, we can thoughtfully research and select the right options, even when a particular recommendation does not generate commission. The fee is based on the scope and complexity of your trip and is discussed before work begins.",
   },
   {
+    q: "How are planning fees determined?",
+    a: "Each fee reflects the destination, length, and complexity of the trip, and the level of support involved. Itinerary planning fees begin at $525, and group sourcing and larger engagements are scoped following an initial consultation. Your fee is always outlined for your approval before any work begins.",
+  },
+  {
     q: "I already booked my hotel directly. Can we still work together?",
     a: "Potentially. If your reservation is eligible, we may be able to add ARP Experiences to the booking and provide support before and during your stay. Preferred partner benefits generally need to be arranged before arrival, so the sooner you reach out, the more we may be able to do.",
   },
@@ -596,12 +600,10 @@ function Inquire() {
                       Note on Planning Fees: Hotel-only bookings are complimentary, and I will add
                       my preferred partner perks &amp; VIP you at no additional cost. Share your
                       dates and destination, and I&apos;ll send a curated selection of hotel
-                      options at no cost as well. For Essential Itinerary
-                      Planning (help with accommodations, transfers, activities and tours), my
-                      planning fees start at $525. For Full Itinerary Planning with concierge
-                      services (dinner recommendations &amp; reservations, spa appointments, golf
-                      tee times, etc.), my planning fees start at $1,050. Final planning fees are
-                      based on the length, complexity, and scope of your itinerary.
+                      options at no cost as well. Itinerary planning, group sourcing, and
+                      concierge-level planning carry a professional fee, based on the length,
+                      complexity, and scope of your trip. I&apos;ll outline it for your approval
+                      before any work begins.
                     </p>
 
                     <div>
