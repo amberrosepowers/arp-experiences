@@ -283,10 +283,10 @@ const offerings: Offering[] = [
               "Ongoing, hands-on support before, during or after your trip. Fees are based on the scope and complexity of what's needed.",
           },
           {
-            label: "Private Travel Consultation",
-            investment: "Details shared upon inquiry",
+            label: "Private Travel Consultation Call",
+            investment: "Fees shared upon inquiry",
             description:
-              "For travelers who would like our expertise while planning the trip themselves. A dedicated session for travel guidance, inspiration, and personalized recommendations, followed by a short written summary of our recommendations.",
+              "For travelers who would like our expertise while planning the trip themselves or who want extra dedicated time from us. A dedicated session for travel guidance, inspiration, and personalized recommendations, followed by a short written summary of our recommendations.",
           },
           {
             label: "Custom Experiences & Event Access",
@@ -373,10 +373,10 @@ function BlockContent({ block }: { block: Block }) {
           {block.feeTiers.map((tier) => (
             <div key={tier.label} className="border-t border-border pt-5">
               <p className="font-display text-lg text-foreground">{tier.label}</p>
-              <p className="mt-1 text-sm font-light text-muted-foreground">{tier.investment}</p>
               <p className="mt-2 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
                 {tier.description}
               </p>
+              <p className="mt-2 text-sm font-light italic text-muted-foreground">{tier.investment}</p>
             </div>
           ))}
         </div>
