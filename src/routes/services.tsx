@@ -136,9 +136,9 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Starting at $525",
+        investment: "Planning fees apply",
         finenote:
-          "Final planning fees are based on the length, complexity, and scope of your itinerary. Additional fees may apply for highly customized or complex travel arrangements.",
+          "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
       },
     ],
   },
@@ -170,9 +170,9 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Starting at $1,050",
+        investment: "Planning fees apply",
         finenote:
-          "Final planning fees are based on the length, complexity, and scope of your itinerary. Additional fees may apply for highly customized or complex travel arrangements.",
+          "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
       },
     ],
   },
@@ -211,9 +211,9 @@ const offerings: Offering[] = [
           },
           {
             label: "Group Sourcing & Proposal Development",
-            investment: "$750",
+            investment: "Planning fees apply",
             description:
-              "If you'd like us to research properties, identify the right fit, negotiate group rates and concessions, meeting space and F&B minimums, and request and evaluate proposals on your behalf, a $750 Group Sourcing & Proposal Fee applies before planning begins.",
+              "If you'd like us to research properties, identify the right fit, negotiate group rates and concessions, meeting space and F&B minimums, and request and evaluate proposals on your behalf, planning fees apply. They reflect the scope of your group's requirements and are outlined following an initial consultation, before work begins.",
           },
           {
             label: "Additional Group Planning",
@@ -283,7 +283,7 @@ const offerings: Offering[] = [
           },
           {
             label: "Private Travel Consultation",
-            investment: "$200 per hour",
+            investment: "Fee outlined when scheduled",
             description:
               "For travelers who would like our expertise while planning the trip themselves. A dedicated session for travel guidance, inspiration, and personalized recommendations, followed by a short written summary of our recommendations.",
           },
