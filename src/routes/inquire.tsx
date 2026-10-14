@@ -122,7 +122,7 @@ const faqs = [
   },
   {
     q: "How are planning fees determined?",
-    a: "Each fee reflects the destination, length, and complexity of the trip, and the level of support involved. Itinerary planning fees begin at $525, and group sourcing and larger engagements are scoped following an initial consultation. Your fee is always outlined for your approval before any work begins.",
+    a: "Each fee reflects the destination, length, and complexity of the trip, and the level of support involved. Itinerary planning and group sourcing are scoped following an initial consultation. Your fee is always outlined for your approval before any work begins.",
   },
   {
     q: "I already booked my hotel directly. Can we still work together?",
@@ -600,10 +600,12 @@ function Inquire() {
                       Note on Planning Fees: Hotel-only bookings are complimentary, and I will add
                       my preferred partner perks &amp; VIP you at no additional cost. Share your
                       dates and destination, and I&apos;ll send a curated selection of hotel
-                      options at no cost as well. Itinerary planning, group sourcing, and
-                      concierge-level planning carry a professional fee, based on the length,
-                      complexity, and scope of your trip. I&apos;ll outline it for your approval
-                      before any work begins.
+                      options at no cost as well. Itinerary planning and group sourcing carry a
+                      professional fee. As a guide, Essential Itinerary Planning begins at $525,
+                      Full Itinerary Planning with concierge services begins at $1,050, and Group
+                      Sourcing &amp; Proposal Development begins at $750. Final fees are based on
+                      the length, complexity, and scope of your trip, and I&apos;ll outline yours
+                      for your approval before any work begins.
                     </p>
 
                     <div>

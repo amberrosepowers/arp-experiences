@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "How are planning fees determined?",
-    a: "Each fee reflects the destination, length, and complexity of the trip, and the level of support involved. Itinerary planning fees begin at $525, and group sourcing and larger engagements are scoped following an initial consultation. Your fee is always outlined for your approval before any work begins.",
+    a: "Each fee reflects the destination, length, and complexity of the trip, and the level of support involved. Itinerary planning and group sourcing are scoped following an initial consultation. Your fee is always outlined for your approval before any work begins.",
   },
   {
     q: "I already booked my hotel directly. Can we still work together?",
