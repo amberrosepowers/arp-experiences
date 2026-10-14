@@ -136,7 +136,7 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Professional planning fee",
+        investment: "Planning fee applies",
         finenote:
           "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
       },
@@ -170,7 +170,7 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Professional planning fee",
+        investment: "Planning fee applies",
         finenote:
           "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
       },
@@ -211,9 +211,9 @@ const offerings: Offering[] = [
           },
           {
             label: "Group Sourcing & Proposal Development",
-            investment: "Professional fee",
+            investment: "Planning fee applies",
             description:
-              "If you'd like us to research properties, identify the right fit, negotiate group rates and concessions, meeting space and F&B minimums, and request and evaluate proposals on your behalf, a professional fee applies. It reflects the scope of your group's requirements and is outlined following an initial consultation, before work begins.",
+              "If you'd like us to research properties, identify the right fit, negotiate group rates and concessions, meeting space and F&B minimums, and request and evaluate proposals on your behalf, a planning fee applies. It reflects the scope of your group's requirements and is outlined following an initial consultation, before work begins.",
           },
           {
             label: "Additional Group Planning",
