@@ -166,15 +166,12 @@ function CheckboxRow({ name, options }: { name: string; options: string[] }) {
 function PlanningFeeNote() {
   return (
     <p className="border-l-2 border-oxblood/60 bg-secondary/60 p-5 text-xs font-light italic leading-relaxed text-muted-foreground">
-      Note on Planning Fees: Hotel-only bookings are complimentary, and I&apos;ll arrange my
-      preferred partner benefits and personal VIP recognition at no additional cost. Share your
-      dates and destination, and I&apos;ll send a curated selection of hotel options at no cost
-      as well. Planning fees apply for itinerary planning and group sourcing. As a guide,
-      Essential Itinerary Planning begins at $525 and Full Itinerary Planning with concierge
-      services begins at $1,050. Group sourcing fees reflect the scope of your group&apos;s
-      requirements and are outlined following an initial consultation. Final fees are based on
-      the length, complexity, and scope of your trip, and I&apos;ll outline yours for your
-      approval before any work begins.
+      Note on Planning Fees: Hotel-only bookings are complimentary. As a guide, Essential
+      Itinerary Planning begins at $525 and Full Itinerary Planning with concierge services
+      begins at $1,050. Group sourcing fees reflect the scope of your group&apos;s requirements
+      and are outlined following an initial consultation. Final fees are based on the length,
+      complexity, and scope of your trip, which will be outlined for your approval before any
+      work begins.
     </p>
   );
 }
