@@ -283,7 +283,7 @@ const offerings: Offering[] = [
           },
           {
             label: "Private Travel Consultation",
-            investment: "Fee outlined when scheduled",
+            investment: "Details shared upon inquiry",
             description:
               "For travelers who would like our expertise while planning the trip themselves. A dedicated session for travel guidance, inspiration, and personalized recommendations, followed by a short written summary of our recommendations.",
           },
