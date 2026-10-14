@@ -188,7 +188,7 @@ const offerings: Offering[] = [
         inquireLabel: "Inquire about Group Booking",
         lede: "Some of the most meaningful travel happens together — and it starts with the right location and logistics.",
         paragraphs: [
-          "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, retreats, and milestone celebrations.",
+          "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, incentive trips, retreats, and milestone celebrations.",
         ],
         items: [
           "Hotel & venue sourcing",
@@ -196,6 +196,7 @@ const offerings: Offering[] = [
           "Meeting space and F&B minimum negotiation",
           "Corporate and executive retreats",
           "Leadership gatherings and off-sites",
+          "Incentive trips and client-hosting experiences",
           "Wedding blocks",
           "Wellness retreats",
           "Multigenerational travel",
