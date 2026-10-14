@@ -170,8 +170,8 @@ function PlanningFeeNote() {
       Itinerary Planning begins at $525 and Full Itinerary Planning with concierge services
       begins at $1,050. Group sourcing fees reflect the scope of your group&apos;s requirements
       and are outlined following an initial consultation. Final fees are based on the length,
-      complexity, and scope of your trip, which will be outlined for your approval before any
-      work begins.
+      complexity, and scope of your trip, which will be outlined for your approval and paid
+      before any work begins.
     </p>
   );
 }
