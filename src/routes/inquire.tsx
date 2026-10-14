@@ -214,19 +214,50 @@ const finePrint = [
   },
 ];
 
+const emailOptIn = finePrint.find((item) => item.name === "optInEmail")!;
+
+function EmailOptIn() {
+  return (
+    <div className="text-xs font-light leading-relaxed text-muted-foreground">
+      <p>{emailOptIn.description}</p>
+      <label className="mt-3 flex items-center gap-3">
+        <Checkbox name={emailOptIn.name} />
+        <strong className="text-foreground">{emailOptIn.agreement}</strong>
+      </label>
+    </div>
+  );
+}
+
+function QuickFinePrint() {
+  return (
+    <div className="space-y-8 border-t border-border pt-10">
+      <label className="flex items-center gap-3 text-xs font-light text-muted-foreground">
+        <Checkbox name="agreeFees" required />
+        <strong className="text-foreground">
+          Yes, I&apos;ve read the note on planning fees above.
+        </strong>
+      </label>
+      <EmailOptIn />
+    </div>
+  );
+}
+
 function FinePrintSection() {
   return (
     <div className="space-y-8 border-t border-border pt-10">
       <p className="font-display text-2xl text-oxblood">Let's Review the Fine Print</p>
-      {finePrint.map((item) => (
-        <div key={item.name} className="text-xs font-light leading-relaxed text-muted-foreground">
-          <p>{item.description}</p>
-          <label className="mt-3 flex items-center gap-3">
-            <Checkbox name={item.name} required={!item.optional} />
-            <strong className="text-foreground">{item.agreement}</strong>
-          </label>
-        </div>
-      ))}
+      {finePrint
+        .filter((item) => !item.optional)
+        .map((item) => (
+          <p key={item.name} className="text-xs font-light leading-relaxed text-muted-foreground">
+            {item.description}
+          </p>
+        ))}
+      <label className="flex items-center gap-3 text-xs font-light text-muted-foreground">
+        <Checkbox name="agreeTerms" required />
+        <strong className="text-foreground">Yes, I&apos;ve read and agree to the above.</strong>
+      </label>
+      <EmailOptIn />
     </div>
   );
 }
@@ -259,9 +290,6 @@ function Inquire() {
           form_type: "quick",
           intake_details: {
             agreedPlanningFees: data.get("agreeFees") === "on",
-            agreedPackagedPricing: data.get("agreePricing") === "on",
-            agreedCommunication: data.get("agreeComm") === "on",
-            agreedPassportValidity: data.get("agreePassport") === "on",
             emailOptIn: data.get("optInEmail") === "on",
           },
         },
@@ -291,6 +319,8 @@ function Inquire() {
     const firstName = get("firstName");
     const lastName = get("lastName");
 
+    const agreedTerms = data.get("agreeTerms") === "on";
+
     const intake_details = {
       travelDatesFlexible: get("datesFlexible"),
       departureCity: get("departureCity"),
@@ -310,10 +340,10 @@ function Inquire() {
       allergies: get("allergies"),
       mobility: get("mobility"),
       drinkPreferences: get("drinkPreferences"),
-      agreedPlanningFees: data.get("agreeFees") === "on",
-      agreedPackagedPricing: data.get("agreePricing") === "on",
-      agreedCommunication: data.get("agreeComm") === "on",
-      agreedPassportValidity: data.get("agreePassport") === "on",
+      agreedPlanningFees: agreedTerms,
+      agreedPackagedPricing: agreedTerms,
+      agreedCommunication: agreedTerms,
+      agreedPassportValidity: agreedTerms,
       emailOptIn: data.get("optInEmail") === "on",
     };
 
@@ -415,12 +445,11 @@ function Inquire() {
                   <div className="grid gap-10 sm:grid-cols-2">
                     <div>
                       <label className={labelClass} htmlFor="phone">
-                        Phone *
+                        Phone
                       </label>
                       <input
                         id="phone"
                         name="phone"
-                        required
                         maxLength={50}
                         className={fieldClass}
                       />
@@ -501,7 +530,7 @@ function Inquire() {
 
                   <PlanningFeeNote />
 
-                  <FinePrintSection />
+                  <QuickFinePrint />
 
                   <button type="submit" className="btn-arp" disabled={status === "sending"}>
                     {status === "sending" ? "Sending…" : "Send inquiry"}
