@@ -139,7 +139,7 @@ const offerings: Offering[] = [
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
         investment:
-          "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
+          "Planning fees apply. They reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
       },
     ],
   },
