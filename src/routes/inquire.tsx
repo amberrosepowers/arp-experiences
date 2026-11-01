@@ -224,20 +224,6 @@ function EmailOptIn() {
   );
 }
 
-function QuickFinePrint() {
-  return (
-    <div className="space-y-8 border-t border-border pt-10">
-      <label className="flex items-center gap-3 text-xs font-light text-muted-foreground">
-        <Checkbox name="agreeFees" required />
-        <strong className="text-foreground">
-          Yes, I&apos;ve read the note on planning fees above.
-        </strong>
-      </label>
-      <EmailOptIn />
-    </div>
-  );
-}
-
 function FinePrintSection() {
   return (
     <div className="space-y-8 border-t border-border pt-10">
@@ -285,7 +271,10 @@ function Inquire() {
           referral_source: String(data.get("referral") ?? ""),
           form_type: "quick",
           intake_details: {
-            agreedPlanningFees: data.get("agreeFees") === "on",
+            agreedPlanningFees: data.get("agreeTerms") === "on",
+            agreedPackagedPricing: data.get("agreeTerms") === "on",
+            agreedCommunication: data.get("agreeTerms") === "on",
+            agreedPassportValidity: data.get("agreeTerms") === "on",
             emailOptIn: data.get("optInEmail") === "on",
           },
         },
@@ -459,7 +448,9 @@ function Inquire() {
                         <option>Bespoke Itinerary Planning</option>
                         <option>Group Booking</option>
                         <option>Cruise</option>
-                        <option>Villa or Charter Booking</option>
+                        <option>Villa</option>
+                        <option>Yacht Charter</option>
+                        <option>Private Aviation</option>
                         <option>A La Carte Service</option>
                       </select>
                     </div>
@@ -521,7 +512,7 @@ function Inquire() {
 
                   <PlanningFeeNote />
 
-                  <QuickFinePrint />
+                  <FinePrintSection />
 
                   <button type="submit" className="btn-arp" disabled={status === "sending"}>
                     {status === "sending" ? "Sending…" : "Send inquiry"}
@@ -645,7 +636,9 @@ function Inquire() {
                         <option>Bespoke Itinerary Planning</option>
                         <option>Group Booking</option>
                         <option>Cruise</option>
-                        <option>Villa or Charter Booking</option>
+                        <option>Villa</option>
+                        <option>Yacht Charter</option>
+                        <option>Private Aviation</option>
                         <option>A La Carte Service</option>
                       </select>
                     </div>
