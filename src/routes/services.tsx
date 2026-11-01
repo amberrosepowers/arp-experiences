@@ -226,6 +226,13 @@ const offerings: Offering[] = [
         pricingNote:
           "Share your dates, destination, and party size, and we'll send a curated selection of options at no cost.",
       },
+    ],
+  },
+  {
+    slug: "flight-services",
+    img: "/photos/offering-flights-paris-dusk.jpg",
+    imgAlt: "Paris at dusk over the Seine, with the Eiffel Tower lit on the horizon",
+    blocks: [
       {
         title: "Flight Services",
         num: "07",
