@@ -138,8 +138,7 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Planning fees apply",
-        finenote:
+        investment:
           "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
       },
     ],
