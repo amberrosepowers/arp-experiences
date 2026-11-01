@@ -130,9 +130,9 @@ const services = [
   },
   {
     n: "02",
-    label: "Itinerary Planning",
+    label: "Bespoke Itinerary Planning",
     body: "From accommodations, transportation and tours to dining, spa, and concierge-level details — itineraries planned intentionally around how you want your travel experience to feel.",
-    to: "essential-itinerary-planning",
+    to: "bespoke-itinerary-planning",
     img: cardItinerary,
   },
   {
