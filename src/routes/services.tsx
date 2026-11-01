@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Hotel bookings, itinerary planning with concierge services, group experiences, cruises, and flights from ARP Experiences.",
+          "Complimentary hotel, villa, cruise, and charter bookings, bespoke itinerary planning, group experiences, and flights from ARP Experiences.",
       },
       { property: "og:title", content: "Services — ARP Experiences" },
       {
@@ -111,48 +111,16 @@ const offerings: Offering[] = [
     ],
   },
   {
-    slug: "essential-itinerary-planning",
-    img: "/photos/offering-itinerary-colonnade.jpg",
-    imgAlt: "Sunlit stone colonnade with long shadows",
-    blocks: [
-      {
-        title: "Essential Itinerary Planning",
-        num: "03",
-        inquireType: "Essential Itinerary Planning",
-        inquireLabel: "Inquire about Essential Itinerary",
-        lede: "For travelers who want accommodations, tours, and transportation handled — without the full concierge layer.",
-        paragraphs: [
-          "We take a tailored approach to every itinerary, designing each one around your preferences and how you want your travel experience to feel. We take care of the essential parts of your trip, so you know where you're staying, how you're getting there, and what you will experience.",
-        ],
-        items: [
-          "Consultation call to discuss your travel details, style and goals for this trip",
-          "Research & selection of accommodations tailored to your preferences and travel style",
-          "VIP hotel booking perks where applicable",
-          "Assistance booking all transfers and tours",
-          "Introduction to hotel concierge team for direct reservation scheduling",
-          "Breakdown of entry requirements",
-          "Access to our trusted local partners throughout your time away",
-          "Digital itinerary and app access",
-          "Pre-trip call a week before departure",
-          "Post-trip call to gather feedback & refine future travel experiences",
-        ],
-        investment: "Planning fees apply",
-        finenote:
-          "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
-      },
-    ],
-  },
-  {
-    slug: "full-itinerary-planning",
+    slug: "bespoke-itinerary-planning",
     img: "/photos/service-concierge-balcony.jpg",
     imgAlt: "Champagne chilling on a Paris balcony at golden hour",
     blocks: [
       {
-        title: "Full Itinerary Planning with Concierge Services",
-        num: "04",
-        inquireType: "Full Itinerary Planning",
-        inquireLabel: "Inquire about Full Itinerary",
-        lede: "For travelers who want more than just the essentials — every detail of your travel, planned strategically and intentionally for you.",
+        title: "Bespoke Itinerary Planning",
+        num: "03",
+        inquireType: "Bespoke Itinerary Planning",
+        inquireLabel: "Inquire about Itinerary Planning",
+        lede: "Every detail of your travel, planned strategically and intentionally around you — from where you stay to where you dine.",
         paragraphs: [
           "From accommodations, tours, and transportation to dining reservations, spa appointments, golf tee times, wellness activities, or any other experience you'd like, we design your itinerary around your preferences and how you want your trip to feel.",
         ],
@@ -183,7 +151,7 @@ const offerings: Offering[] = [
     blocks: [
       {
         title: "Group Bookings & Experiences",
-        num: "05",
+        num: "04",
         inquireType: "Group Booking",
         inquireLabel: "Inquire about Group Booking",
         lede: "Some of the most meaningful travel happens together — and it starts with the right location and logistics.",
@@ -233,7 +201,7 @@ const offerings: Offering[] = [
     blocks: [
       {
         title: "Cruise Bookings",
-        num: "06",
+        num: "05",
         inquireType: "Cruise",
         inquireLabel: "Inquire about Cruise Booking",
         lede: "That same personal layer to cruise bookings — whether you know exactly which sailing you want, or you're looking for us to uncover the right one.",
@@ -244,6 +212,19 @@ const offerings: Offering[] = [
         investment: "Complimentary",
         pricingNote:
           "Share your travel dates and preferences, and we'll send a curated selection of sailings at no cost.",
+      },
+      {
+        title: "Villa, Yacht & Private Jet Charters",
+        num: "06",
+        inquireType: "Villa or Charter Booking",
+        inquireLabel: "Inquire about Villas & Charters",
+        lede: "Private villas, crewed yachts, and private jets — arranged through partners we know and trust.",
+        paragraphs: [
+          "Whether you have a particular villa or yacht in mind, or would like us to find the right fit, we arrange it with the same personal attention as any hotel reservation, and stay in touch with the owner, crew, or operator before you arrive.",
+        ],
+        investment: "Complimentary",
+        pricingNote:
+          "Share your dates, destination, and party size, and we'll send a curated selection of options at no cost.",
       },
       {
         title: "Flight Services",
@@ -270,12 +251,6 @@ const offerings: Offering[] = [
         inquireLabel: "Inquire about A La Carte Services",
         lede: "Individual travel offerings, each thoughtfully tailored to your needs.",
         feeTiers: [
-          {
-            label: "Villa, Yacht & Private Aviation Bookings",
-            investment: "Fees vary by scope",
-            description:
-              "Some bookings are complimentary; others involve more extensive research, curation, negotiation, or concierge-level planning. Fees, when applicable, are based on the scope and complexity of the request.",
-          },
           {
             label: "Concierge Services",
             investment: "Fees vary by scope",

@@ -68,12 +68,12 @@ const process = [
   {
     n: "03",
     title: "Formalize",
-    body: "Hotel and cruise bookings are complimentary, including a curated selection of options when you share your dates and destination. For itinerary and group planning, a contract is signed and the planning fee is settled before work begins.",
+    body: "Hotel, villa, cruise, and charter bookings are complimentary, including a curated selection of options when you share your dates and destination. For bespoke itinerary planning and group sourcing, a contract is signed and the planning fee is settled before work begins.",
   },
   {
     n: "04",
     title: "Propose",
-    body: "Hotel, villa, and cruise recommendations are typically delivered within a week or less. Custom itinerary and group proposals are typically delivered within two weeks, depending on complexity.",
+    body: "Hotel, villa, cruise, and charter recommendations are typically delivered within a week or less. Custom itinerary and group proposals are typically delivered within two weeks, depending on complexity.",
   },
   {
     n: "05",
@@ -113,16 +113,16 @@ const flightClasses = ["Premium Economy", "Business Class", "First Class", "No f
 
 const faqs = [
   {
-    q: "Why are hotel & cruise bookings complimentary?",
-    a: "Hotels, cruise lines, and other preferred hospitality partners compensate us when we arrange eligible bookings through our professional relationships. This allows us to provide the booking service at no additional cost to you while still offering personal planning, property or cruise line communication, and ongoing support.",
+    q: "Why are hotel, villa, cruise, and charter bookings complimentary?",
+    a: "Hotels, villa partners, cruise lines, yacht and private jet charter operators, and other preferred hospitality partners compensate us when we arrange eligible bookings through our professional relationships. This allows us to provide the booking service at no additional cost to you while still offering personal planning, communication with the property, cruise line, or operator, and ongoing support.",
   },
   {
-    q: "Why do you charge a planning fee for itinerary planning?",
+    q: "Why do you charge a planning fee for bespoke itinerary planning?",
     a: "This work involves considerably more than making reservations. The planning fee covers the time, research, expertise, creative direction, supplier communication, itinerary development, revisions, coordination, and ongoing support required to design a trip around you. It also allows us to remain focused on your experience rather than relying only on supplier commissions. Once the planning fee is settled, we can thoughtfully research and select the right options, even when a particular recommendation does not generate commission. The fee is based on the scope and complexity of your trip and is discussed before work begins.",
   },
   {
     q: "How are planning fees determined?",
-    a: "Each fee reflects the destination, length, and complexity of the trip, and the level of support involved. Itinerary planning and group sourcing are scoped following an initial consultation. Your fee is always outlined for your approval before any work begins.",
+    a: "Each fee reflects the destination, length, and complexity of the trip, and the level of support involved. Bespoke itinerary planning and group sourcing are scoped following an initial consultation. Your fee is always outlined for your approval before any work begins.",
   },
   {
     q: "I already booked my hotel directly. Can we still work together?",
@@ -142,7 +142,7 @@ const faqs = [
   },
   {
     q: "Can I work with ARP Experiences for a short weekend away?",
-    a: "Absolutely. We work with travelers planning everything from a single hotel stay to a longer, more layered trip. For itinerary planning, the scope and planning fee will depend on the destination, length, complexity, and level of support required.",
+    a: "Absolutely. We work with travelers planning everything from a single hotel stay to a longer, more layered trip. For bespoke itinerary planning, the scope and planning fee will depend on the destination, length, complexity, and level of support required.",
   },
   {
     q: "Do you work with Airbnb or VRBO?",
@@ -166,12 +166,11 @@ function CheckboxRow({ name, options }: { name: string; options: string[] }) {
 function PlanningFeeNote() {
   return (
     <p className="border-l-2 border-oxblood/60 bg-secondary/60 p-5 text-xs font-light italic leading-relaxed text-muted-foreground">
-      Note on Planning Fees: Hotel-only bookings are complimentary. As a guide, Essential
-      Itinerary Planning begins at $525 and Full Itinerary Planning with concierge services
-      begins at $1,050. Group sourcing fees reflect the scope of your group&apos;s requirements
-      and are outlined following an initial consultation. Final fees are based on the length,
-      complexity, and scope of your trip, which will be outlined for your approval and paid
-      before any work begins.
+      Note on Planning Fees: Hotel, villa, cruise, and yacht and private jet charter bookings are
+      complimentary. As a guide, Bespoke Itinerary Planning begins at $525. Group sourcing fees
+      reflect the scope of your group&apos;s requirements and are outlined following an initial
+      consultation. Final fees are based on the length, complexity, and scope of your trip, which
+      will be outlined for your approval and paid before any work begins.
     </p>
   );
 }
@@ -186,7 +185,7 @@ const finePrint = [
   {
     name: "agreePricing",
     description:
-      "Some of our essential and full itinerary planning proposals come from local partners who provide bundled rates without breaking down individual components. This protects our valued partners who may have confidential, contracted rates from local vendors, and creates a seamless, holistic approach to your travel plans.",
+      "Some of our bespoke itinerary planning proposals come from local partners who provide bundled rates without breaking down individual components. This protects our valued partners who may have confidential, contracted rates from local vendors, and creates a seamless, holistic approach to your travel plans.",
     agreement:
       "Yes, I understand my proposal may come as one packaged rate and itemized pricing may not be available.",
   },
@@ -444,12 +443,7 @@ function Inquire() {
                       <label className={labelClass} htmlFor="phone">
                         Phone
                       </label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        maxLength={50}
-                        className={fieldClass}
-                      />
+                      <input id="phone" name="phone" maxLength={50} className={fieldClass} />
                     </div>
                     <div>
                       <label className={labelClass} htmlFor="type">
@@ -462,10 +456,10 @@ function Inquire() {
                         className={fieldClass}
                       >
                         <option>Hotel Only Booking</option>
-                        <option>Essential Itinerary Planning</option>
-                        <option>Full Itinerary Planning</option>
+                        <option>Bespoke Itinerary Planning</option>
                         <option>Group Booking</option>
                         <option>Cruise</option>
+                        <option>Villa or Charter Booking</option>
                         <option>A La Carte Service</option>
                       </select>
                     </div>
@@ -648,10 +642,10 @@ function Inquire() {
                       </label>
                       <select id="servicesWanted" name="servicesWanted" className={fieldClass}>
                         <option>Hotel Only Booking</option>
-                        <option>Essential Itinerary Planning</option>
-                        <option>Full Itinerary Planning</option>
+                        <option>Bespoke Itinerary Planning</option>
                         <option>Group Booking</option>
                         <option>Cruise</option>
+                        <option>Villa or Charter Booking</option>
                         <option>A La Carte Service</option>
                       </select>
                     </div>

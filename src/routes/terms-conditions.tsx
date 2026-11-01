@@ -25,7 +25,7 @@ const sections = [
   {
     heading: "Our Services",
     body: [
-      "ARP Experiences provides travel advisory services, including hotel bookings, itinerary planning, group bookings, cruise and flight arrangements, and a la carte travel services, as described on our Services page.",
+      "ARP Experiences provides travel advisory services, including hotel, villa, cruise, and yacht and private jet charter bookings, bespoke itinerary planning, group bookings, flight arrangements, and a la carte travel services, as described on our Services page.",
     ],
   },
   {
@@ -72,6 +72,7 @@ const sections = [
   {
     heading: "Planning & Fee Policy",
     body: [
+      "Hotel, villa, cruise, and yacht and private jet charter bookings carry no planning fee from ARP Experiences.",
       "Planning, research, curation, and service fees, where applicable, are due in full before work begins and are non-refundable, as described on our Services page.",
       "Flight ticketing fees are due at the time of ticketing and are non-refundable.",
       "Fees charged by ARP Experiences are separate from travel costs, bookings, and other third-party charges unless otherwise noted.",
