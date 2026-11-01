@@ -126,7 +126,7 @@ const faqs = [
   },
   {
     q: "I already booked my hotel directly. Can we still work together?",
-    a: "Potentially. If your reservation is eligible, we may be able to add ARP Experiences to the booking and provide support before and during your stay. Preferred partner benefits generally need to be arranged before arrival, so the sooner you reach out, the more we may be able to do.",
+    a: "Potentially. If your reservation is eligible, we may be able to add ARP Experiences as agent on record for the booking and provide support before and during your stay. Preferred partner benefits generally need to be arranged before arrival, so the sooner you reach out, the more we may be able to do.",
   },
   {
     q: "Can I earn hotel loyalty points or cruise loyalty benefits when booking through you?",
