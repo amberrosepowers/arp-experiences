@@ -216,7 +216,7 @@ const offerings: Offering[] = [
       {
         title: "Villa, Yacht & Private Jet Charters",
         num: "06",
-        inquireType: "Villa or Charter Booking",
+        inquireType: "Villa",
         inquireLabel: "Inquire about Villas & Charters",
         lede: "Private villas, crewed yachts, and private jets — arranged through partners we know and trust.",
         paragraphs: [
