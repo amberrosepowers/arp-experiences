@@ -200,8 +200,21 @@ const offerings: Offering[] = [
     imgAlt: "Stone archway framing a yacht in a Malta harbor",
     blocks: [
       {
-        title: "Cruise Bookings",
+        title: "Villa, Yacht & Private Jet Charters",
         num: "05",
+        inquireType: "Villa",
+        inquireLabel: "Inquire about Villas & Charters",
+        lede: "Private villas, crewed yachts, and private jets — arranged through partners we know and trust.",
+        paragraphs: [
+          "Whether you have a particular villa or yacht in mind, or would like us to find the right fit, we arrange it with the same personal attention as any hotel reservation, and stay in touch with the owner, crew, or operator before you arrive.",
+        ],
+        investment: "Complimentary",
+        pricingNote:
+          "Share your dates, destination, and party size, and we'll send a curated selection of options at no cost.",
+      },
+      {
+        title: "Cruise Bookings",
+        num: "06",
         inquireType: "Cruise",
         inquireLabel: "Inquire about Cruise Booking",
         lede: "That same personal layer to cruise bookings — whether you know exactly which sailing you want, or you're looking for us to uncover the right one.",
@@ -212,19 +225,6 @@ const offerings: Offering[] = [
         investment: "Complimentary",
         pricingNote:
           "Share your travel dates and preferences, and we'll send a curated selection of sailings at no cost.",
-      },
-      {
-        title: "Villa, Yacht & Private Jet Charters",
-        num: "06",
-        inquireType: "Villa",
-        inquireLabel: "Inquire about Villas & Charters",
-        lede: "Private villas, crewed yachts, and private jets — arranged through partners we know and trust.",
-        paragraphs: [
-          "Whether you have a particular villa or yacht in mind, or would like us to find the right fit, we arrange it with the same personal attention as any hotel reservation, and stay in touch with the owner, crew, or operator before you arrive.",
-        ],
-        investment: "Complimentary",
-        pricingNote:
-          "Share your dates, destination, and party size, and we'll send a curated selection of options at no cost.",
       },
     ],
   },
