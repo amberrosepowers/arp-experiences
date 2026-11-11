@@ -25,7 +25,7 @@ const sections = [
   {
     heading: "Our Services",
     body: [
-      "ARP Experiences provides travel advisory services, including hotel, villa, cruise, and yacht and private jet charter bookings, bespoke itinerary planning, group bookings, flight arrangements, and a la carte travel services, as described on our Services page.",
+      "ARP Experiences provides travel advisory services, including hotel, villa, cruise, and yacht and private jet charter bookings, bespoke itinerary planning, group travel, flight arrangements, and a la carte travel services, as described on our Services page.",
     ],
   },
   {
