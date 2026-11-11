@@ -173,10 +173,12 @@ function PlanningFeeNote() {
   return (
     <p className="border-l-2 border-oxblood/60 bg-secondary/60 p-5 text-xs font-light italic leading-relaxed text-muted-foreground">
       Note on Planning Fees: Hotel, villa, cruise, and yacht and private jet charter bookings are
-      complimentary. As a guide, Bespoke Itinerary Planning begins at $525. Group sourcing fees
-      reflect the scope of your group&apos;s requirements and are outlined following an initial
-      consultation. Final fees are based on the length, complexity, and scope of your trip, which
-      will be outlined for your approval and paid before any work begins.
+      complimentary. Bespoke Itinerary Planning begins at $525 and includes your consultation,
+      accommodations, tours and experiences, transportation, and a complete digital itinerary.
+      Concierge planning, with dining, spa, and wellness reservations arranged throughout your
+      stay, may be added. You&apos;ll receive one clear quote for everything you&apos;ve chosen,
+      approved and paid before any work begins. Group sourcing fees reflect the scope of your
+      group&apos;s requirements and are outlined following an initial consultation.
     </p>
   );
 }
