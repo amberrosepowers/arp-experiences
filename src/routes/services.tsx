@@ -150,10 +150,10 @@ const offerings: Offering[] = [
     imgAlt: "Wood-paneled dining room set for a group, with a statement ring-light fixture",
     blocks: [
       {
-        title: "Group Bookings & Experiences",
+        title: "Group Travel & Experiences",
         num: "04",
-        inquireType: "Group Booking",
-        inquireLabel: "Inquire about Group Booking",
+        inquireType: "Group Travel",
+        inquireLabel: "Inquire about Group Travel",
         lede: "Some of the most meaningful travel happens together — and it starts with the right location and logistics.",
         paragraphs: [
           "ARP Experiences sources locations and negotiates group rates, room blocks, amenities, upgrades, and concessions with hotels, resorts, cruise lines, and hospitality partners on your behalf — from wedding room blocks to corporate group stays, incentive trips, retreats, and milestone celebrations.",

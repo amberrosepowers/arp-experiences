@@ -17,7 +17,13 @@ const faqImage = "/photos/blog-fewer-options-spa.jpg";
 
 export const Route = createFileRoute("/inquire")({
   validateSearch: (search: Record<string, unknown>): { type?: string | undefined } => ({
-    type: typeof search["type"] === "string" ? search["type"] : undefined,
+    // Older links used "Group Booking"; the service is now called "Group Travel".
+    type:
+      typeof search["type"] === "string"
+        ? search["type"] === "Group Booking"
+          ? "Group Travel"
+          : search["type"]
+        : undefined,
   }),
   head: () => ({
     meta: [
@@ -446,7 +452,7 @@ function Inquire() {
                       >
                         <option>Hotel Only Booking</option>
                         <option>Bespoke Itinerary Planning</option>
-                        <option>Group Booking</option>
+                        <option>Group Travel</option>
                         <option>Cruise</option>
                         <option>Villa</option>
                         <option>Yacht Charter</option>
@@ -634,7 +640,7 @@ function Inquire() {
                       <select id="servicesWanted" name="servicesWanted" className={fieldClass}>
                         <option>Hotel Only Booking</option>
                         <option>Bespoke Itinerary Planning</option>
-                        <option>Group Booking</option>
+                        <option>Group Travel</option>
                         <option>Cruise</option>
                         <option>Villa</option>
                         <option>Yacht Charter</option>
