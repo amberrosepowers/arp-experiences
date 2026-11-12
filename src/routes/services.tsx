@@ -138,11 +138,11 @@ const offerings: Offering[] = [
           "Pre-trip call a week before departure",
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
-        investment: "Planning fees apply",
+        investment: "Planning fees begin at $525",
         feeTiers: [
           {
             label: "Optional Concierge Planning",
-            investment: "Added to your quote when you'd like it",
+            investment: "Added to your quote upon request",
             description: "Dining, spa, golf, and wellness reservations arranged around your itinerary.",
           },
         ],
