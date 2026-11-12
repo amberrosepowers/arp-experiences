@@ -122,7 +122,7 @@ const offerings: Offering[] = [
         inquireLabel: "Inquire about Itinerary Planning",
         lede: "Every detail of your travel, planned strategically and intentionally around you — from where you stay to where you dine.",
         paragraphs: [
-          "From accommodations, tours, and transportation to dining reservations, spa appointments, golf tee times, wellness activities, or any other experience you'd like, we design your itinerary around your preferences and how you want your trip to feel.",
+          "From accommodations, tours, and transportation to the experiences you'd like woven in, we design your itinerary around your preferences and how you want your trip to feel.",
         ],
         items: [
           "Consultation call to discuss your travel details, style and goals for this trip",
@@ -130,7 +130,7 @@ const offerings: Offering[] = [
           "VIP hotel booking perks where applicable",
           "Booking and management of tours, activities, and immersive experiences",
           "Ground transportation — private transfers, drivers, trains, ferries, and rental vehicles",
-          "Concierge-level restaurant reservations, Spa & wellness experiences, Golf tee times, etc",
+          "Introductions to the hotel concierge for dining and spa",
           "A beautifully organized digital itinerary with confirmations and essential travel documents",
           "Breakdown of entry requirements",
           "Access to our trusted local partners throughout your time away",
@@ -139,8 +139,14 @@ const offerings: Offering[] = [
           "Post-trip call to gather feedback & refine future travel experiences",
         ],
         investment: "Planning fees apply",
-        finenote:
-          "Planning fees reflect the length, complexity, and scope of your itinerary, and are outlined for your approval before work begins.",
+        feeTiers: [
+          {
+            label: "Optional Concierge Planning",
+            investment: "Added to your quote when you'd like it",
+            description: "Dining, spa, golf, and wellness reservations arranged around your itinerary.",
+          },
+        ],
+        finenote: "One planning fee, outlined for your approval before work begins.",
       },
     ],
   },
@@ -445,7 +451,7 @@ function Services() {
         centered
         eyebrow="Services"
         title="Work with Us."
-        intro="From a complimentary hotel booking, to a fully planned itinerary with concierge services — each offering is designed around your preferences and how you want your travel experience to feel."
+        intro="From a complimentary hotel booking, to a fully planned itinerary with optional concierge planning — each offering is designed around your preferences and how you want your travel experience to feel."
         introClassName="max-w-4xl"
       />
 
