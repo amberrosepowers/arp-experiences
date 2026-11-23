@@ -169,44 +169,30 @@ function CheckboxRow({ name, options }: { name: string; options: string[] }) {
   );
 }
 
-function PlanningFeeNote() {
-  return (
-    <p className="border-l-2 border-oxblood/60 bg-secondary/60 p-5 text-xs font-light italic leading-relaxed text-muted-foreground">
-      Note on Planning Fees: Hotel, villa, cruise, and yacht and private jet charter bookings are
-      complimentary. Bespoke Itinerary Planning begins at $525 and includes your consultation,
-      accommodations, tours and experiences, transportation, and a complete digital itinerary.
-      Concierge planning, with dining, spa, and wellness reservations arranged throughout your
-      stay, may be added. You&apos;ll receive one clear quote for everything you&apos;ve chosen,
-      approved and paid before any work begins. Group sourcing fees reflect the scope of your
-      group&apos;s requirements and are outlined following an initial consultation.
-    </p>
-  );
-}
-
 const finePrint = [
   {
     name: "agreeFees",
     description:
-      "Please be aware that there may be a planning fee associated with our services. During our complimentary intake call, we'll discuss your travel details & goals before providing you with a detailed understanding of any associated fees based upon the scope and complexities of your trip request.",
+      "Hotel, villa, cruise, and yacht and private jet charter bookings are complimentary. Bespoke Itinerary Planning begins at $525, with concierge planning available to add, and group fees are outlined after an initial consultation. Whatever you choose, you'll receive one clear quote to approve before any work begins.",
     agreement: "Yes, I agree to pay any planning fees if applicable to my chosen services.",
   },
   {
     name: "agreePricing",
     description:
-      "Some of our bespoke itinerary planning proposals come from local partners who provide bundled rates without breaking down individual components. This protects our valued partners who may have confidential, contracted rates from local vendors, and creates a seamless, holistic approach to your travel plans.",
+      "Some itinerary proposals come from local partners as one bundled rate, which protects their confidential, contracted rates with local vendors.",
     agreement:
       "Yes, I understand my proposal may come as one packaged rate and itemized pricing may not be available.",
   },
   {
     name: "agreePassport",
     description:
-      "I understand that for international travel my passport is required to be valid for up to 6 months after my scheduled return date to the US.",
+      "I understand that for international travel, my passport must be valid for six months beyond my return date to the US.",
     agreement: "Yes, I understand and agree.",
   },
   {
     name: "agreeComm",
     description:
-      "While planning your travel, we will primarily be in contact via email or scheduled phone calls, to ensure no important information is overlooked — we strongly discourage questions via text message. We operate with working business hours and ask you to honor them unless it's an emergency. Before your departure, we'll provide the best local contact information for prompt assistance after business hours; unscheduled calls and texts remain available for any in-travel emergencies.",
+      "While planning, we'll stay in touch by email and scheduled calls rather than text, so nothing important is overlooked, and we ask that you respect our business hours. Before you depart, we'll share local contacts for after-hours help, and calls and texts are always open for emergencies while you travel.",
     agreement: "Yes, I understand and agree.",
   },
   {
@@ -518,8 +504,6 @@ function Inquire() {
                     <input id="referral" name="referral" maxLength={200} className={fieldClass} />
                   </div>
 
-                  <PlanningFeeNote />
-
                   <FinePrintSection />
 
                   <button type="submit" className="btn-arp" disabled={status === "sending"}>
@@ -632,8 +616,6 @@ function Inquire() {
                         className={fieldClass}
                       />
                     </div>
-
-                    <PlanningFeeNote />
 
                     <div>
                       <label className={labelClass} htmlFor="servicesWanted">
